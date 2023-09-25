@@ -1,0 +1,77 @@
+.nav {
+    display: flex;
+    justify-content: space-between; /* Space items apart horizontally */
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Add padding for spacing */
+    /* background-color: #26A69A; */
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between; /* Space items apart horizontally */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .logo {
+    margin-right: 20px; /* Add margin between logo and Header-right */
+    margin-bottom: 0px;
+  }
+  
+  .Header-right {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    margin-bottom: 0px;
+  }
+  
+  .links {
+    text-align: center;
+    margin-top: 20px; /* Add margin to push the links slightly lower */
+  }
+  
+  .link {
+    margin: 25px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .links a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #3498db; /* Border style */
+    border-radius: 4px;
+    color: #3498db;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .links a:hover{
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #2980b9; /* Change border color on hover */
+  }
+  
