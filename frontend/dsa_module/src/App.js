@@ -1,5 +1,3 @@
-import './components/Navbar.css';
-import Navbar from './components/Navbar';
 import './App.css';
 
 import {
@@ -9,7 +7,10 @@ import {
   Navigate,
 } from "react-router-dom";
 
-// import Navbar from './components/Navbar';
+import './components/Navbar.css';
+import './components/footer.css';
+import Navbar from './components/Navbar';
+import Footer from './components/footer';
 import FrontPage from './components/FrontPage/FrontPage';
 import Programming from './components/Programming/Programming';
 import DsaSyllabus from './components/DsaSyllabus/DsaSyllabus';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/cheatsheet" element={<CheatSheet />} />
           <Route path="/queries" element={<Queries />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
