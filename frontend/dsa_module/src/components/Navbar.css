@@ -17,27 +17,6 @@
   align-items: center;
 }
 
-.button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #3498db;
-  color: #ffffff;
-}
-
-.button:hover {
-  background-color: #2980b9;
-}
-
-.button:focus {
-  outline: none;
-}
-
 .bell-icon {
   margin-right: 30px; /* Add margin to the bell icon for spacing */
 }
@@ -56,15 +35,32 @@
 .links a {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
   color: #fff;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .links a:hover {
-  background-color: #3498db;
-  color: #ffffff;
-  border-color: #2980b9;
+ /* background-color: #fff;
+ border-bottom: #080808 10px; */
+ border-bottom: 2px solid white;
+ /* padding-bottom: 15px; */
 }
+
+/* .links a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #030000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.links a:hover:after { 
+  width: 100%; 
+  left: 0; 
+} */
