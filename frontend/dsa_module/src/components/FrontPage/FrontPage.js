@@ -72,7 +72,7 @@ function FrontPage() {
                 ))}
                 </ul>
             </div>
-            <form className='contact-us-form'>
+            {/* <form className='contact-us-form'>
             <h1>STILL IN DOUBT?</h1>
             <div className='form-content'>                
                 <div className='form-image'>
@@ -94,7 +94,7 @@ function FrontPage() {
                             <button type="text" class="submit">submit</button>
                 </div>
             </div>
-            </form>
+            </form> */}
 </div>        
     );
 }
