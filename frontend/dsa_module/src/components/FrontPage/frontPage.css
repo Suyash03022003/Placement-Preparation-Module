@@ -122,16 +122,27 @@
     float:right;
   }
 
+.benefit-img{
+  /* width: 400px;
+  height: auto; */
+  object-fit:contain;
+  margin-left: 20%;
+}
+
 /* contact-us.css */
+
+.contact-us-form{
+  margin-left: 15%;
+  /* margin-right: 20%; */
+  margin-bottom: 10%;
+  width: 990px;
+}
 
 .contact-us-form h1{
   text-align: center;
 }
 
 .form-content{ 
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 10%;
   display: flex;
   align-items: center;  
 }
@@ -141,7 +152,7 @@
 }
 
 .form-image{
-  background-color: rgb(217, 236, 248);
+  background-color: rgb(135, 250, 131);
 }
 
 .form-text{

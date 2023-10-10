@@ -48,7 +48,11 @@ function FrontPage() {
                 </div>
             </div> 
         </div>
-            
+
+            <div className='benefit-img'>
+                <img src={process.env.PUBLIC_URL + "/images/benefit (1).png"} alt="img" />
+            </div>
+
             <div className="faq-container">
                 <h1>Frequently Asked Questions</h1>
                 <ul className="faq-list">
@@ -72,7 +76,7 @@ function FrontPage() {
             <h1>STILL IN DOUBT?</h1>
             <div className='form-content'>                
                 <div className='form-image'>
-                    <img src={process.env.PUBLIC_URL + "/images/output-onlinegiftools.gif"} alt="img" style={{ width: '500px', height: '475px' }}/>
+                    <img src={process.env.PUBLIC_URL + "/images/output-onlinegiftools.gif"} alt="img" style={{ width: '475px', height: '475px' }}/>
                 </div>
 
                 <div className='form-text'>
