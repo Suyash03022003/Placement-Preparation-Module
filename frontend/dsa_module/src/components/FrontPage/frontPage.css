@@ -1,7 +1,8 @@
 .Main-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between heading and image */
+    justify-content: space-between;
+    /* Space between heading and image */
     padding: 20px;
     background-color: #fffbf0;
 }
@@ -12,7 +13,7 @@
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     font-size: 27px;
     font-weight: 260;
-    
+
 }
 
 .heading .p {
@@ -20,15 +21,16 @@
 }
 
 .image {
-    flex: 1;/* Take up available space */
-    text-align: right;   
+    flex: 1;
+    /* Take up available space */
+    text-align: right;
 }
 
 .image img {
     max-width: 85%;
-    
+
     height: auto;
-   
+
 }
 
 .button-1 {
