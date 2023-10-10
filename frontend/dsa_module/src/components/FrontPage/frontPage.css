@@ -70,3 +70,163 @@
 .button-1:hover {
     color: #111;
 }
+
+/* FAQ.css */
+
+.faq-container {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 40px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    text-align: left;
+    font-size: 20px;
+    /* box-shadow: 5px 10px 8px 10px #888888; */
+    /* background-color: #e6f4fd; */
+    box-shadow: 5px 10px 20px #e2f7f5 inset;
+  }
+  
+  .faq-container h1{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .faq-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: 2px 4px 2px 4px #d1fffa; */
+    /* box-shadow: 5px 10px 20px red inset */
+  }
+  
+  .faq-question {
+    padding: 20px ;
+    cursor: pointer;
+    /* background-color: #ccf8f4; */
+    box-shadow: 5px 10px 20px #ccf8f4 inset;
+    
+  }
+  
+  .faq-answer {
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  .arrow{
+    float:right;
+  }
+
+.benefit-img{
+  /* width: 400px;
+  height: auto; */
+  object-fit:contain;
+  margin-left: 20%;
+}
+
+/* contact-us.css */
+
+.contact-us-form{
+  margin-left: 15%;
+  /* margin-right: 20%; */
+  margin-bottom: 10%;
+  width: 990px;
+}
+
+.contact-us-form h1{
+  text-align: center;
+}
+
+.form-content{ 
+  display: flex;
+  align-items: center;  
+}
+
+.form-heading{
+  text-align: center;
+}
+
+.form-image{
+  background-color: rgb(135, 250, 131);
+}
+
+.form-text{
+  background-color: #111;
+  width: 55%;
+  padding: 25px;
+}
+
+.title {
+  color: #ddd;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #adaaaa;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:hover {
+  background-color: #06b;
+}

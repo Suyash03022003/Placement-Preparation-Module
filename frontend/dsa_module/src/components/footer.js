@@ -4,7 +4,7 @@ export default function footer() {
     <footer className="footer">
     <div className="container">
       <div className="company-logo">
-        <img src="./diagram.png" alt="Company Logo" />
+      <img src={process.env.PUBLIC_URL + "/images/diagram.png"} alt="Company Logo" />
       </div>
       <div className="footer-links">
         <ul>
@@ -20,16 +20,16 @@ export default function footer() {
         <h3>FOLLOW US ON</h3>
         <div className="social-media-icons">
           <a href="#"><i className="fab fa-facebook"></i>
-          <img src="./instagram.png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <img src={process.env.PUBLIC_URL + "/images/instagram.png"} style={{ width: '50px', height: '50px' }} />
           </a>
           <a href="#"><i className="fab fa-twitter"></i>
-          <img src="./linkedin (2).png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <img src={process.env.PUBLIC_URL + "/images/linkedin (2).png"} style={{ width: '50px', height: '50px' }} />
           </a>
           <a href="#"><i className="fab fa-instagram"></i>
-          <img src="/youtube (2).png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <img src={process.env.PUBLIC_URL + "/images/youtube (2).png"} alt="Logo" style={{ width: '50px', height: '50px' }} />
           </a>
           <a href="#"><i className="fab fa-instagram"></i>
-          <img src="/telegram-8247.png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+          <img src={process.env.PUBLIC_URL + "/images/telegram-8247.png"} alt="Logo" style={{ width: '50px', height: '50px' }} />
           </a>
         </div>
         <br></br>

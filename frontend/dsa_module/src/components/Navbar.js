@@ -22,8 +22,8 @@ function Navbar() {
       </div>
 
       <div className="Header-right">
-          <img src="/bell.png" alt="Bell" style={{ width: '30px', height: '50px', marginRight: '30px' }} />
-          <button className="button">LOGIN</button>
+      <img src={process.env.PUBLIC_URL + "/images/bell_white.png"} alt="Bell" style={{ width: '40px', height: '40px', marginRight: '30px' }} />
+      <img src={process.env.PUBLIC_URL + "/images/user.png"} alt="Bell" style={{ width: '45px', height: '45px', marginRight: '30px' }} />
         </div>
 
     </div>
