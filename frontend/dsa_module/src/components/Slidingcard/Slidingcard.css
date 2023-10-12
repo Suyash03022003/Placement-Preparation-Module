@@ -1,0 +1,18 @@
+.card-slider {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: rgb(83, 144, 198);
+    /* font-size: 30px; */
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliding-image1 {
+    margin-top: 10%;
+    width: 100%;
+    height: 70%;
+    border-radius: 1%;
+}
