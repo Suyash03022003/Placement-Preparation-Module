@@ -91,10 +91,10 @@ function FrontPage() {
                 <Slidingcard />
             </div>
             {/*-------Features of website--------- */}
-           
-            <div className='feature-card'>   
+
+            <div className='feature-card'>
                 <div className='feature-square-card'>
-               
+
                     <div className='features-inner-card'>
                         <div className='left'>
                             <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/web-analytic1.png"} alt="img" />
@@ -136,7 +136,7 @@ function FrontPage() {
             <div className='start-learning-container'>
                 <div className='start-learning-items-container'>
                     <div className='item-box1'>
-                        <img src={process.env.PUBLIC_URL + "/images/dsa.jpg"} alt="img" style={{ "position": 'absolute', "height": '250px', "width": '260px', "borderRadius": '10px' }} />
+                        <img src={process.env.PUBLIC_URL + "/images/ds.png"} alt="img" style={{ "position": 'absolute', "height": '250px', "width": '260px', "borderRadius": '10px' }} />
                         <div className='item-title'>
                             <h4>Data Structure</h4>
                             <button style={{ "align": 'center' }}>Read More</button>
