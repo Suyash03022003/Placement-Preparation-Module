@@ -1,24 +1,23 @@
 .nav {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: space-between;
   align-items: center;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   background-color: #30aee3;
+  width: 100%;
 }
 
 .logo {
-  margin-right: auto; /* Pushes the logo to the left */
+  margin-right: 10px; /* Adjust the margin for spacing */
 }
 
 .Header-right {
   display: flex;
   align-items: center;
-}
-
-.bell-icon {
-  margin-right: 30px; /* Add margin to the bell icon for spacing */
+  margin-right: 10px; /* Adjust the margin for spacing */
 }
 
 .links {
@@ -28,39 +27,26 @@
   justify-content: center;
 }
 
-.link {
-  margin: 0 10px;
-}
-
 .links a {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 25px;
+  font-size: 18px; /* Reduce the font size for smaller screens */
   text-align: center;
   text-decoration: none;
   color: #fff;
 }
 
 .links a:hover {
- /* background-color: #fff;
- border-bottom: #080808 10px; */
- border-bottom: 2px solid white;
- /* padding-bottom: 15px; */
+  border-bottom: 2px solid white;
 }
 
-/* .links a:after {    
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #030000;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+  .links {
+    flex-wrap: wrap; /* Allow links to wrap to the next line on smaller screens */
+  }
+
+  .links a {
+    padding: 10px 10px; /* Adjust padding for smaller screens */
+  }
 }
-.links a:hover:after { 
-  width: 100%; 
-  left: 0; 
-} */

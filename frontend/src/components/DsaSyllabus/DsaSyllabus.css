@@ -1,7 +1,92 @@
 /* * {
     box-sizing: border-box;
   } */
-   
+   /* ------------First container quote + image-----------------   */
+.dsa-syllabus-container {
+  display: flex;
+  align-items: left;
+  background-color: #f0f1f5;
+}
+
+.h1 {
+  /* font-size: large; */
+  font-size: 100%;
+
+}
+
+.h3 {
+  color: rgb(167, 167, 229);
+  font-size: 20px;
+}
+
+
+.dsa-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Space between heading and image */
+  padding-top: 0%;
+  background-color: #f0f1f5;
+}
+
+.dsa-heading {
+  /* flex: 1; */
+  margin-left: 2px;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 260;
+  gap: 20%;
+}
+
+
+
+.dsa-image {
+  flex: 1;
+  /* Take up available space */
+}
+
+.dsa-image img {
+  max-width: 110%;
+  height: auto;
+  margin-top: -50%;
+}
+
+.quiz-box-container {
+  display: flex;
+
+}
+
+.card-hover {
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  font-size: .875rem;
+  box-shadow: -1px 1px 4px #758aac1f;
+  position: relative;
+}
+
+.card_content {
+  flex: 1;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: -0.3125rem;
+}
+
   /* The actual timeline (the vertical ruler) */
   .timeline {
     /* background-color: #474e5d; */
