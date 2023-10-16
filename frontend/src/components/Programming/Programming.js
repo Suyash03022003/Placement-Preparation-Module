@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Programming.css";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Programming() {
   const [ques, setQues] = useState([]);
@@ -61,7 +62,7 @@ function Programming() {
                   <td>{index + 1}</td>
                   <td>{que.title}</td>
                   <td>{que.difficultyLevel}</td>
-                  <td><button className='solve-button'>Solve</button></td>
+                  <td><Link to={`/details/${que._id}`}><button className='solve-button'>Solve</button></Link></td>
                 </tr>
               ))}
             </tbody>

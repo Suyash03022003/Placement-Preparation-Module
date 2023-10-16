@@ -16,7 +16,7 @@ import Programming from './components/Programming/Programming';
 import DsaSyllabus from './components/DsaSyllabus/DsaSyllabus';
 import CheatSheet from './components/CheatSheet/Sheet';
 import Queries from './components/Queries/Queries';
-
+import ShowDetailsQues from './components/Programming/ShowDetailsQues';
 import Sidebar from './components/Sidebar.js';
 import Array from './components/Array.js';
 import String from './components/String.js';
@@ -31,11 +31,12 @@ function App() {
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/programming" element={<Programming />} />
-          <Route path="/dsasyllabus" element={<DsaSyllabus />} /> 
-            <Route path="/array" element={<Array />} />
-            <Route path="/string" element={<String />} /> 
+          <Route path="/dsasyllabus" element={<DsaSyllabus />} />
+          <Route path="/array" element={<Array />} />
+          <Route path="/string" element={<String />} />
           <Route path="/cheatsheet" element={<CheatSheet />} />
           <Route path="/queries" element={<Queries />} />
+          <Route path='/details/:id' element={<ShowDetailsQues />} />
         </Routes>
         <Footer />
       </Router>

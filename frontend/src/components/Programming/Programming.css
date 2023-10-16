@@ -16,7 +16,7 @@
     border: none;
     cursor: pointer;
     width: 160px;
-    /* border-radius: 50%; */   
+    /* border-radius: 50%; */
 }
 
 .dropdown {
@@ -71,16 +71,18 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
     .filter {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: column;
+        /* Stack items vertically on small screens */
     }
 
     .dropdown {
-        margin-bottom: 10px; /* Add some spacing between dropdowns */
+        margin-bottom: 10px;
+        /* Add some spacing between dropdowns */
     }
 }
 
 /* You can adjust the max-width and styles as needed for your specific design. */
-.programming-questions{
+.programming-questions {
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
@@ -90,38 +92,40 @@
     border-collapse: collapse;
     font-size: 0.9 em;
     width: 80%;
-  } 
-  
-  .tablecontent thead tr {
+}
+
+.tablecontent thead tr {
     background-color: #b4d4fd;
     color: white;
-  }
-  
-  .tablecontent th {
+}
+
+.tablecontent th {
     text-align: center;
-  }
-  
-  .tablecontent th,
-  .tablecontent td {
+}
+
+.tablecontent th,
+.tablecontent td {
     text-align: left;
     border-bottom: 7px solid white;
     padding: 15px;
-  }
-  
-  .tablecontent td {
+}
+
+.tablecontent td {
     padding: 15px !important;
     font-size: 20px;
     background-color: rgb(243, 243, 250);
-  }
-  
-  .solve-button{
-  background-color: #26a69a; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 10%;
-  }
+}
+
+.solve-button {
+    background-color: #26a69a;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}

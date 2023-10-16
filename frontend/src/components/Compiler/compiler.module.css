@@ -1,0 +1,20 @@
+.compiler {
+    width: 99%;
+    margin-right: 1%;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    gap: 20px;
+}
+
+.button {
+    color: #464646;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: 18px;
+}
