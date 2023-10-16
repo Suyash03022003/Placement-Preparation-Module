@@ -9,14 +9,14 @@
 }
 
 main {
-    width: 100%;
+    width: 10%;
     padding: 20px;
 }
 
 .sidebar {
     background: #000;
     color: #fff;
-    height: 150vh;
+    height: 120vh;
     width: 100px;
     transition: all 0.5s;
 }

@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FrontPage />} />
           <Route path="/programming" element={<Programming />} />
-          <Route path="/dsasyllabus" element={<DsaSyllabus />} /> 
+          <Route path="/dsasyllabus" element={<DsaSyllabus />} />
             <Route path="/array" element={<Array />} />
             <Route path="/string" element={<String />} /> 
           <Route path="/cheatsheet" element={<CheatSheet />} />
