@@ -1,13 +1,15 @@
-.footer {
-  background-color: #30aee3;
-  color: #fff;
-  padding: 10px 0;
+.footer{
+  background-color: #30aee3;;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4rem 1fr 2fr 1fr 4rem;
+  color: white;
+  padding-top: 2%;
 }
 
-.container {
+.footer-links{
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-links ul {
@@ -25,8 +27,8 @@
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #00aaff;
+.social-media{
+  margin-left: 10%;
 }
 
 .social-media-icons a {
@@ -42,4 +44,42 @@
 
 .contact-us ul {
   list-style: none;
+}
+
+li {
+  list-style: none;
+  font-size: 25px;
+}
+
+.sep-link-footer{
+  color: #fff;
+}
+
+.footer-logo{
+  display: grid;
+  grid-column: 2/3;
+  justify-content: start;
+  align-items: center;
+  height: 6rem;
+  margin-left: 5%;
+}
+
+.footer-logo-img{
+  width: 25%;
+}
+
+.footer-links{
+  grid-column: 3/4;
+}
+
+.social-media{
+  grid-column: 4/5;
+}
+
+.nav-login ul li{
+  text-align: right;
+}
+
+.social-media ul li:first-child{
+  grid-column: 2/3;
 }

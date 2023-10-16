@@ -1,44 +1,30 @@
 /* ------------First container quote + image-----------------   */
 .Main-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* Space between heading and image */
-  padding: 20px;
-  background-color: #fff;
+  justify-content: center;
+  margin: 5%;
 }
 
 .heading {
-  /* flex: 1; */
-  margin-left: 50px;
+  text-align: center;
   font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 260;
 }
 
-.heading .p {
-  margin-left: 70px;
-}
-
-.image {
-  flex: 1;
-  /* Take up available space */
-  text-align: right;
-}
-
-.image img {
-  max-width: 85%;
-  height: auto;
-}
+ .heading p {
+  line-height: 1.8;
+  text-align: center;
+} 
 
 .hoverbutton {
   padding: 0.5em 1.9em;
-  margin-left: 110px;
+  margin-left: 32%;
+  margin-top: 5%;
   border: 2px solid #30aee3;
   position: relative;
   overflow: hidden;
   background-color: transparent;
-  text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   transition: .3s;
@@ -72,33 +58,30 @@
 .box {
   display: grid;
   grid-gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 1.5rem 0;
+  grid-template-columns: repeat(2, 2fr);
+  margin-left: 20%;
+  margin-top: 5%;
 }
 
 .grid1 {
-  gap: 15px;
   display: flex;
   align-items: center;
 
 }
 
 .grid2 {
-  gap: 15px;
   display: flex;
   align-items: center;
 
 }
 
 .grid3 {
-  gap: 15px;
   display: flex;
   align-items: center;
 
 }
 
 .grid4 {
-  gap: 15px;
   display: flex;
   align-items: center;
 
@@ -108,7 +91,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 0.875rem;
   background-color: #f184a0;
   height: 62px;
@@ -119,7 +101,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 0.875rem;
   background-color: #ffd42e;
   height: 62px;
@@ -130,7 +111,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 0.875rem;
   background-color: #9775fa;
   height: 62px;
@@ -141,7 +121,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   border-radius: 0.875rem;
   background-color: #25cd71;
   height: 62px;
@@ -151,84 +130,96 @@
 .box-heading1 {
   font-size: .875rem;
   font-weight: 600;
-  width: calc(100% - 64px);
+  width: calc(60% - 64px);
 }
 
 .box-heading2 {
   font-size: .875rem;
   font-weight: 600;
-  width: calc(100% - 64px);
+  width: calc(60% - 64px);
 }
 
 .box-heading3 {
   font-size: .875rem;
   font-weight: 600;
-  width: calc(100% - 64px);
+  width: calc(60% - 64px);
 }
 
 .box-heading4 {
   font-size: .875rem;
   font-weight: 600;
-  width: calc(100% - 64px);
+  width: calc(50% - 64px);
+} 
+
+@media (max-width: 768px){
+  .Main-container{
+    flex-direction: column-reverse;
+  }
+
+  .front-image-img{
+    width: 100%;
+  }
 }
 
 /* ------------- features of website------------- */
 
 .feature-card {
   background-color: #ffffff;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin: 10% 5% 10%;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Distribute the cards horizontally */
   gap: 25px;
-  padding: 0 2%;
+  height: 100%;
+  /* padding: 0 2%; */
 }
 
 .feature-square-card {
-  width: 30%;
+  /* margin: 2%; */
   background: #e6eced;
-  box-shadow: 0 0 22px rgba(0, 0, 0, .10196078431372549);
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.10196078431372549);
   border-radius: 27px;
-  margin: 17.5px;
-  padding: 25px;
+  /* margin: 0 0 20px; Adjust the margin as needed */
+  /* padding: 65px; */
   border-left: 5px solid #30aee3;
   border-top-left-radius: 27px;
   border-bottom-left-radius: 27px;
   display: flex;
-  justify-content: flex-start;
-  /* align-items: center; */
-  position: relative;
+  /* justify-content: center; */
+  /* position: relative; */
+  flex: 1; /* Take equal horizontal space within the container */
+}
+
+
+@media (max-width: 768px) {
+  .feature-card {
+    flex-direction: column;
+  }
+
+  .feature-square-card {
+    max-width: 100%; /* Take full width on smaller screens */
+  }
 }
 
 .features-inner-card {
+  /* width: 50%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  gap: 20px;
 }
 
 .feature-icon {
-  width: 150px;
-  height: 150px;
-  padding: 1px;
+  width: 100%;
+  height: auto;
 }
 
-.feature-inner-card-heading {
-  display: flex;
-  font-size: 20px;
-  letter-spacing: 0;
+.right .feature-inner-card-heading {
+  font-size: 25px;
   color: #000000;
-  font-weight: 500;
-  margin-left: 10px;
 }
-
-
 
 .feature-button {
-  margin-top: 30px;
+  margin-top: 15%;
   background-color: #30aee3;
-  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -240,92 +231,95 @@
 
 /* ----------Benefit wali image----------- */
 .benefit-heading{
- text-align: center;
+ text-align: center; 
 }
 
 .benefits-img {
- display: flex;
- justify-content: center;
-  width: 100%;
-  /* height: auto; */
+  width: 70%;
+}
+
+.benefit-img-div{
+  display: flex;
+  justify-content: center;
 }
 
 /* ------------Start learning ------------*/
 .start-learning-container {
-  max-width: 1260px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
+  margin-bottom: 3%;
 }
 
 .start-learning-items-container {
   display: flex;
-  justify-content: space-evenly;
-  margin: 50px 0;
+  justify-content: center;
+  gap: 9%;
+  margin: 2% 0;
   flex-wrap: wrap;
 }
 
-.item-box1 {
-  width: 260px;
-  height: 250px;
-  display: flex;
-  align-items: flex-end;
-  margin: 15px;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.item-box2 {
-  width: 260px;
-  height: 250px;
-  display: flex;
-  align-items: flex-end;
-  margin: 15px;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
+.item-box1,
+.item-box2,
 .item-box3 {
   width: 260px;
+  background-color: #ffffff; /* Add a background color if needed */
+  border: 1px solid #c2c2c2; /* Border styles */
+  border-radius: 10px;
+  margin: 10px; /* Adjust the margin as needed for spacing between cards */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Box shadow for the cards */
+  overflow: hidden; /* Ensure the shadow doesn't overflow */
+  position: relative;
+}
+
+.image-container {
   height: 250px;
   display: flex;
-  align-items: flex-end;
-  margin: 15px;
-  background-repeat: no-repeat;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the image stays within the container */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .item-title {
-  box-shadow: 0 3px 30px rgba(0, 0, 0, .1607843137254902);
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
   border: 0.5px solid #c2c2c2;
-  border-radius: 9px;
-  width: 120%;
+  border-radius: 0 0 9px 9px; /* Rounded corners only at the bottom */
+  width: 100%; /* Use 100% width for the title */
   background-color: #f9f9f6;
   text-align: center;
   font-size: 25px;
   letter-spacing: 0;
   color: #424242;
-  padding: 5px 5px;
-  line-height: 0.1;
-  z-index: 2;
+  padding: 5px 10px;
+  line-height: 1.5;
 }
 
+.learning-button{
+  background-color: #30aee3;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 /* -----------FAQ.css---------------- */
 
 .faq-container {
-
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 10px;
   padding: 40px;
-  /* padding-left: 50px;
- padding-right: 50px; */
   text-align: left;
   font-size: 20px;
-  /* box-shadow: 5px 10px 8px 10px #888888; */
-  /* background-color: #e6f4fd; */
-  /* box-shadow: 5px 10px 20px #e2f7f5 inset; */
 }
 
 .faq-container h1 {
@@ -344,16 +338,12 @@
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  /* box-shadow: 2px 4px 2px 4px #d1fffa; */
-  /* box-shadow: 5px 10px 20px red inset */
 }
 
 .faq-question {
   padding: 20px;
   cursor: pointer;
-  /* background-color: #ccf8f4; */
   box-shadow: 5px 10px 20px #ccf8f4 inset;
-
 }
 
 .faq-answer {
@@ -365,12 +355,10 @@
   float: right;
 }
 
-
-
 /* --------------------contact-us.css------------------ */
 
 .form{
- display: flex;
+  display: flex;
   justify-content: center;
   margin-bottom: 2%;
 }
@@ -386,15 +374,15 @@
 
 .form-image {
   background-color: #e6eced;
-  /* width:50%; */
- /* width: 250p0x; */
-  /* max-height: fit-content; */
+  flex: 1;
 }
 
 .form-text {
   background-color: #e6eced; 
-  width: 50%;
+  max-width: 50%;
+  flex: 1;
   padding: 25px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -465,12 +453,10 @@
   background-color: rgb(163, 74, 138);
 }
 
-
-
-
 @media screen and (max-width: 1200px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+  .form {
+    /* display: flex;
+    justify-content: center; */
+    margin: 2% 2%;
   }
 }
