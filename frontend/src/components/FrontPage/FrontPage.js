@@ -118,7 +118,7 @@ function FrontPage() {
                 <div className='feature-square-card'>
                     <div className='features-inner-card'>
                         <div className='left'>
-                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} alt="img" />
+                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} />
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Complete Roadmap</div>
