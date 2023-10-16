@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import "./Sidebar.css"
-//install in terminal : : npm i react-icons
 import {
     FaTh,
     FaBars,
@@ -10,31 +8,92 @@ import {
     FaShoppingBag,
     FaThList
 } from "react-icons/fa";
-
 import { NavLink } from 'react-router-dom';
+import "./Sidebar.css";
 
 
 const Sidebar = ({ children }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const toggle = () => setIsOpen(!isOpen);
     const menuItem = [
+
         {
             path: "/array",
-            name: "Array",
+            name: "Data Structures",
 
         },
         {
             path: "/string",
-            name: "String",
-        },
+            name: ">Array",
 
+        },
+        {
+            path: "/string",
+            name: ">String",
+
+        },
+        {
+            path: "/string",
+            name: ">Linked List",
+
+        },
+        {
+            path: "/string",
+            name: ">Stack",
+
+        },
+        {
+            path: "/string",
+            name: ">Queue",
+
+        },
+        {
+            path: "/string",
+            name: ">Tree",
+
+        },
+        {
+            path: "/string",
+            name: ">Graph",
+
+        },
+        {
+            path: "/string",
+            name: "Algorithms",
+
+        },
+        {
+            path: "/string",
+            name: ">Sorting",
+
+        },
+        {
+            path: "/string",
+            name: ">Searching",
+
+        },
+        {
+            path: "/string",
+            name: ">Tree Traversal",
+
+        },
+        {
+            path: "/string",
+            name: ">Divide & Conquer",
+
+        },
+        {
+            path: "/string",
+            name: ">Backtracking",
+
+        }
     ]
     return (
-        <div className="sidebar-container">
-            <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+        <div className="side-container">
+            <div style={{ width: isOpen ? "250px" : "50px" }} className="sidebar">
                 <div className="top_section">
-                    <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
-                    <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
+                    <h3 style={{ display: isOpen ? "block" : "none" }} className="side-bar-logo">Syllabus</h3>
+                    <div style={{ marginLeft: isOpen ? "60px" : "0px" }} className="bars">
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
@@ -51,5 +110,6 @@ const Sidebar = ({ children }) => {
         </div>
     );
 };
+
 
 export default Sidebar;

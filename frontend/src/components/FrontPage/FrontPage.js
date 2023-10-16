@@ -37,7 +37,8 @@ function FrontPage() {
             <div className="Main-container">
                 <div>
                     <div className="heading">
-                        <h1>Power Your Dreams <br />with DSA Mastery!</h1>
+                        <h1>Power Your Dreams with DSA Mastery!</h1>
+                        <br></br>
                         <p> “Where Algorithms Shapes Futures -<br></br>
                             Your Journey to Success Begins Now” </p>
                         <div className='box'>
@@ -67,7 +68,7 @@ function FrontPage() {
                             </div>
                             <div className='grid4'>
                                 <div className='icon-container4'>
-                                    <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }}></img>
+                                    <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }} alt="img"></img>
                                 </div>
                                 <div className='box-heading4'>
                                     <h4>Coding</h4>
@@ -80,9 +81,8 @@ function FrontPage() {
                     <button className='hoverbutton'> Explore More...</button>
                 </div>
                 <div>
-                    <div className="image">
-                        <img src={process.env.PUBLIC_URL + "/images/Frontpg.gif"} alt="img" />
-
+                    <div className="front-image">
+                        <img className="front-image-img" src={process.env.PUBLIC_URL + "/images/Frontpg.gif"} alt="img" />
                     </div>
                 </div>
             </div>
@@ -94,7 +94,6 @@ function FrontPage() {
 
             <div className='feature-card'>
                 <div className='feature-square-card'>
-
                     <div className='features-inner-card'>
                         <div className='left'>
                             <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/web-analytic1.png"} alt="img" />
@@ -122,40 +121,48 @@ function FrontPage() {
                             <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} alt="img" />
                         </div>
                         <div className='right'>
-                            <div className='feature-inner-card-heading'>Roadmap</div>
+                            <div className='feature-inner-card-heading'>Complete Roadmap</div>
                             <button className='feature-button'>View</button>
                         </div>
                     </div>
                 </div>
             </div>
+
             {/* --------------Benefits wali image----------- */}
             <div className='benefit-div'>
                 <h1 className='benefit-heading'>WHY PLACEMENT PREPARATION MODULE</h1>
-                <img className=" benefits-img" src={process.env.PUBLIC_URL + "/images/benefits-img.png"} alt="img" />
+                <div className='benefit-img-div'>
+                    <img className=" benefits-img" src={process.env.PUBLIC_URL + "/images/benefits-img.png"} alt="img" />
+                </div>
             </div>
             {/* ------------Start learning-------------------- */}
             <div className='start-learning-container'>
                 <div className='start-learning-items-container'>
                     <div className='item-box1'>
-                        <img src={process.env.PUBLIC_URL + "/images/ds.png"} alt="img" style={{ "position": 'absolute', "height": '250px', "width": '260px', "borderRadius": '10px' }} />
+                        <div className='image-container'>
+                            <img src={process.env.PUBLIC_URL + "/images/data_structure_card.png"} alt="Data Structure" />
+                        </div>
                         <div className='item-title'>
                             <h4>Data Structure</h4>
-                            <button style={{ "align": 'center' }}>Read More</button>
-
+                            <button className='learning-button'>Read More</button>
                         </div>
                     </div>
                     <div className='item-box2'>
-                        <img src={process.env.PUBLIC_URL + "/images/algo.png"} alt="img" style={{ "position": 'absolute', "height": '250px', "width": '260px', "borderRadius": '10px' }} />
+                        <div className='image-container'>
+                            <img src={process.env.PUBLIC_URL + "/images/algorithm_card_2-removebg-preview.png"} alt="Data Structure" />
+                        </div>
                         <div className='item-title'>
                             <h4>Algorithm</h4>
-                            <button style={{ "align": 'center' }}>Read More</button>
+                            <button className='learning-button'>Read More</button>
                         </div>
                     </div>
                     <div className='item-box3'>
-                        <img src={process.env.PUBLIC_URL + "/images/dsa.jpg"} alt="img" style={{ "position": 'absolute', "height": '250px', "width": '260px', "borderRadius": '10px' }} />
+                        <div className='image-container'>
+                            <img src={process.env.PUBLIC_URL + "/images/coding_card.png"} alt="Data Structure" />
+                        </div>
                         <div className='item-title'>
                             <h4>Coding Problems</h4>
-                            <button style={{ "align": 'center' }}>Read More</button>
+                            <button className='learning-button'>Read More</button>
                         </div>
                     </div>
                 </div>
@@ -187,26 +194,26 @@ function FrontPage() {
             <form className='contact-us-form'>
                 <h1>STILL IN DOUBT?</h1>
                 <div className='form'>
-                <div className='form-content'>
-                    <div className='form-image'>
-                        <img src={process.env.PUBLIC_URL + "/images/contact_us_page.png"} alt="img" style={{ width: '475px', height: '475px' }} />
-                    </div>
+                    <div className='form-content'>
+                        <div className='form-image'>
+                            <img src={process.env.PUBLIC_URL + "/images/contact_us_page.png"} alt="img" style={{ width: '475px', height: '475px' }} />
+                        </div>
 
-                    <div className='form-text'>
-                        <div class="title">Welcome</div>
-                        <div class="subtitle">Let's create your account!</div>
-                        <div class="input-container">
-                            <input id="firstname" class="input" type="text" placeholder="First name" />
+                        <div className='form-text'>
+                            <div class="title">Welcome</div>
+                            <div class="subtitle">Let's create your account!</div>
+                            <div class="input-container">
+                                <input id="firstname" class="input" type="text" placeholder="First name" />
+                            </div>
+                            <div class="input-container">
+                                <input id="contact" class="input" type="text" placeholder="Contact Number " />
+                            </div>
+                            <div class="input-container">
+                                <input id="email" class="input" type="text" placeholder="Email " />
+                            </div>
+                            <button type="text" class="submit">submit</button>
                         </div>
-                        <div class="input-container">
-                            <input id="contact" class="input" type="text" placeholder="Contact Number " />
-                        </div>
-                        <div class="input-container">
-                            <input id="email" class="input" type="text" placeholder="Email " />
-                        </div>
-                        <button type="text" class="submit">submit</button>
                     </div>
-                </div>
                 </div>
             </form>
         </div>
