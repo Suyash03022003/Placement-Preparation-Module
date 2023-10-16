@@ -9,7 +9,7 @@ function Programming() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:8080/ques')
+      .get('http://localhost:5000/ques')
       .then((response) => {
         setQues(response.data);
         setLoading(false);

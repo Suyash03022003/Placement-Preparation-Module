@@ -21,17 +21,17 @@ export default function Slidingcard() {
 
     return (
         <div className='carousel-container'>
-            <h1>XYZ</h1>
-            <Carousel className='main-carousel' autoPlay infiniteLoop vertical={true} interval={3000} showThumbs={false} fade={true} 
-            centerSlidePercentage={50}
-            centerMode
-            transitionTime={2000}
-            showStatus={false}>
-                {items.map(item => 
+            <h1></h1>
+            <Carousel className='main-carousel' autoPlay infiniteLoop vertical={true} interval={3000} showThumbs={false} fade={true}
+                centerSlidePercentage={50}
+                centerMode
+                transitionTime={2000}
+                showStatus={false}>
+                {items.map(item =>
                     <img
-                    src={process.env.PUBLIC_URL + item.image}
-                    alt={item.alt}
-                />
+                        src={process.env.PUBLIC_URL + item.image}
+                        alt={item.alt}
+                    />
                 )}
             </Carousel>
         </div>

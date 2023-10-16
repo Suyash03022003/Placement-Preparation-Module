@@ -12,7 +12,7 @@ const ShowDetailsQues = () => {
     useEffect(() => {
         setLoading(true);
         axios
-            .get(`http://localhost:8080/ques/${id}`)
+            .get(`http://localhost:5000/ques/${id}`)
             .then((response) => {
                 setQues(response.data);
                 setLoading(false);

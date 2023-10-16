@@ -12,13 +12,13 @@
   font-weight: 260;
 }
 
- .heading p {
+.heading p {
   line-height: 1.8;
   text-align: center;
-} 
+}
 
 .hoverbutton {
-  padding: 0.5em 1.9em;
+  padding: 0.8em 1.9em;
   margin-left: 32%;
   margin-top: 5%;
   border: 2px solid #30aee3;
@@ -36,7 +36,7 @@
 .hoverbutton::before {
   content: '';
   width: 0;
-  height: 399%;
+  height: 410%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -149,14 +149,14 @@
   font-size: .875rem;
   font-weight: 600;
   width: calc(50% - 64px);
-} 
+}
 
-@media (max-width: 768px){
-  .Main-container{
+@media (max-width: 768px) {
+  .Main-container {
     flex-direction: column-reverse;
   }
 
-  .front-image-img{
+  .front-image-img {
     width: 100%;
   }
 }
@@ -167,7 +167,8 @@
   background-color: #ffffff;
   margin: 10% 5% 10%;
   display: flex;
-  justify-content: center; /* Distribute the cards horizontally */
+  justify-content: center;
+  /* Distribute the cards horizontally */
   gap: 25px;
   height: 100%;
   /* padding: 0 2%; */
@@ -175,8 +176,8 @@
 
 .feature-square-card {
   /* margin: 2%; */
-  background: #e6eced;
-  box-shadow: 0 0 22px rgba(0, 0, 0, 0.10196078431372549);
+  background: #fff;
+  box-shadow: 0 0 50px rgba(30, 5, 5, 0.102);
   border-radius: 27px;
   /* margin: 0 0 20px; Adjust the margin as needed */
   /* padding: 65px; */
@@ -186,7 +187,8 @@
   display: flex;
   /* justify-content: center; */
   /* position: relative; */
-  flex: 1; /* Take equal horizontal space within the container */
+  flex: 1;
+  /* Take equal horizontal space within the container */
 }
 
 
@@ -196,7 +198,8 @@
   }
 
   .feature-square-card {
-    max-width: 100%; /* Take full width on smaller screens */
+    max-width: 100%;
+    /* Take full width on smaller screens */
   }
 }
 
@@ -230,15 +233,15 @@
 }
 
 /* ----------Benefit wali image----------- */
-.benefit-heading{
- text-align: center; 
+.benefit-heading {
+  text-align: center;
 }
 
 .benefits-img {
   width: 70%;
 }
 
-.benefit-img-div{
+.benefit-img-div {
   display: flex;
   justify-content: center;
 }
@@ -263,12 +266,17 @@
 .item-box2,
 .item-box3 {
   width: 260px;
-  background-color: #ffffff; /* Add a background color if needed */
-  border: 1px solid #c2c2c2; /* Border styles */
+  background-color: #ffffff;
+  /* Add a background color if needed */
+  border: 1px solid #c2c2c2;
+  /* Border styles */
   border-radius: 10px;
-  margin: 10px; /* Adjust the margin as needed for spacing between cards */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Box shadow for the cards */
-  overflow: hidden; /* Ensure the shadow doesn't overflow */
+  margin: 10px;
+  /* Adjust the margin as needed for spacing between cards */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  /* Box shadow for the cards */
+  overflow: hidden;
+  /* Ensure the shadow doesn't overflow */
   position: relative;
 }
 
@@ -278,7 +286,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  overflow: hidden; /* Ensure the image stays within the container */
+  overflow: hidden;
+  /* Ensure the image stays within the container */
 }
 
 img {
@@ -289,8 +298,10 @@ img {
 .item-title {
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
   border: 0.5px solid #c2c2c2;
-  border-radius: 0 0 9px 9px; /* Rounded corners only at the bottom */
-  width: 100%; /* Use 100% width for the title */
+  border-radius: 0 0 9px 9px;
+  /* Rounded corners only at the bottom */
+  width: 100%;
+  /* Use 100% width for the title */
   background-color: #f9f9f6;
   text-align: center;
   font-size: 25px;
@@ -300,7 +311,7 @@ img {
   line-height: 1.5;
 }
 
-.learning-button{
+.learning-button {
   background-color: #30aee3;
   border: none;
   color: white;
@@ -343,7 +354,7 @@ img {
 .faq-question {
   padding: 20px;
   cursor: pointer;
-  box-shadow: 5px 10px 20px #ccf8f4 inset;
+  box-shadow: 5px 10px 20px #d7dcdc inset;
 }
 
 .faq-answer {
@@ -356,11 +367,19 @@ img {
 }
 
 /* --------------------contact-us.css------------------ */
+/* .contact-us-form {
+ 
 
-.form{
+} */
+
+.form {
   display: flex;
   justify-content: center;
-  margin-bottom: 2%;
+  width: fit-content;
+  margin-left: 15%;
+  margin-bottom: 0%;
+  /* box-shadow: 0 0px 5px rgba(0, 0, 0, 0.16); */
+
 }
 
 .contact-us-form h1 {
@@ -373,12 +392,12 @@ img {
 }
 
 .form-image {
-  background-color: #e6eced;
+  background-color: #fff;
   flex: 1;
 }
 
 .form-text {
-  background-color: #e6eced; 
+  background-color: #fff;
   max-width: 50%;
   flex: 1;
   padding: 25px;

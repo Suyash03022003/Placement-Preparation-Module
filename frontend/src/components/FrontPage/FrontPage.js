@@ -5,19 +5,19 @@ function FrontPage() {
 
     const faqData = [
         {
-            question: 'What is React?',
+            question: 'What about language support?',
             answer:
-                'React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application efficiently.',
+                'We support a list of the main languages: Javascript, Ruby, Python, C#, Java, PHP, C, C++, Objective-C, Swift, Elixir, Typescript, Bash, Clojure, Haskell, Go and Coffeescript and many more.',
         },
         {
-            question: 'What is React?',
+            question: 'Do I need to be technical to use this?',
             answer:
-                'React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application efficiently.',
+                'Not at all, if you dont know the first thing about computers this will still work for you. Our system evaluates your prospective developers code and programming aptitude',
         },
         {
-            question: 'What is React?',
+            question: 'What is the difficulty level of questions?',
             answer:
-                'React is a JavaScript library for building user interfaces. It allows you to create reusable UI components and manage the state of your application efficiently.',
+                'The difficulty level of questions is variable. There are questions ranging from easy to difficult levels and hence gives the students a chance to test all kinds of waters.',
         },
 
         // ... (other FAQ data)
@@ -118,7 +118,7 @@ function FrontPage() {
                 <div className='feature-square-card'>
                     <div className='features-inner-card'>
                         <div className='left'>
-                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} alt="img" />
+                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} />
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Complete Roadmap</div>
@@ -196,7 +196,7 @@ function FrontPage() {
                 <div className='form'>
                     <div className='form-content'>
                         <div className='form-image'>
-                            <img src={process.env.PUBLIC_URL + "/images/contact_us_page.png"} alt="img" style={{ width: '475px', height: '475px' }} />
+                            <img src={process.env.PUBLIC_URL + "/images/contact_us_page.png"} alt="img" style={{ width: '700px', height: '475px' }} />
                         </div>
 
                         <div className='form-text'>
