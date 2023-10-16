@@ -177,7 +177,7 @@
 .feature-square-card {
   /* margin: 2%; */
   background: #fff;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.102);
+  box-shadow: 0 0 50px rgba(30, 5, 5, 0.102);
   border-radius: 27px;
   /* margin: 0 0 20px; Adjust the margin as needed */
   /* padding: 65px; */
@@ -354,7 +354,7 @@ img {
 .faq-question {
   padding: 20px;
   cursor: pointer;
-  box-shadow: 5px 10px 20px #ccf8f4 inset;
+  box-shadow: 5px 10px 20px #d7dcdc inset;
 }
 
 .faq-answer {
@@ -367,11 +367,19 @@ img {
 }
 
 /* --------------------contact-us.css------------------ */
+/* .contact-us-form {
+ 
+
+} */
 
 .form {
   display: flex;
   justify-content: center;
-  margin-bottom: 2%;
+  width: fit-content;
+  margin-left: 15%;
+  margin-bottom: 0%;
+  /* box-shadow: 0 0px 5px rgba(0, 0, 0, 0.16); */
+
 }
 
 .contact-us-form h1 {
@@ -384,12 +392,12 @@ img {
 }
 
 .form-image {
-  background-color: #e6eced;
+  background-color: #fff;
   flex: 1;
 }
 
 .form-text {
-  background-color: #e6eced;
+  background-color: #fff;
   max-width: 50%;
   flex: 1;
   padding: 25px;

@@ -68,13 +68,13 @@ function DsaSyllabus() {
                 <div class="timeline-container timeline-left">
                     <div class="timeline-content">
                         <h2>Week 7</h2>
-                        <p>Trees and binary Search Trees</p>
+                        <h4>Trees and binary Search Trees</h4>
                     </div>
                 </div>
                 <div class="timeline-container timeline-right">
                     <div class="timeline-content">
                         <h2>Week 8 & 9</h2>
-                        <p>Dynamic Programming</p>
+                        <h4>Dynamic Programming</h4>
                     </div>
                 </div>
             </div>
