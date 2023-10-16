@@ -2,11 +2,12 @@ import React from 'react';
 import "./sheet.css";
 export default function CheatSheet() {
 
-    return (
-        <div>
-            <h1 className='cheetsheet-heading'>Sorting</h1>
-            <div className='programming-questions'>
-            <table class="tablecontent">
+  return (
+    <div className='cheetsheet'>
+      <h1 className='cheetsheet-heading'>Sorting</h1>
+      <br></br>
+      <div className='cheetsheet-table'>
+        <table class="cheetsheet-tablecontent">
           <thead>
             <tr>
               <th>ALGORITHMN</th>
@@ -21,28 +22,28 @@ export default function CheatSheet() {
               <th>WORST</th>
             </tr>
           </thead>
-          <tbody id="tbody">
+          <tbody id="cheetsheet-tbody">
             <td>Quicksort</td>
             <td>&Omega;(n log(n))</td>
             <td>&Theta;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
           </tbody>
-          <tbody id="tbody">
+          <tbody id="cheetsheet-tbody">
             <td>Mergesort</td>
             <td>&Omega;(n log(n))</td>
             <td>&Theta;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
           </tbody>
-          <tbody id="tbody">
+          <tbody id="cheetsheet-tbody">
             <td>Heapsort</td>
             <td>&Omega;(n log(n))</td>
             <td>&Theta;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
             <td>&Omicron;(n log(n))</td>
           </tbody>
-          <tbody id="tbody">
+          <tbody id="cheetsheet-tbody">
             <td>Bubblesort(n)</td>
             <td>&Omega;(n)</td>
             <td>&Theta;(n*2)</td>
@@ -50,7 +51,7 @@ export default function CheatSheet() {
             <td>&Omicron;(n log(n))</td>
           </tbody>
         </table>
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
