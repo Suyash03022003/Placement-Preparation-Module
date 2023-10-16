@@ -20,6 +20,7 @@ main {
     height: 120vh;
     width: 100px;
     transition: all 0.5s;
+    overflow-y: scroll;
 }
 
 .top_section {

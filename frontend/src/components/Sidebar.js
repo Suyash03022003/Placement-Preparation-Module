@@ -56,7 +56,7 @@ const Sidebar = ({ children }) => {
             path: "/string",
             name: "Graph",
 
-        }
+        },
     ]
     return (
         <div className="side-container">
