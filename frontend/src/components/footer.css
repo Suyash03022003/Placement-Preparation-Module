@@ -5,6 +5,8 @@
   grid-template-columns: 4rem 1fr 2fr 1fr 4rem;
   color: white;
   padding-top: 2%;
+  position: sticky;
+  z-index: 10000;
 }
 
 .footer-links{

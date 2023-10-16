@@ -1,7 +1,7 @@
 /* ------------First container quote + image-----------------   */
 .dsa-syllabus-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
   width: 100%;
 }
@@ -20,12 +20,14 @@
 
 
 .dsa-inner-container {
+  margin-left: 20%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   /* Space between heading and image */
   padding-top: 0%;
   background-color: #fff;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .dsa-heading {
@@ -40,14 +42,18 @@
 
 
 .dsa-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   flex: 1;
   /* Take up available space */
 }
 
 .dsa-image img {
+  width: 60%;
+  margin: auto;
   max-width: 110%;
   height: auto;
-  margin-top: -50%;
 }
 
 /* ---------------The actual timeline (the vertical ruler)------------------ */
@@ -57,6 +63,8 @@
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 2%;
+  margin-top: 50px;
+  width: 70%;
 }
 
 /* The actual timeline (the vertical ruler) */

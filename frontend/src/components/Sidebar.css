@@ -6,7 +6,7 @@
 
 .side-container {
     display: flex;
-    position: absolute;
+    position: fixed;
 }
 
 main {

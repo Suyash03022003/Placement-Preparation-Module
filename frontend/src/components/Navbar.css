@@ -5,7 +5,9 @@
   display: grid;
   grid-template-columns: 4rem 1fr 3fr 1fr 4rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 li {

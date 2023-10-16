@@ -18,73 +18,43 @@ const Sidebar = ({ children }) => {
     const menuItem = [
 
         {
-            path: "/array",
+            path: "/dsasyllabus",
             name: "Data Structures",
 
         },
         {
             path: "/string",
-            name: ">Array",
+            name: "Array",
 
         },
         {
             path: "/string",
-            name: ">String",
+            name: "String",
 
         },
         {
             path: "/string",
-            name: ">Linked List",
+            name: "Linked List",
 
         },
         {
             path: "/string",
-            name: ">Stack",
+            name: "Stack",
 
         },
         {
             path: "/string",
-            name: ">Queue",
+            name: "Queue",
 
         },
         {
             path: "/string",
-            name: ">Tree",
+            name: "Tree",
 
         },
         {
             path: "/string",
-            name: ">Graph",
-
-        },
-        {
-            path: "/string",
-            name: "Algorithms",
-
-        },
-        {
-            path: "/string",
-            name: ">Sorting",
-
-        },
-        {
-            path: "/string",
-            name: ">Searching",
-
-        },
-        {
-            path: "/string",
-            name: ">Tree Traversal",
-
-        },
-        {
-            path: "/string",
-            name: ">Divide & Conquer",
-
-        },
-        {
-            path: "/string",
-            name: ">Backtracking",
+            name: "Graph",
 
         }
     ]
