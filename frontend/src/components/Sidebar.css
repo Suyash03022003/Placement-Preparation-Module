@@ -5,13 +5,12 @@
 }
 
 .side-container {
-    display: flex;
-    position: fixed;
+    position: sticky;
+    top: 0;
 }
 
 main {
     width: 10%;
-    padding: 20px;
 }
 
 .sidebar {
