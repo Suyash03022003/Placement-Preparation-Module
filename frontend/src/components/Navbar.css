@@ -15,6 +15,10 @@ li {
   font-size: 25px;
 }
 
+.nav-links li {
+  transition: 0.5s;
+}
+
 .sep-link{
   color: #fff;
 }
@@ -26,7 +30,7 @@ li {
 .nav-logo{
   display: grid;
   grid-column: 2/3;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   height: 6rem;
 }
@@ -63,6 +67,10 @@ li {
 
 .hamburger-menu{
   display: none;
+}
+
+.active {
+  border-bottom: 5px solid white;
 }
 
 @media (max-width: 1080px) {
@@ -111,11 +119,10 @@ li {
 
   .mobile-menu-link {
     background-color: white;
-    height: 20rem;
+    height: 30rem;
     display: grid;
     /* grid-column: 2/5; */
     align-items: center;
-    padding-left: 3rem;
     transition: all 2s linear;
     transform-origin: top;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -123,11 +130,11 @@ li {
   }
 
   .mobile-menu-link ul {
-    height: 20rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
+    gap: 60px;
   }
 
   .mobile-menu-link ul li:first-child {

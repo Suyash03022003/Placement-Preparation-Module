@@ -5,6 +5,12 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcon] = useState(false);
+  const [activeLink, setActiveLink] = useState('Home'); // Set the default active link
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    setShowMediaIcon(false);
+  };
 
   return (
     <>
@@ -19,11 +25,31 @@ const Navbar = () => {
 
         <div className={showMediaIcons ? 'nav-links mobile-menu-link' : 'nav-links'}>
           <ul>
-            <li><Link to="/" className='sep-link'>Home</Link></li>
-            <li><Link to="/programming" className='sep-link'>Programming</Link></li>
-            <li><Link to="/dsasyllabus" className='sep-link'>DSA Syllabus</Link></li>
-            <li><Link to="/cheatsheet" className='sep-link'>Cheatsheet</Link></li>
-            <li><Link to="/queries" className='sep-link'>Any queries</Link></li>
+            <li>
+              <Link to="/" className={`sep-link ${activeLink === 'Home' ? 'active' : ''}`} onClick={() => handleLinkClick('Home')}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/programming" className={`sep-link ${activeLink === 'Programming' ? 'active' : ''}`} onClick={() => handleLinkClick('Programming')}>
+                Programming
+              </Link>
+            </li>
+            <li>
+              <Link to="/dsasyllabus" className={`sep-link ${activeLink === 'DSASyllabus' ? 'active' : ''}`} onClick={() => handleLinkClick('DSASyllabus')}>
+                DSA Syllabus
+              </Link>
+            </li>
+            <li>
+              <Link to="/cheatsheet" className={`sep-link ${activeLink === 'Cheatsheet' ? 'active' : ''}`} onClick={() => handleLinkClick('Cheatsheet')}>
+                Cheatsheet
+              </Link>
+            </li>
+            <li>
+              <Link to="/queries" className={`sep-link ${activeLink === 'Queries' ? 'active' : ''}`} onClick={() => handleLinkClick('Queries')}>
+                Any queries
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -36,16 +62,18 @@ const Navbar = () => {
                 style={{ width: '40px', height: '40px', marginRight: '20px' }}
               />
             </li>
-            <li>
-              <img
-                src={process.env.PUBLIC_URL + '/images/user.png'}
-                alt="User"
-                style={{ width: '45px', height: '45px', marginRight: '20px' }}
-              />
-            </li>
+            <Link to="/login" className='sep-link'>
+              <li>
+                <img
+                  src={process.env.PUBLIC_URL + '/images/user.png'}
+                  alt="User"
+                  style={{ width: '45px', height: '45px', marginRight: '20px' }}
+                />
+              </li>
+            </Link>
           </ul>
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcon(!showMediaIcons)}>
+            <a href="/#" onClick={() => setShowMediaIcon(!showMediaIcons)}>
               <GiHamburgerMenu />
             </a>
           </div>

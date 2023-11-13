@@ -52,12 +52,16 @@ main {
     transition: all 0.5s;
 }
 
-.active {
-    background: lightskyblue;
-    color: #000;
+.mobile-menu-link .active {
+    border-bottom: 5px solid black;
 }
 
 .icon,
 .link_text {
     font-size: 20px;
+}
+
+.mobile-menu-link ul li {
+    width: 100%;
+    text-align: center;
 }

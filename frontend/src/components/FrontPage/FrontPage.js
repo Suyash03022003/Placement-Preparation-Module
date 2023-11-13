@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import "./frontPage.css";
 import Slidingcard from "../Slidingcard/Slidingcard";
+import ChatBot from '../ChatBot/Chatbot.js';
+
 function FrontPage() {
 
     const faqData = [
@@ -38,47 +40,47 @@ function FrontPage() {
                 <div>
                     <div className="heading">
                         <h1>Power Your Dreams with DSA Mastery!</h1>
-                        <br></br>
-                        <p> “Where Algorithms Shapes Futures -<br></br>
+                        <p> “Where Algorithms Shapes Futures -<br />
                             Your Journey to Success Begins Now” </p>
-                        <div className='box'>
-                            <div className='grid1'>
-                                <div className='icon-container1'>
-                                    <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} ></img>
+                        <div className='outsideBox'>
+                            <div className='box'>
+                                <div className='grid1'>
+                                    <div className='icon-container1'>
+                                        <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} alt="Image1" ></img>
+                                    </div>
+                                    <div className='box-heading1'>
+                                        <h4>Quizzes</h4>
+                                    </div>
                                 </div>
-                                <div className='box-heading1'>
-                                    <h4>Quizzes</h4>
+                                <div className='grid2'>
+                                    <div className='icon-container2'>
+                                        <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>
+                                    </div>
+                                    <div className='box-heading2'>
+                                        <h4>Performance Analysis</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='grid2'>
-                                <div className='icon-container2'>
-                                    <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }}></img>
+                                <div className='grid3'>
+                                    <div className='icon-container3'>
+                                        <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }} alt="Image3" ></img>
+                                    </div>
+                                    <div className='box-heading3'>
+                                        <h4>DSA</h4>
+                                    </div>
                                 </div>
-                                <div className='box-heading2'>
-                                    <h4>Performance Analysis</h4>
+                                <div className='grid4'>
+                                    <div className='icon-container4'>
+                                        <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }} alt="img"></img>
+                                    </div>
+                                    <div className='box-heading4'>
+                                        <h4>Coding</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='grid3'>
-                                <div className='icon-container3'>
-                                    <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }}></img>
-                                </div>
-                                <div className='box-heading3'>
-                                    <h4>DSA</h4>
-                                </div>
-                            </div>
-                            <div className='grid4'>
-                                <div className='icon-container4'>
-                                    <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }} alt="img"></img>
-                                </div>
-                                <div className='box-heading4'>
-                                    <h4>Coding</h4>
-                                </div>
-                            </div>
 
+                            </div>
                         </div>
-
+                        <button className='hoverbutton'> Explore More...</button>
                     </div>
-                    <button className='hoverbutton'> Explore More...</button>
                 </div>
                 <div>
                     <div className="front-image">
@@ -118,7 +120,7 @@ function FrontPage() {
                 <div className='feature-square-card'>
                     <div className='features-inner-card'>
                         <div className='left'>
-                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} />
+                            <img className='feature-icon' src={process.env.PUBLIC_URL + "/images/career.png"} alt="img" />
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Complete Roadmap</div>
@@ -190,6 +192,7 @@ function FrontPage() {
                     ))}
                 </ul>
             </div>
+
             {/* --------------Contact us------------- */}
             <form className='contact-us-form'>
                 <h1>STILL IN DOUBT?</h1>
@@ -216,6 +219,8 @@ function FrontPage() {
                     </div>
                 </div>
             </form>
+
+            <ChatBot />
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./Programming.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import LoadingScreen from '../LoadingScreen';
 
 function Programming() {
   const [ques, setQues] = useState([]);
@@ -45,7 +46,7 @@ function Programming() {
 
       <div className='programming-questions'>
         {loading ? (
-          <p>Loading...</p>
+          <LoadingScreen />
         ) : (
           <table class="tablecontent">
             <thead>
