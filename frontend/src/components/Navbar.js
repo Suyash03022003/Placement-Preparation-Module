@@ -62,7 +62,7 @@ const Navbar = () => {
                 style={{ width: '40px', height: '40px', marginRight: '20px' }}
               />
             </li>
-            <Link to="/login" className='sep-link'>
+            <Link to="/login" className='sep-link' onClick={() => handleLinkClick('Login')}>
               <li>
                 <img
                   src={process.env.PUBLIC_URL + '/images/user.png'}

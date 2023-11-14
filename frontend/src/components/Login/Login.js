@@ -1,73 +1,102 @@
 import React, { useState } from 'react';
-import styles from './Login.module.css'; // Import your CSS file
+import Aside from '../../assets/bajaj1.jpg';
+import BitLogo from '../../assets/bitlogo.jpg';
+import styles from './Login.module.css';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-function Login() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+const Login = () => {
+    const navigate = useNavigate();
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
     });
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // You can handle the form submission here and use the formData.
-    // For example, you can send it to an API or display it in the component.
-    console.log('Form submitted with data:', formData);
-  };
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
 
-  return (
-    <>
-      <div className={styles.mainDivForm}>
-        <div className={styles.innerFormDiv}>
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-              />
+    const checkUserExists = async (email) => {
+        try {
+            const response = await axios.get(`http://localhost:5000/user?email=${email}`);
+            const userData = response.data;
+    
+            const userExists = !!userData.length;
+    
+            return userExists;
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+            return false;
+        }
+    };    
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        const userExists = await checkUserExists(formData.email);
+    
+        if (userExists) {
+            try {
+                const response = await axios.get(`http://localhost:5000/user?email=${formData.email}`);
+                const userData = response.data[0];
+    
+                if (userData.password === formData.password) {
+                    navigate('/');
+                } else {
+                    window.alert('Incorrect Password');
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        } else {
+            window.alert("User Doesn't Exist. Register Now!");
+        }
+    };
+    
+
+    return (
+        <>
+            <div className={styles.login}>
+                <div className={styles.form}>
+                    <div className={styles.frm}>
+                        <img src={Aside} alt="BITW" />
+                        <div className={styles.content}>
+                            <img src={BitLogo} alt="BIT Logo" />
+                            <form onSubmit={handleSubmit}>
+                                <div className={styles.userInputWrp} style={{ marginBottom: '5px' }}>
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        onChange={handleInputChange}
+                                        className={styles.inputText}
+                                        required
+                                    />
+                                    <span className={styles.floatingLabel}>Enter Email</span>
+                                </div>
+                                <div className={styles.userInputWrp}>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        onChange={handleInputChange}
+                                        className={styles.inputText}
+                                        required
+                                    />
+                                    <span className={styles.floatingLabel}>Enter Password</span>
+                                </div>
+                                <Link to="/register">Register Now</Link>
+                                <input type="submit" id={styles.btn} value="Login" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <button type="submit" className={styles.submitButton}>
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </>
-  );
-}
+        </>
+    );
+};
 
 export default Login;

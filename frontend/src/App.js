@@ -17,8 +17,8 @@ import DsaSyllabus from './components/DsaSyllabus/DsaSyllabus';
 import CheatSheet from './components/CheatSheet/Sheet';
 import Queries from './components/Queries/Queries';
 import ShowDetailsQues from './components/Programming/ShowDetailsQues';
-import Sidebar from './components/Sidebar.js';
 import Login from './components/Login/Login.js';
+import Register from './components/Register/Register.js';
 import Array from './components/Array.js';
 import String from './components/String.js';
 
@@ -38,6 +38,7 @@ function App() {
           <Route path="/cheatsheet" element={<CheatSheet />} />
           <Route path="/queries" element={<Queries />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path='/details/:id' element={<ShowDetailsQues />} />
         </Routes>
         <Footer />
