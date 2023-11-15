@@ -1,0 +1,118 @@
+.login {
+    width: 100vw;
+    z-index: 1000;
+    padding: 70px;
+    background-color: #E4EDF9;
+}
+
+.login img {
+    width: 50%;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login .form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.login .frm {
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgb(133, 133, 133);
+}
+
+.login .content {
+    width: 50%;
+}
+
+.content img {
+    width: 20%;
+}
+
+.login .frm input {
+    width: 70%;    
+    padding: 10px;
+}
+
+.login form {
+    padding: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.login form a {
+    color: blue;
+    font-size: 18px;
+}
+
+.login #btn {
+    background-color: #30aee3;
+    font-size: 18px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.login #btn:hover {
+    border-radius: 0;
+    transform: scale(1.01);
+}
+
+.login .userInputWrp {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    margin: 5px 0;
+}
+
+.login .userInputWrp .inputText {
+    width: 100%;
+    outline: 0;
+    box-shadow: none !important;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.login span {
+    font-size: 18px;
+}
+
+.login .userInputWrp .inputText:focus {
+    border-radius: 5px;
+    border: 2px solid #102543;
+}
+
+.login .userInputWrp .floatingLabel {
+    position: absolute;
+    pointer-events: none;
+    top: 23px;
+    left: 15px;
+    transition: 0.2s ease all;
+}
+
+.login .userInputWrp input:focus~.floatingLabel,
+.login .userInputWrp input:not(:focus):valid~.floatingLabel {
+    top: -30px;
+    left: 15px;
+    font-size: 18px;
+    opacity: 1;
+}

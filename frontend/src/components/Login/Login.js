@@ -5,7 +5,7 @@ import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({setUser}) => {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -21,43 +21,23 @@ const Login = () => {
         });
     };
 
-    const checkUserExists = async (email) => {
-        try {
-            const response = await axios.get(`http://localhost:5000/user?email=${email}`);
-            const userData = response.data;
-    
-            const userExists = !!userData.length;
-    
-            return userExists;
-        } catch (error) {
-            console.error('Error fetching user data:', error);
-            return false;
-        }
-    };    
-
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
-        const userExists = await checkUserExists(formData.email);
-    
-        if (userExists) {
-            try {
-                const response = await axios.get(`http://localhost:5000/user?email=${formData.email}`);
-                const userData = response.data[0];
-    
-                if (userData.password === formData.password) {
-                    navigate('/');
-                } else {
-                    window.alert('Incorrect Password');
+        try {
+        axios.post("http://localhost:5000/user/login", formData)
+            .then(res => {
+                alert(res.data.message)
+                if(res.data.message === "Login successful!") {
+                    setUser(res.data.user);
+                    navigate("/");
                 }
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
-        } else {
-            window.alert("User Doesn't Exist. Register Now!");
+                else if(res.data.message === "User Not Registered!")
+                    navigate("/register");
+            })
+        } catch (e) {
+            console.log(e);
         }
     };
-    
 
     return (
         <>

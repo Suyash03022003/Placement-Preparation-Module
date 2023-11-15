@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   const [showMediaIcons, setShowMediaIcon] = useState(false);
   const [activeLink, setActiveLink] = useState('Home'); // Set the default active link
 
@@ -11,6 +11,8 @@ const Navbar = () => {
     setActiveLink(link);
     setShowMediaIcon(false);
   };
+
+  console.log(user);
 
   return (
     <>
@@ -68,7 +70,7 @@ const Navbar = () => {
                   src={process.env.PUBLIC_URL + '/images/user.png'}
                   alt="User"
                   style={{ width: '45px', height: '45px', marginRight: '20px' }}
-                />
+                /><span>{user.name}</span>
               </li>
             </Link>
           </ul>
