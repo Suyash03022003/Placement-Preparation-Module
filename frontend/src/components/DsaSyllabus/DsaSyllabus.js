@@ -24,8 +24,8 @@ function DsaSyllabus() {
                         </div>
                     </div>
                     <div className="dsa-heading">
-                                <h1>Time Line</h1>
-                            </div>
+                        <h1>Time Line</h1>
+                    </div>
                     <div class="timeline">
                         <div class="timeline-container timeline-left">
                             <div class="timeline-content">
