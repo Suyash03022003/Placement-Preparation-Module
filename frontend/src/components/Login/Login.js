@@ -4,9 +4,11 @@ import BitLogo from '../../assets/bitlogo.jpg';
 import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useCookies } from "react-cookie";
 
-const Login = ({setUser}) => {
+const Login = () => {
     const navigate = useNavigate();
+    const [cookies, setCookie] = useCookies(['user']);
 
     const [formData, setFormData] = useState({
         email: '',
@@ -24,16 +26,20 @@ const Login = ({setUser}) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-        axios.post("http://localhost:5000/user/login", formData)
-            .then(res => {
-                alert(res.data.message)
-                if(res.data.message === "Login successful!") {
-                    setUser(res.data.user);
-                    navigate("/");
-                }
-                else if(res.data.message === "User Not Registered!")
-                    navigate("/register");
-            })
+            axios.post("http://localhost:5000/user/login", formData)
+                .then(res => {
+                    if (res.data.message === "Login successful!") {
+                        setCookie('user', res.data.user, { path: '/' });
+                        if(res.data.user.role === "Admin")
+                            navigate('/admin'); 
+                        else               
+                            navigate("/");
+                    }
+                    else if (res.data.message === "User Not Registered!") {
+                        alert(res.data.message)
+                        navigate("/register");
+                    }
+                })
         } catch (e) {
             console.log(e);
         }

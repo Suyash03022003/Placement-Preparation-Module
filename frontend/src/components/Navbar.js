@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import './Navbar.css';
+import { useCookies } from 'react-cookie';
 
 const Navbar = ({user}) => {
   const [showMediaIcons, setShowMediaIcon] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home'); // Set the default active link
+  const [activeLink, setActiveLink] = useState('Home');
+  const [cookies] = useCookies(['user']);
+  const fname = cookies.user.name.split(" ")[0];
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
     setShowMediaIcon(false);
   };
-
-  console.log(user);
 
   return (
     <>
@@ -64,13 +65,13 @@ const Navbar = ({user}) => {
                 style={{ width: '40px', height: '40px', marginRight: '20px' }}
               />
             </li>
-            <Link to="/login" className='sep-link' onClick={() => handleLinkClick('Login')}>
+            <Link to={"/login"} className='sep-link' onClick={() => handleLinkClick('Login')}>
               <li>
                 <img
                   src={process.env.PUBLIC_URL + '/images/user.png'}
                   alt="User"
                   style={{ width: '45px', height: '45px', marginRight: '20px' }}
-                /><span>{user.name}</span>
+                /><span>{fname}</span>
               </li>
             </Link>
           </ul>

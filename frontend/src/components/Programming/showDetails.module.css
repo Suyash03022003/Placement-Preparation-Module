@@ -25,14 +25,14 @@
 .difficultyLevel {
     font-weight: lighter;
     font-size: 20px;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .topic {
     color: #464646;
     background-color: #e0e0e0;
     border-radius: 20px;
-    /* width: fit-content; */
+    width: fit-content;
     padding: 5px 20px;
 }
 

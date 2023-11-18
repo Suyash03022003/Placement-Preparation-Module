@@ -63,7 +63,10 @@ router.post('/login', async (request, response) => {
 
         if (user) {
             if (password === user.password) {
-                response.send({ message: "Login successful!", user: { name: user.name, email: user.email } });
+                if(user.role === "Admin")
+                    response.send({ message: "Login successful!", user: { _id: user._id, name: user.name, email: user.email, role: user.role } });
+                else
+                    response.send({ message: "Login successful!", user: { _id: user._id, name: user.name, email: user.email } });
             } else {
                 response.send({ message: "Wrong Credentials!" });
             }
@@ -79,16 +82,6 @@ router.post('/login', async (request, response) => {
 
 router.put('/:id', async (request, response) => {
     try {
-        if (
-            !request.body.name ||
-            !request.body.email ||
-            !request.body.password
-        ) {
-            return response.status(400).send({
-                message: 'Enter all the required fields!'
-            });
-        }
-
         const { id } = request.params;
 
         const result = await User.findByIdAndUpdate(id, request.body);
