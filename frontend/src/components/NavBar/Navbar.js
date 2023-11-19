@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, ScrollRestoration } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import styles from './Navbar.module.css';
 import { useCookies } from 'react-cookie';
@@ -60,13 +60,33 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/programming" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Programming' ? styles.active : ''}`} onClick={() => handleLinkClick('Programming')}>
-                                Programming
+                            <Link to="/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}>
+                                Roadmap
                             </Link>
                         </li>
+                        <li className={styles.dropdownLinks}>
+                            <Link to="#" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Prepare' ? styles.active : ''}`} >
+                                Prepare
+                            </Link>
+                            <ul>
+                                <Link to="/learnDSA" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                    <li>Learn DSA</li>
+                                </Link>
+
+                                <Link to="/quizzes" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                    <li>Quizzes</li>
+                                </Link>
+
+                                <Link to="/interviewques" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                    <li>Interview Questions</li>
+                                </Link>
+                            </ul>
+                            {/* <Link to="/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}> */}
+                            {/* </Link> */}
+                        </li>
                         <li>
-                            <Link to="/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}>
-                                DSA Syllabus
+                            <Link to="/programming" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Programming' ? styles.active : ''}`} onClick={() => handleLinkClick('Programming')}>
+                                Problems
                             </Link>
                         </li>
                         <li>
@@ -76,7 +96,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link to="/queries" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Queries' ? styles.active : ''}`} onClick={() => handleLinkClick('Queries')}>
-                                Any queries
+                                Discuss
                             </Link>
                         </li>
                     </ul>
