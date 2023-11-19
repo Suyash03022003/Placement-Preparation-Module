@@ -59,6 +59,11 @@
 .navLinks .dropdownLinks ul li {
     padding: 20px 30px;
     border-bottom: 5px solid white;
+    transition: 0.3s;
+}
+
+.navLinks .dropdownLinks ul li:hover {
+    font-weight: bold;
 }
 
 .navLinks .dropdownLinks:hover ul,
@@ -97,7 +102,6 @@
         font-size: 18px;
         padding: 10px 20px;
         border-bottom: 3px solid white;
-        transition: 0.3s;
     }
 
     .navLinks .dropdownLinks ul li:hover {
