@@ -1,0 +1,110 @@
+.footer {
+    background-color: #30aee3;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footerMainLogo {
+    width: 15%;
+    display: flex;
+    padding: 30px;
+}
+
+.footerMainLogo img {
+    width: 60px;
+    height: 60px;
+}
+
+.footerHead {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footerLinks {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.footerLinks ul {
+    list-style: none;
+}
+
+.footerLinksDivs {
+    display: flex;
+    gap: 20%;
+}
+
+.footerLinksDivs div li {
+    margin-bottom: 20px;
+}
+
+.footerLinksDivs div .footerSeperateLink:hover {
+    border-bottom: 4px solid white;
+}
+
+.footerSeperateLink {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.socialMediaLinks {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.socialMediaIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.socialMediaIcons .footerHead, .footerContactUs .footerHead {
+    margin-right: 30px;
+    margin-bottom: 0;
+}
+
+.footerContactUs {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.footerContactUs ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerContactUs ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerContactUs span {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerContactUs li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

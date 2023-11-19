@@ -24,9 +24,8 @@
 }
 
 .cheetsheet-tablecontent th {
+    color: white;
     text-align: center;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
 }
 
 .cheetsheet-tablecontent th,
@@ -39,5 +38,4 @@
     padding: 15px !important;
     font-size: 20px;
     background-color: rgb(243, 243, 250);
-    border-right: 1px solid;
 }

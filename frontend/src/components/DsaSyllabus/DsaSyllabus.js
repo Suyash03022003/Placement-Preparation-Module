@@ -1,12 +1,9 @@
 import React from 'react'
 import "./DsaSyllabus.css";
-// import "../Sidebar.js"
-import Sidebar from '../Sidebar.js';
 function DsaSyllabus() {
     return (
         <div>
             <div className='dsa-syllabus-container'>
-                <Sidebar />
                 <div className="dsa-inner-container">
                     <div>
                         <div>
@@ -19,7 +16,7 @@ function DsaSyllabus() {
 
                         <div>
                             <div className="dsa-image">
-                                <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} />
+                                <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} alt="DSABackgroundImage" />
                             </div>
                         </div>
                     </div>

@@ -1,15 +1,12 @@
-import './App.css';
-
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
+  ScrollRestoration
 } from "react-router-dom";
 
-import './components/Navbar.css';
-import './components/footer.css';
-import Navbar from './components/Navbar';
-import Footer from './components/footer';
+import Navbar from './components/NavBar/Navbar.js';
+import Footer from './components/Footer/Footer.js';
 import FrontPage from './components/FrontPage/FrontPage';
 import Programming from './components/Programming/Programming';
 import DsaSyllabus from './components/DsaSyllabus/DsaSyllabus';
@@ -21,6 +18,7 @@ import Register from './components/Register/Register.js';
 import Array from './components/Array.js';
 import String from './components/String.js';
 import Admin from './components/admindashboard/Admin.js';
+import Profile from './components/UserProfile/Profile.js';
 
 function App() {
 
@@ -37,6 +35,7 @@ function App() {
           <Route path="/cheatsheet" element={<CheatSheet />} />
           <Route path="/queries" element={<Queries />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/admin/*" element={<Admin />} />
           <Route path="/register" element={<Register />} />
           <Route path='/details/:id' element={<ShowDetailsQues />} />

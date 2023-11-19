@@ -1,0 +1,125 @@
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #30aee3;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    padding: 20px 30px;
+    z-index: 1000;
+}
+
+.mainNavFirstDiv {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navLogo {
+    width: 8%;
+}
+
+.navLinks ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    list-style: none;
+}
+
+.navSeperateLinks {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 27px 0;
+}
+
+.navSeperateLinks:hover,
+.active {
+    border-bottom: 5px solid white;
+}
+
+.navLoginLink .navLoginLinkDesktop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navLoginLink .navLoginLinkDesktop .navLoginLinkDesktopHref {
+    text-decoration: none;
+    color: white;
+}
+
+.navLoginLinkMobile {
+    display: none;
+}
+
+@media (max-width: 1440px) {
+    .mainNav {
+        padding: 14px 30px;
+    }
+
+    .navbarImageLogo {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .navbarBellImage {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .navbarHamburgerImage {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .navSeperateLinks {
+        font-size: 20px;
+        padding: 19px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navLinks {
+        display: none;
+    }
+    
+    .mobileMenuLink {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        left: 0;
+        background-color: #58b8e1;
+    }
+    
+    .mobileMenuLink ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+        list-style: none;
+    }
+    
+    .mobileMenuLink ul li .navSeperateLinks {
+        color: white;
+    }
+
+    .navLoginLinkDesktop {
+        display: none !important;
+    }
+
+    .navLoginLinkMobile {
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+
+    .navSeperateLinks {
+        padding: 5px 0;
+    }    
+}
