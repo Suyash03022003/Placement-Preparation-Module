@@ -1,34 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-.side-container {
+.sidebar {
     position: sticky;
     top: 0;
-}
-
-main {
-    width: 10%;
-}
-
-.sidebar {
     background: #000;
     color: #fff;
-    height: 120vh;
     width: 100px;
     transition: all 0.5s;
     overflow-y: scroll;
 }
 
-.top_section {
+.topSection {
     display: flex;
     align-items: center;
     padding: 30px 15px;
 }
 
-.side-bar-logo {
+.sidebarLogo {
     font-size: 30px;
 }
 
@@ -39,29 +25,21 @@ main {
 }
 
 .link {
+    text-decoration: none;
     display: flex;
     color: #fff;
     padding: 10px 15px;
     gap: 15px;
-    transition: all 0.5s;
+    transition: 0.3s;
 }
 
 .link:hover {
+    text-decoration: underline;
     background: #30aee3;
     color: #000;
-    transition: all 0.5s;
-}
-
-.mobile-menu-link .active {
-    border-bottom: 5px solid black;
 }
 
 .icon,
-.link_text {
+.linkText {
     font-size: 20px;
-}
-
-.mobile-menu-link ul li {
-    width: 100%;
-    text-align: center;
 }
