@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, ScrollRestoration } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import styles from './Navbar.module.css';
 import { useCookies } from 'react-cookie';
@@ -55,12 +55,12 @@ const Navbar = () => {
                 <div className={windowDimensions.width <= 1024 && showMediaIcons ? styles.mobileMenuLink : styles.navLinks}>
                     <ul>
                         <li>
-                            <Link to="/" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Home' ? styles.active : ''}`} onClick={() => handleLinkClick('Home')}>
+                            <Link to="/user/" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Home' ? styles.active : ''}`} onClick={() => handleLinkClick('Home')}>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link to="/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}>
+                            <Link to="/user/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}>
                                 Roadmap
                             </Link>
                         </li>
@@ -69,33 +69,33 @@ const Navbar = () => {
                                 Prepare
                             </Link>
                             <ul>
-                                <Link to="/learnDSA" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                <Link to="/user/learnDSA" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
                                     <li>Learn DSA</li>
                                 </Link>
 
-                                <Link to="/quizzes" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                <Link to="/user/quizzes" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
                                     <li>Quizzes</li>
                                 </Link>
 
-                                <Link to="/interviewques" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
+                                <Link to="/user/interviewques" preventScrollReset={false} className={`${styles.navSeperateLinks}`} onClick={() => handleLinkClick('Prepare')} >
                                     <li>Interview Questions</li>
                                 </Link>
                             </ul>
-                            {/* <Link to="/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}> */}
+                            {/* <Link to="/user/dsasyllabus" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'DSASyllabus' ? styles.active : ''}`} onClick={() => handleLinkClick('DSASyllabus')}> */}
                             {/* </Link> */}
                         </li>
                         <li>
-                            <Link to="/programming" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Programming' ? styles.active : ''}`} onClick={() => handleLinkClick('Programming')}>
+                            <Link to="/user/programming" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Programming' ? styles.active : ''}`} onClick={() => handleLinkClick('Programming')}>
                                 Problems
                             </Link>
                         </li>
                         <li>
-                            <Link to="/cheatsheet" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Cheatsheet' ? styles.active : ''}`} onClick={() => handleLinkClick('Cheatsheet')}>
+                            <Link to="/user/cheatsheet" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Cheatsheet' ? styles.active : ''}`} onClick={() => handleLinkClick('Cheatsheet')}>
                                 Cheatsheet
                             </Link>
                         </li>
                         <li>
-                            <Link to="/queries" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Queries' ? styles.active : ''}`} onClick={() => handleLinkClick('Queries')}>
+                            <Link to="/user/discuss" preventScrollReset={false} className={`${styles.navSeperateLinks} ${activeLink === 'Discuss' ? styles.active : ''}`} onClick={() => handleLinkClick('Discuss')}>
                                 Discuss
                             </Link>
                         </li>
@@ -113,7 +113,7 @@ const Navbar = () => {
                                 style={{ width: '35px', height: '35px' }}
                             />
                         </div>
-                        <Link to={fname !== "" ? "/profile" : "/login"} className={styles.navLoginLinkDesktopHref} onClick={() => handleLinkClick('Login')}>
+                        <Link to={fname !== "" ? "/user/profile" : "/login"} className={styles.navLoginLinkDesktopHref} onClick={() => handleLinkClick('Login')}>
                             <div className={styles.navLoginLinkDesktopHrefInnerDiv}>
                                 <img
                                     src={process.env.PUBLIC_URL + '/images/user.png'}

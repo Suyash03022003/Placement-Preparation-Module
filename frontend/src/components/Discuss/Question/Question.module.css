@@ -1,0 +1,142 @@
+.main {
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.centerDiv {
+    width: 100%;
+    padding: 30px 40px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.info h4 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.info button, .postAnswerButton {
+    border: 0;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.quesInfo {
+    color: #757575;
+}
+
+.bold {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.questionUploader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.quesBody {
+    margin-bottom: 20px;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.userProfile {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.options img {
+    width: 30px;
+}
+
+.userProfile img {
+    width: 40px;
+}
+
+
+.linkProfile {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.headAnswer {    
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+}
+
+.individualAnswers {
+    padding: 30px 0;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #999;
+}
+
+.individualAnswers .options {
+    display: flex;
+    justify-content: center;
+    width: 6%;
+}
+
+.questionUploader {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsMenuVotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.optionsMenuVotes img {
+    opacity: 0.6;
+}
+
+.userDetails {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.reactQuill {
+    margin-top: 20px;
+    height: 200px;
+    margin-bottom: 60px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 50px;
+}
+
+.individualAnswers {
+}
+
+.individualAnswers li {
+    margin-left: 30px;
+}
