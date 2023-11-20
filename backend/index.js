@@ -2,6 +2,7 @@ import express from 'express';
 import { PORT, mongodbURL } from './config.js'
 import mongoose from 'mongoose';
 import quesRoutes from './routes/QuesRoutes.js';
+import quizRoutes from './routes/McQuizRoutes.js';
 import userRoutes from './routes/UserRoutes.js';
 import cors from "cors";
 
@@ -25,6 +26,7 @@ app.get('/', (request, response) => {
 });
 
 app.use('/ques', quesRoutes);
+app.use('/mcquiz', quizRoutes);
 app.use('/user', userRoutes);
 
 mongoose

@@ -16,12 +16,13 @@ import Login from './components/Login/Login.js';
 import Register from './components/Register/Register.js';
 import Array from './components/Array.js';
 import String from './components/String.js';
-import Admin from './components/admindashboard/Admin.js';
+import Admin from './components/admindashboard/admin.js';
 import Profile from './components/UserProfile/Profile.js';
 import ScrollToTop from "./includes/ScrollToTop/ScrollToTop.js";
 import LearnDSA from './components/LearnDSA/LearnDSA';
 import InterviewQues from './components/InterviewQues/InterviewQues';
 import Quizzes from './components/Quizzes/Quizzes';
+import QuizQuestion from './components/Quizzes/QuizQuestion';
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
           <Route path="/admin/*" element={<Admin />} />
           <Route path="/learnDSA" element={<LearnDSA />} />
           <Route path="/quizzes" element={<Quizzes />} />
+          {/* <Route path="/quizzes" element={<Quizzes />} /> */}
+          <Route path="/quizquestion" element={<QuizQuestion />} />
           <Route path="/interviewques" element={<InterviewQues />} />
           <Route path="/register" element={<Register />} />
           <Route path='/details/:id' element={<ShowDetailsQues />} />
