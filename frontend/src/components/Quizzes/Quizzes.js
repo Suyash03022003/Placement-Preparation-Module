@@ -10,7 +10,7 @@ function Quizzes() {
                 <div class="ag-courses_box">
                     <div class="ag-courses_item">
                         <Link to={{
-                            pathname: '/QuizQuestion',
+                            pathname: '/user/QuizQuestion',
                             search: '?topic=Array&difficultyLevel=Easy' // Pass the selected filters as query parameters
                         }} class="ag-courses-item_link">
                             <div class="ag-courses-item_bg"></div>

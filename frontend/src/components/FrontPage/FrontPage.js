@@ -45,7 +45,7 @@ function FrontPage() {
                             Your Journey to Success Begins Now” </p>
                         <div className='outsideBox'>
                             <div className='box'>
-                            <Link to = './Quizzes'>
+                            <Link to = './user/Quizzes'>
                                 <div className='grid1'>
                                     <div className='icon-container1'>
                                         <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} alt="Image1" ></img>

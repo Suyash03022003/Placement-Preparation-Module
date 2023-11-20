@@ -14,6 +14,7 @@ import Profile from "../UserProfile/Profile.js";
 import LearnDSA from "../LearnDSA/LearnDSA.js";
 import InterviewQues from "../InterviewQues/InterviewQues.js";
 import Quizzes from "../Quizzes/Quizzes.js";
+import QuizQuestion from "../Quizzes/QuizQuestion.js";
 import Navbar from "../NavBar/Navbar.js";
 import Footer from "../Footer/Footer.js";
 
