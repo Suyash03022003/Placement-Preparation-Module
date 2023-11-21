@@ -123,7 +123,7 @@ const DiscussionForumHome = () => {
                 </div>
                 <div className={styles.questionBody}>
                   <div className={styles.questionBodyDescription}>
-                    <Link className={styles.questionLink} to={`/question/${que._id}`}>
+                    <Link className={styles.questionLink} to={`/user/discuss/question/${que._id}`}>
                       <p className={styles.mainQuestion}>{que.title}</p>
                     </Link>
                     <p className={styles.questionDesc} dangerouslySetInnerHTML={{ __html: que.body }}></p>

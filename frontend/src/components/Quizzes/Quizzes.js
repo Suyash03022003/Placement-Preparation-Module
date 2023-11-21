@@ -22,7 +22,29 @@ function Quizzes() {
                             <div class="ag-courses-item_date-box">
                                 Difficulty:
                                 <span class="ag-courses-item_date">
-                                    Easy Medium Hard
+                                    <Link to={{
+                                        pathname: '/user/QuizQuestion',
+                                        search: '?topic=Array&difficultyLevel=Easy' // Pass the selected filters as query parameters
+                                    }}>
+                                        Easy
+                                    </Link>
+                                </span>
+
+                                <span class="ag-courses-item_date">
+                                    <Link to={{
+                                        pathname: '/user/QuizQuestion',
+                                        search: '?topic=Array&difficultyLevel=Medium' // Pass the selected filters as query parameters
+                                    }}>
+                                        Medium
+                                    </Link>
+                                </span>
+                                <span class="ag-courses-item_date">
+                                    <Link to={{
+                                        pathname: '/user/QuizQuestion',
+                                        search: '?topic=Array&difficultyLevel=Hard' // Pass the selected filters as query parameters
+                                    }} >
+                                        Hard
+                                    </Link>
                                 </span>
                             </div>
                         </Link>

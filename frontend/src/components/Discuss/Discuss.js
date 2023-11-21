@@ -8,7 +8,7 @@ const Discuss = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/question" element={<Question />} />
+            <Route path="/question/:id" element={<Question />} />
             <Route path="/addquestion/:user" element={<AddQuestion />} />
         </Routes>
     )
