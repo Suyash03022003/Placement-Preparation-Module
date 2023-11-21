@@ -1,5 +1,5 @@
 .quiz-main-div {
-    width: 1500px;
+    width: 1250px;
     margin: 0 auto;
 }
 
@@ -19,12 +19,13 @@
     margin: 0 15px 30px;
     overflow: hidden;
     border-radius: 28px;
+    box-shadow: 0px 0px 5px 5px rgb(215, 215, 216);
 }
 
 .ag-courses-item_link {
     display: block;
     padding: 30px 20px;
-    background-color: #121212;
+    /* background-color: #d8f3ff; */
     overflow: hidden;
     position: relative;
 }
@@ -47,18 +48,20 @@
     overflow: hidden;
     font-weight: bold;
     font-size: 30px;
-    color: #FFF;
+    color: black;
     text-align: center;
     z-index: 2;
     position: relative;
+    text-decoration: none;
 }
 
 .ag-courses-item_date-box {
     font-size: 18px;
-    color: #FFF;
-
+    color: black;
+    /* font-weight: 500px;   */
     z-index: 2;
     position: relative;
+    text-decoration: none;
 }
 
 .ag-courses-item_date {

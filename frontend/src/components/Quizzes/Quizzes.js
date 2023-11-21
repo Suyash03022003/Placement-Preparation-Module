@@ -29,7 +29,10 @@ function Quizzes() {
                     </div>
 
                     <div class="ag-courses_item">
-                        <Link to='/QuizQuestion' class="ag-courses-item_link">
+                        <Link to={{
+                            pathname: '/user/QuizQuestion',
+                            search: '?topic=Linked List&difficultyLevel=Medium' // Pass the selected filters as query parameters
+                        }} class="ag-courses-item_link">
                             <div class="ag-courses-item_bg"></div>
 
                             <div class="ag-courses-item_title">

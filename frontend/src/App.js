@@ -6,7 +6,7 @@ import {
 
 import ScrollToTop from "./includes/ScrollToTop/ScrollToTop.js"
 import Login from './components/Login/Login.js';
-import Admin from './components/admindashboard/Admin.js'
+import Admin from './components/admindashboard/admin.js'
 import User from './components/User/User.js';
 
 function App() {
