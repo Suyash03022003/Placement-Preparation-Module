@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./frontPage.css";
+import { Link } from "react-router-dom";
 import Slidingcard from "../Slidingcard/Slidingcard";
 import ChatBot from '../ChatBot/Chatbot.js';
 
@@ -44,6 +45,7 @@ function FrontPage() {
                             Your Journey to Success Begins Now” </p>
                         <div className='outsideBox'>
                             <div className='box'>
+                            <Link to = '/user/Quizzes'>
                                 <div className='grid1'>
                                     <div className='icon-container1'>
                                         <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} alt="Image1" ></img>
@@ -52,6 +54,7 @@ function FrontPage() {
                                         <h4>Quizzes</h4>
                                     </div>
                                 </div>
+                            </Link>
                                 <div className='grid2'>
                                     <div className='icon-container2'>
                                         <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>

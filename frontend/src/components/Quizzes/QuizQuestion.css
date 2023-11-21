@@ -1,0 +1,69 @@
+.MCQQuesBackground {
+  background-color: #f0f0f0;
+  padding: 40px;
+}
+
+.MCQQuesBackground h1 {
+  margin: auto;
+  width: 70%;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.quizQuestionsHeading{
+  text-align: center;
+}
+
+.quizQuetionForm{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.questionSection {
+  margin-bottom: 20px;
+}
+
+.seperateMCQQues {
+  border-radius: 10px;
+  background-color: white;
+  width: 70%;
+  padding: 40px;
+}
+
+.seperateMCQQues h3 {
+  margin-bottom: 30px;
+}
+
+.seperateMCQQues ul {
+  list-style: none;
+  width: 100%;
+}
+
+.seperateMCQQues li {
+  margin-bottom: 20px;
+}
+
+.option {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  border-radius: 5px;
+  padding: 15px 20px; 
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+.option input {
+  margin-right: 10px;
+}
+

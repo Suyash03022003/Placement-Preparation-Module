@@ -49,7 +49,7 @@ const Chatbot = () => {
                 {
                     headers: {
                         'content-type': 'application/json',
-                        'X-RapidAPI-Key': '317e2bf0d2mshf3e436e507a9d62p1b55d5jsnec855c285c8e',
+                        'X-RapidAPI-Key': 'e3f4457b10msh60e2a83fa7423dbp1a663ejsn4980bc13835c',
                         'X-RapidAPI-Host': 'simple-chatgpt-api.p.rapidapi.com',
                     },
                 }

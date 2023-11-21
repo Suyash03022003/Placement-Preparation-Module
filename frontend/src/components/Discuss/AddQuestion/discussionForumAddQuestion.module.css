@@ -1,0 +1,55 @@
+.main {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.centerDiv {
+    padding: 40px 20px;
+    width: 60%;
+}
+
+.addQuesh4 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.mainForm {
+    width: 100%;
+    /* border: 1px solid #333; */
+    box-shadow: 0px 0px 15px #999;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.headAskQuestion {
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+
+.mainForm small {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.mainForm input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #999;
+}
+
+.addQuestionButton {
+    border: 0;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
