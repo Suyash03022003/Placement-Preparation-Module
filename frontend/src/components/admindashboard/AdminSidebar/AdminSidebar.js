@@ -1,7 +1,7 @@
 import React from 'react'
 import "./adminsidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
+// import InsertChartIcon from "@mui/icons-material/InsertChart";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
@@ -29,14 +29,12 @@ const AdminSidebar = () => {
                         <Link to="/admin" >
                             <span>Dashboard</span>
                         </Link>
-
                     </li>
                     <li>
                         <AccountBoxIcon className="icon" />
                         <Link to="/admin/user">
                             <span>Users</span>
                         </Link>
-
                     </li>
                     {/* <li>
                         <InsertChartIcon className="icon" />
@@ -45,8 +43,7 @@ const AdminSidebar = () => {
                         </Link>
                     </li> */}
                     <li>
-                        <NoteAltIcon
-                            className="icon" />
+                        <NoteAltIcon className="icon" />
                         <Link to="/admin/addcontent">
                             <span>Add Content</span>
                         </Link>
@@ -62,8 +59,6 @@ const AdminSidebar = () => {
                 <div className="colorOption"></div>
                 <div className="colorOption"></div>
             </div>
-
-
         </div>
     );
 };

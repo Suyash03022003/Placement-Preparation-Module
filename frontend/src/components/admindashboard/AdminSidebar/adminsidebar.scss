@@ -1,11 +1,10 @@
 .admin-sidebar {
-    flex: 1;
+    flex: 2;
     border-right: 0.5px solid rgb(230, 227, 227);
     min-height: 100vh;
     background-color: white;
 
     .top {
-        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,7 +14,7 @@
             grid-column: 2/3;
             justify-content: flex-start;
             align-items: center;
-            height: 6rem;
+            height: 50px;
 
         }
     }

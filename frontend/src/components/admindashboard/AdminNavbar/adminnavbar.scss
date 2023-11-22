@@ -8,10 +8,11 @@
 
     .wrapper {
         width: 100%;
-        padding: 30px;
+        padding: 0 20px; /* Adjust the padding to fit your content */
         display: flex;
         align-items: center;
         justify-content: space-between;
+
 
         .h2 {
             font-weight: bold;
