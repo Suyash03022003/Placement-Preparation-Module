@@ -63,7 +63,7 @@ function Programming() {
                   <td>{index + 1}</td>
                   <td>{que.title}</td>
                   <td>{que.difficultyLevel}</td>
-                  <td><Link to={`/details/${que._id}`}><button className='solve-button'>Solve</button></Link></td>
+                  <td><Link to={`/user/details/${que._id}`}><button className='solve-button'>Solve</button></Link></td>
                 </tr>
               ))}
             </tbody>

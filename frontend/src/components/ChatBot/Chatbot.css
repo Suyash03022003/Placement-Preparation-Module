@@ -110,6 +110,7 @@
 }
 
 .user {
+    position: relative;
     display: flex;
     justify-content: right;
     right: 0;
@@ -118,6 +119,7 @@
 }
 
 .chatbot {
+    position: relative;
     display: flex;
     justify-content: left;
     color: #333;
@@ -147,7 +149,7 @@
     border-width: 10px;
     border-style: solid;
     border-color: transparent #e1e1e1 transparent transparent;
-    left: 65px;
+    left: 45px;
     z-index: 100001;
 }
 
