@@ -1,20 +1,27 @@
 import React from 'react';
-import styles from './Admin.module.css';
-import AdminNavbar from './AdminNavbar/AdminNavbar.js';
+import styles from './Admin.module.scss';
+import AdminSidebar from "./AdminSidebar/AdminSidebar";
+import AdminNavbar from "./AdminNavbar/AdminNavbar";
+
+import AdminProfile from './AdminProfile/Profile.js';
 import AdminDashboard from './AdminDashboard/AdminDashboard.js';
 import AdminViewUsers from './AdminViewUsers/AdminViewUsers.js';
-import AdminAddContent from './AdminAddContent/AdminAddContent';
+import AddContent from './AdminAddContent/AdminAddContent';
 import { Routes, Route } from 'react-router-dom';
 
 const Admin = () => {
   return (
-    <div className={styles.mainAdminDiv}>
-      <AdminNavbar />
-      <Routes>
-        <Route path="/" element={<AdminDashboard />} />
-        <Route path="/addContent" element={<AdminAddContent />} />
-        <Route path="/viewUsers" element={<AdminViewUsers />} />
-      </Routes>
+    <div className={styles.mainAdminHome}>
+      <AdminSidebar />
+      <div className={styles.mainAdminHomeBody}>
+        <AdminNavbar />
+          <Routes>
+            <Route path="/" element={<AdminDashboard />} />
+            <Route path="/addContent" element={<AddContent />} />
+            <Route path="/user" element={<AdminViewUsers />} />
+            <Route path="/profile" element={<AdminProfile />} />
+          </Routes>
+      </div>
     </div>
   )
 }

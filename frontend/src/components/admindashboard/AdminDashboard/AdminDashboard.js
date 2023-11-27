@@ -1,9 +1,34 @@
-import React from 'react'
+import React from 'react';
+import "./home.scss";
+import Widget from "../widget/Widget";
+import Featured from "../featured/Featured";
+import Chart from "../chart/Chart";
+import Table from "../table/Table";
 
-const AdminDashboard = () => {
-  return (
-    <div>AdminDashboard</div>
-  )
-}
+const Home = () => {
+    return (
+        <div className="home">
+            {/* <AdminSidebar /> */}
+            <div className="homeContainer">
+                {/* <AdminNavbar /> */}
+                <div className="widgets">
+                    <Widget type="user" />
+                    <Widget type="active-user" />
+                    <Widget type="unsubcribed" />
+                    <Widget type="useractive" />
 
-export default AdminDashboard
+                </div>
+                <div className="charts">
+                    <Featured />
+                    <Chart />
+                </div>
+                <div className="listContainer">
+                    <Table />
+                </div>
+
+            </div>
+        </div>
+    );
+};
+
+export default Home;

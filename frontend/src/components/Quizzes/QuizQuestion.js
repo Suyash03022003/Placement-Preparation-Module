@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./QuizQuestion.css";
 
 const QuizComponent = () => {
   const [questions, setQuestions] = useState([]);
@@ -6,28 +7,28 @@ const QuizComponent = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-        try {
-            const queryParams = new URLSearchParams(window.location.search);
-            const topic = queryParams.get('topic');
-            const difficultyLevel = queryParams.get('difficultyLevel');
+      try {
+        const queryParams = new URLSearchParams(window.location.search);
+        const topic = queryParams.get('topic');
+        const difficultyLevel = queryParams.get('difficultyLevel');
 
-            const url = `http://localhost:5000/mcquiz?topic=${topic}&difficultyLevel=${difficultyLevel}`;
-            const response = await fetch(url);
+        const url = `http://localhost:5000/mcquiz?topic=${topic}&difficultyLevel=${difficultyLevel}`;
+        const response = await fetch(url);
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            
-            const data = await response.json();
-            setQuestions(data);
-            initializeSelectedAnswers(data);
-        } catch (error) {
-            console.error('Error fetching questions:', error.message);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+
+        const data = await response.json();
+        setQuestions(data);
+        initializeSelectedAnswers(data);
+      } catch (error) {
+        console.error('Error fetching questions:', error.message);
+      }
     };
 
     fetchQuestions();
-}, []);
+  }, []);
 
   const initializeSelectedAnswers = (data) => {
     const initialAnswers = {};
@@ -45,15 +46,15 @@ const QuizComponent = () => {
   };
 
   return (
-    <div>
-      <h1>Quiz Questions</h1>
-      <form>
+    <div className='MCQQuesBackground'>
+      <h1 className='quizQuestionsHeading'>Quiz Questions</h1>
+      <form className='quizQuetionForm'>
         {questions.map((question, index) => (
-          <div key={question._id}>
-            <h3>Question {index + 1}: {question.question}</h3>
+          <div key={question._id} className='seperateMCQQues'>
+            <h3 className='questionSection'>Question {index + 1}: {question.question}</h3>
             <ul>
               {question.options.map((option, optionIndex) => (
-                <li key={optionIndex}>
+                <li key={optionIndex} className='option'>
                   <label>
                     <input
                       type="radio"

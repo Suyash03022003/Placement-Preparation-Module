@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import "./user.scss";
+import UserTable from "../usertable/UserTable";
 
-const AdminViewUsers = () => {
+function User() {
   return (
-    <div>AdminViewUsers</div>
+    <div className="list">
+      <div className="listContainer">
+        <UserTable />
+      </div>
+    </div>
   )
 }
 
-export default AdminViewUsers
+
+export default User

@@ -1,0 +1,101 @@
+.mainDivAdminAddContent {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    color: #333;
+    background-color: #f7f6f6;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .addTopicHeading {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        border: 1px solid #ccc;
+        margin-top: 15px;
+        display: block;
+        width: 80%;
+        padding: 10px;
+        transition: 0.4s;
+    }
+
+    input:focus, textarea:focus {
+        outline: 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .reactQuill {
+        margin-top: 15px !important;
+        width: 80%;
+        height: 150px !important;
+    }
+
+    .addImageURL,
+    .addDescription,
+    .addTopicName,
+    .addSubTopics,
+    .addapplication,
+    .adddisadvantages,
+    .addadvantages {
+        background-color: white;
+        border: 0;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px #e5e5e5;
+    }
+
+    .addSubTopics {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3 {
+            margin-top: 10px;
+        }
+    }
+
+    button {
+        width: fit-content;
+        background-color: white;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #8a8a8a;
+        cursor: pointer;
+    }
+
+    button:focus {
+        border: 0;
+        outline: 0;
+    }
+
+    .addSubTopics button {
+        position: absolute;
+        right: 30px;
+        background-color: rgb(250, 86, 86);
+        color: white;
+        border: 0;
+    }
+
+    .addTopicButton button {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 10px;
+        color: #333;
+        border: 1px solid #333;
+    }
+}

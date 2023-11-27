@@ -34,10 +34,11 @@ const Login = () => {
                             navigate('/admin'); 
                         else               
                             navigate("/");
-                    }
-                    else if (res.data.message === "User Not Registered!") {
-                        alert(res.data.message)
+                    } else if (res.data.message === "User Not Registered!") {
+                        alert(res.data.message);
                         navigate("/register");
+                    } else {
+                        alert(res.data.message);
                     }
                 })
         } catch (e) {

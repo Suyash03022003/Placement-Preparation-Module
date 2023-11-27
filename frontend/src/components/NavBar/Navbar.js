@@ -14,13 +14,14 @@ function getWindowDimensions() {
 const Navbar = () => {
     const [showMediaIcons, setShowMediaIcon] = useState(false);
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-    const [activeLink, setActiveLink] = useState('Home');
+    const [activeLink, setActiveLink] = useState(getActiveLinkFromStorage() || 'Home');
     const [cookies, setCookie] = useCookies(['user']);
     const [fname, setFname] = useState("");
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
         setShowMediaIcon(false);
+        saveActiveLinkToStorage(link);
     };
 
     useEffect(() => {
@@ -38,6 +39,14 @@ const Navbar = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    function getActiveLinkFromStorage() {
+        return localStorage.getItem('activeLink');
+    }
+
+    function saveActiveLinkToStorage(link) {
+        localStorage.setItem('activeLink', link);
+    }
 
     return (
         <>

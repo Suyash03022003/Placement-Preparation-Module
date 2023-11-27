@@ -1,56 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     FaBars
 } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import styles from "./Sidebar.module.css";
+import axios from 'axios';
 
-
-const Sidebar = ({ children }) => {
+const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(true);
     const toggle = () => setIsOpen(!isOpen);
-    const menuItem = [
-        {
-            path: "/dsasyllabus",
-            name: "Data Structures",
+    const [topics, setTopics] = useState([]);
+    const [topicNames, setTopicNames] = useState([]);
 
-        },
-        {
-            path: "/string",
-            name: "Array",
+    useEffect(() => {
+        try {
+            axios.get('http://localhost:5000/topic')
+                .then((response) => {
+                    setTopics(response.data)
+                })
+        } catch (err) {
+            console.log(err);
+        }
+    }, []);
 
-        },
-        {
-            path: "/string",
-            name: "String",
+    useEffect(() => {
+        setTopicNames(() => {
+            return topics.map((topic) => (
+                topic.topicName
+            ))
+        });
+    }, [topics]);
 
-        },
-        {
-            path: "/string",
-            name: "Linked List",
-
-        },
-        {
-            path: "/string",
-            name: "Stack",
-
-        },
-        {
-            path: "/string",
-            name: "Queue",
-
-        },
-        {
-            path: "/string",
-            name: "Tree",
-
-        },
-        {
-            path: "/string",
-            name: "Graph",
-
-        },
-    ]
     return (
         <div className={styles.sideContainer}>
             <div style={{ width: isOpen ? "250px" : "80px" }} className={styles.sidebar}>
@@ -61,10 +41,9 @@ const Sidebar = ({ children }) => {
                     </div>
                 </div>
                 {
-                    menuItem.map((item, index) => (
-                        <NavLink to={item.path} key={index} className={styles.link} activeclassName="active">
-                            <div className={styles.icon}>{item.icon}</div>
-                            <div style={{ display: isOpen ? "block" : "none" }} className={styles.linkText}>{item.name}</div>
+                    topicNames.map((item, index) => (
+                        <NavLink to={"./content/" + item} key={index} className={styles.link} activeClassName={styles.active}>
+                            <div style={{ display: isOpen ? "block" : "none" }} className={styles.linkText}>{item}</div>
                         </NavLink>
                     ))
                 }
