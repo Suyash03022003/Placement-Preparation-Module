@@ -40,18 +40,18 @@ const AdminSidebar = () => {
                             <span>Add Topic</span>
                         </li>
                     </Link>
-                    <Link to="/admin/addprogques" className='adminSidebarLink'>
+                    <Link to="/admin/addprogquiz" className='adminSidebarLink'>
                         <li>
                             <NoteAltIcon className="icon" />
                             <span>Add Programming Question</span>
                         </li>
                     </Link>
-                    <Link to="/admin/addquiz" className='adminSidebarLink'>
+                    {/* <Link to="/admin/addquiz" className='adminSidebarLink'>
                         <li>
                             <NoteAltIcon className="icon" />
                             <span>Add Quiz</span>
                         </li>
-                    </Link>
+                    </Link> */}
                     <Link to="/admin/addquiz" className='adminSidebarLink'>
                         <li>
                             <NoteAltIcon className="icon" />

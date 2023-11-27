@@ -30,16 +30,19 @@ const ShowDetailsQues = () => {
             ) : (
                 <div className={styles.question}>
                     <div className={styles.content}>
-                        <p className={styles.title}>{ques.title}<span className={styles.difficultyLevel} style={ques.difficultyLevel === "Easy" ? {color: "rgb(0 175 155)"} : ques.difficultyLevel === "Medium" ? {color: "rgb(255 184 0)"} : {color: "red"}}>{ques.difficultyLevel}</span></p>
-                        <p className={styles.topic}>{ques.topic}</p>
-                        <p className={styles.description}>{ques.description}</p>
+                        <p className={styles.title}>{ques.title}
+                        <span className={styles.difficultyLevel} style={ques.difficultyLevel === "Easy" ? {color: "rgb(0 175 155)"} : ques.difficultyLevel === "Medium" ? {color: "rgb(255 184 0)"} : {color: "red"}}>{ques.difficultyLevel}
+                        </span>
+                        </p>
+                        <p className={styles.topic} dangerouslySetInnerHTML={{__html: ques.topic}}></p>
+                        <p className={styles.description}dangerouslySetInnerHTML={{__html:ques.description}}></p>
                         <p className={styles.sampleInput}>
                             <p className={styles.sampleHeading}>Sample Input:</p>
-                            <p>{ques.sampleInput}</p>
+                            <p dangerouslySetInnerHTML={{__html:ques.sampleInput}}></p>
                         </p>
                         <p className={styles.sampleOutput}>
                             <p className={styles.sampleHeading}>Sample Output:</p>
-                            <p>{ques.sampleOutput}</p>
+                            <p dangerouslySetInnerHTML={{__html: ques.sampleOutput}}></p>
                         </p>
                     </div>
                     <Compiler className={styles.compilerEle} />

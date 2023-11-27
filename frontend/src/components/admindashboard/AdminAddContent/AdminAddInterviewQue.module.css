@@ -1,0 +1,38 @@
+.mainDivAdminAddInterview {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    color: #333;
+    background-color: #f7f6f6;
+}
+
+.addTopicHeading{
+    margin-bottom: 2%;
+}
+
+.addInterviewQues {
+    background-color: white;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+.addInterviewAns{
+    background-color: white;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+.addInterviewButton{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #30aee3;
+}
