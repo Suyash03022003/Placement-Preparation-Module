@@ -82,7 +82,7 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Dynamic Array</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -95,7 +95,7 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Singly-Linked List</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -108,7 +108,7 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Doubly-Linked List</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -121,7 +121,7 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Skip List</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -134,7 +134,7 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Hash Table</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -147,7 +147,43 @@ export default function CheatSheet() {
               </Tr>
 
               <Tr>
-                <Td>Basic Array</Td>
+                <Td>Binary Search Tree</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(n)</Td>
+              </Tr>
+              <Tr>
+                <Td>B Tree</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(n)</Td>
+              </Tr>
+              <Tr>
+                <Td>Red Black Tree</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(1)</Td>
+                <Td>O(n)</Td>
+                <Td>-</Td>
+                <Td>-</Td>
+                <Td>O(n)</Td>
+              </Tr>
+              <Tr>
+                <Td>AVL Tree</Td>
                 <Td>O(1)</Td>
                 <Td>O(n)</Td>
                 <Td>-</Td>
@@ -301,16 +337,52 @@ export default function CheatSheet() {
             <li>Insertion: Linked Lists: O(1)</li>
           </ul>
         </div>
+        {/* ------------------------------- */}
+        <div className='Data_Structures'>
+          <h2 className='DataStructuresMainHeading'>Hash Table</h2>
+          <h3 className='DataStructuresSubHeading'>Definition</h3>
+          <ul>
+            <li>Stores data with key value pairs.</li>
+
+            <li>Hash functions accept a key and return an output unique only to that specific key.
+              <ul>
+                <li>This is known as hashing, which is the concept that an input and an output have a one-to-one correspondence to map information.</li>
+                <li>Hash functions return a unique address in memory for that data.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 className='DataStructuresSubHeading'>What you need to know</h3>
+          <ul>
+            <li>Designed to optimize searching, insertion, and deletion.</li>
+            <li>Hash collisions are when a hash function returns the same output for two distinct inputs.
+              <ul>
+                <li>All hash functions have this problem.</li>
+                <li>This is often accommodated for by having the hash tables be very large.</li>
+              </ul>
+            </li>
+            <li>Hashes are important for associative arrays and database indexing.</li>
+          </ul>
+
+          <h3 className='DataStructuresSubHeading'>Time Complexity</h3>
+          <ul>
+            <li>Indexing: Hash Tables: O(1)</li>
+            <li>Search: Hash Tables: O(1)</li>
+            <li>Insertion: Hash Tables: O(1)</li>
+
+          </ul>
+        </div >
+        {/* --------------------------------- */}
+
+        < div className='Data_Structures' >
+
+        </div >
 
         <div className='Data_Structures'>
 
         </div>
 
-        <div className='Data_Structures'>
-
-        </div>
-
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }

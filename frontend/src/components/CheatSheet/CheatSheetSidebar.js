@@ -58,8 +58,8 @@ export default function CheatSheetSidebar({ scrollToDataStructures, scrollToSort
         {isOpenDataStructures && (
           <ul className={styles.subMenuOpen}>
             <li onClick={scrollToDS_Array}>Array</li>
-            <li>Linked List</li>
-            <li>Hash Table or Hash Map</li>
+            <li> Linked List</li>
+            <li>Hash Table</li>
             <li>Binary Tree</li>
           </ul>
         )}
