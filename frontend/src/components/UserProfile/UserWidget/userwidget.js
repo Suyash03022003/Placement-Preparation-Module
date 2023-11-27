@@ -3,15 +3,12 @@ import "./userwidget.scss";
 import QuizIcon from '@mui/icons-material/Quiz';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import PersonOffIcon from '@mui/icons-material/PersonOff';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
 const userwidget = ({ type }) => {
   let data;
 
-  //temporary
   const amount = 70;
   const diff = 20;
 

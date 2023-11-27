@@ -1,12 +1,12 @@
 .user-widget {
     display: flex;
     justify-content: space-between;
-    flex: 1;
+    width: 40%;
     padding: 30px;
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     border-radius: 30px;
-    height: 190px;
+    height: 180px;
 
     .user-left,
     .user-right {
@@ -52,5 +52,13 @@
             align-self: flex-end;
             // background-color:greenyellow ;
         }
+    }
+    
+    .user-left {
+        width: 70%;
+    }
+
+    .user-rigt {
+        width: 30%;
     }
 }

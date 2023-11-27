@@ -46,3 +46,7 @@
 .SepInterviewQuestion li {
     margin-bottom: 20px;
 }
+
+.InterviewAnswer {
+    line-height: 0.7cm;
+}

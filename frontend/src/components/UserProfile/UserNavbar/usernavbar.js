@@ -12,14 +12,12 @@ const Usernavbar = () => {
             setFname(gettingFirstName);
         }
     }, [cookies.user]);
+
     return (
         <div className="user-navbar">
-            <div className="user-wrapper">
-                <h2>Welcome, {fname} !</h2>
-                <div className="user-items">
-                </div>
+            <div className="wrapper">
+                <h2>Welcome, {fname}!</h2>
             </div>
-
         </div>
     )
 }
