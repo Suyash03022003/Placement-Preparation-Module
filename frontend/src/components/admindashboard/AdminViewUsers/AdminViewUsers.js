@@ -6,9 +6,9 @@ import UserTable from "../usertable/UserTable"
 
 function User() {
   return (
-    <div className="list">
+    <div className="list-inner">
       <AdminSidebar />
-      <div className="listContainer">
+      <div className="listContainer-inner">
         <AdminNavbar />
         <UserTable />
       </div>

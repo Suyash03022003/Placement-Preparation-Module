@@ -1,8 +1,8 @@
-.list {
+.list-inner {
   display: flex;
-  width: 60%;
+  width: 100%;
 
-  .listContainer{
+  .listContainer-inner {
     flex: 6;
   }
 }

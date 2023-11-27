@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminSidebar from "../AdminSidebar/AdminSidebar";
 import AdminNavbar from "../AdminNavbar/AdminNavbar";
-import "./home.scss";
+import "./admindashboard.scss";
 import Widget from "../widget/Widget";
 import Featured from "../featured/Featured";
 import Chart from "../chart/Chart";
@@ -18,7 +18,6 @@ const Home = () => {
                     <Widget type="active-user" />
                     <Widget type="unsubcribed" />
                     <Widget type="useractive" />
-
                 </div>
                 <div className="charts">
                     <Featured />

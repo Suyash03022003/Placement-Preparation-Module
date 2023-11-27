@@ -1,0 +1,11 @@
+.user-home-inner {
+    display: flex;
+    flex-basis: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+
+.user-homeContainer-inner {
+    flex: 6;
+}
