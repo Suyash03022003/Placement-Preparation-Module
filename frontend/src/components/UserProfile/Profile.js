@@ -1,6 +1,10 @@
 import React from 'react'
+import styles from './User.module.scss';
+import { Routes, Route } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import { useNavigate } from 'react-router-dom';
+import UserDashboard from './UserDashboard/userdashboard';
+import UserProgress from './UserProgress/Progress';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -17,10 +21,14 @@ const Profile = () => {
   }
 
   return (
-    <>
+    <div className={styles.mainUserDiv}>
+      <Routes>
+        <Route path="/" element={<UserDashboard />} />
+        <Route path="/progress" element={<UserProgress />} />
+      </Routes>
       <div>Profile</div>
       <button onClick={handleLogout}>Logout</button>
-    </>
+    </div>
   )
 }
 

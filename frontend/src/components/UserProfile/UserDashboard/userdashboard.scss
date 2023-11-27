@@ -1,0 +1,28 @@
+.user-home {
+  display: flex;
+  flex-basis: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+
+  .user-homeContainer {
+    flex: 6;
+
+    .user-widgets {
+      display: flex;
+      padding: 10px;
+      gap: 10px;
+    }
+
+  }
+
+  .homeWidgets {
+    display: flex;
+    margin: 20px;
+  }
+
+  .homeWidgets2 {
+    display: flex;
+    margin: 20px;
+  }
+}

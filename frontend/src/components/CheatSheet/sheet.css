@@ -1,41 +1,31 @@
-.cheetsheet{
-    margin: 2%;
-}
-
-.cheetsheet-heading{
-    text-align: center;
-}
-
-.cheetsheet-table{
+.sheet{
     display: flex;
-    justify-content: center;
 }
 
-.cheetsheet-tablecontent {
-    /* border-collapse: collapse; */
-    font-size: 0.9 em;
-    width: 80%;
-    /* border: 1px solid; */
+.MainContentsheet{
+    margin-left: 2%;
 }
 
-.cheetsheet-tablecontent thead tr {
-    background-color: #b4d4fd;
-    color: rgb(8, 8, 8);
+.BigO_Table Td, .BigO_Table Th, .Array_Table Td, .Array_Table Th{
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
-.cheetsheet-tablecontent th {
-    color: white;
+.Data_Structures{
+    margin-top: 2%;
+}
+
+.DataStructuresMainHeading{
     text-align: center;
+    padding: 2%;
+    background-color: #dae9f5;
+    scroll-margin-top: 200px;
 }
 
-.cheetsheet-tablecontent th,
-.cheetsheet-tablecontent td {
-    text-align: center;
-    padding: 15px;
+.DataStructuresSubHeading{
+    margin-top: 2%;
 }
 
-.cheetsheet-tablecontent td {
-    padding: 15px !important;
-    font-size: 20px;
-    background-color: rgb(243, 243, 250);
+.Data_Structures ul{
+    margin: 2%;
 }

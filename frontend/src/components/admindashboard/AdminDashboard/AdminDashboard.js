@@ -16,7 +16,6 @@ const Home = () => {
                     <Widget type="active-user" />
                     <Widget type="unsubcribed" />
                     <Widget type="useractive" />
-
                 </div>
                 <div className="charts">
                     <Featured />

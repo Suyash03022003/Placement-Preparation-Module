@@ -1,0 +1,46 @@
+/* cheatSheetSidebar.module.css */
+
+.cheatSheetSidebar {
+  width: 240px;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;  
+  top: 0; 
+  box-shadow: 0px 0px 5px 5px rgb(215, 215, 216);
+}
+
+.cheatSheetSidebar ul {
+  padding: 0;
+  list-style: none;
+  margin: 0; /* Add this to remove default margin */
+}
+
+.cheatSheetSidebar ul li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.cheatSheetSidebar ul li:hover {
+  background-color: rgb(215, 215, 216);
+}
+
+/* Show submenu */
+.cheatSheetSidebar .subMenuOpen {
+  display: block;
+}
+
+/* Hide submenu */
+.cheatSheetSidebar .subMenuOpen ul {
+  display: block;
+}
+
+.cheatSheetSidebar .subMenuOpen li {
+  padding-left: 20px;
+}
+
+/* Initially hide submenu */
+.cheatSheetSidebar .subMenuOpen ul {
+  display: none;
+}

@@ -16,7 +16,7 @@ const Widget = ({ type }) => {
         case "user":
             data = {
                 title: "TOTAL USERS",
-                isMoney: false,
+                amount: 70,
                 link: "See all users",
                 icon: (
                     <PersonOutlinedIcon
@@ -32,7 +32,7 @@ const Widget = ({ type }) => {
         case "active-user":
             data = {
                 title: "ACTIVE USERS",
-                isMoney: false,
+                amount: 12,
                 link: "View all Users",
                 icon: (
                     <ManageAccountsIcon
@@ -49,7 +49,7 @@ const Widget = ({ type }) => {
         case "unsubcribed":
             data = {
                 title: "UNSUBCRIBED USERS",
-                isMoney: true,
+                amount: 8,
                 link: "See details",
                 icon: (
                     <PersonOffIcon
@@ -65,7 +65,7 @@ const Widget = ({ type }) => {
         case "useractive":
             data = {
                 title: "SITE VIEWS",
-                isMoney: true,
+                amount: 70,
                 link: "View details",
                 icon: (
                     <ReviewsIcon
@@ -82,7 +82,7 @@ const Widget = ({ type }) => {
         <div className="admin-widget">
             <div className="admin-left">
                 <span className="admin-title">{data.title}</span>
-                <span className="counter">{data.isMoney} {amount}</span>
+                <span className="counter">{data.amount} </span>
                 <span className="admin-link">{data.link}</span>
             </div>
             <div className="admin-right">
@@ -90,6 +90,7 @@ const Widget = ({ type }) => {
                     <KeyboardArrowUpIcon />
                     {diff} %
                 </div>
+
                 {data.icon}
             </div>
 
