@@ -6,9 +6,9 @@ import quizRoutes from './routes/McQuizRoutes.js';
 import userRoutes from './routes/UserRoutes.js';
 import dfQuesRoutes from './routes/DFQuesRoutes.js';
 import answerRoutes from './routes/AnswerRoutes.js';
-import interviewRoutes from './routes/InterviewRoutes.js';
 import topicRoutes from './routes/TopicsRoutes.js';
 import subTopicRoutes from './routes/SubTopicsRoutes.js';
+import interviewRoutes from './routes/InterviewRoutes.js';
 import cors from "cors";
 
 const app = express();
@@ -35,6 +35,9 @@ app.use('/mcquiz', quizRoutes);
 app.use('/user', userRoutes);
 app.use('/dfques', dfQuesRoutes);
 app.use('/answer', answerRoutes);
+app.use('/topic', topicRoutes);
+app.use('/subtopic', subTopicRoutes);
+app.use('/interview', interviewRoutes);
 
 mongoose
     .connect(mongodbURL)
