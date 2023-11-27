@@ -5,21 +5,25 @@ function DsaSyllabus() {
         <div>
             <div className='dsa-syllabus-container'>
                 <div className="dsa-inner-container">
-                    <div>
-                        <div>
+                    <div className='RoadMapTop'>
                             <div className="dsa-heading">
-                                <h1>Code ! Compete ! Conquer !</h1>
+                                <h1>Code ! <br/>
+                                    Compete ! <br/>
+                                    Conquer !</h1>
                                 <br />
                                 <h4 style={{ 'color': '#5fa1ff', "fontWeight": '20px', }} >Your Path to Placements Starts Now !</h4>
                             </div>
-                        </div>
 
-                        <div>
                             <div className="dsa-image">
                                 <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} alt="DSABackgroundImage" />
                             </div>
-                        </div>
+
                     </div>
+                    
+                    <div className='RoadmapImageDiv'>
+                    <img className='' src={process.env.PUBLIC_URL + "/images/roadmap-new.jpg"} style={{ "width": '350px', "height": '350px' }} alt="Image1" ></img>
+                    </div>
+
                     <div className="dsa-heading">
                         <h1>Time Line</h1>
                     </div>
