@@ -14,11 +14,11 @@ const Profile = () => {
       <UserSidebar />
       <div className={styles.mainAdminHomeBody}>
         <UserNavbar />
-          <Routes>
-            <Route path="/" element={<UserDashboard />} />
-            <Route path="/progress" element={<UserProgress />} />
-            <Route path="/logout" element={<UserLogout />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<UserDashboard />} />
+          <Route path="/progress" element={<UserProgress />} />
+          <Route path="/logout" element={<UserLogout />} />
+        </Routes>
       </div>
     </div>
   )

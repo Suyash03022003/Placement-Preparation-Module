@@ -11,9 +11,7 @@ import { userData } from "../dummydata";
 const userdashboard = () => {
     return (
         <div className="user-home">
-            {/* <UserSidebar /> */}
             <div className="user-homeContainer">
-                {/* <UserNavbar /> */}
                 <div className="user-widgets">
                     <UserWidget type="user" />
                     <UserWidget type="active-user" />
