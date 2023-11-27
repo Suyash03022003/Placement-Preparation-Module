@@ -58,7 +58,7 @@ function widgetsm() {
                 <YAxis />
                 <Tooltip />
                 {/* <Legend /> */}
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <Bar dataKey="uv" fill="#82ca9d" width={10} />
             </BarChart>
         </div>
     )

@@ -9,32 +9,32 @@ import { Link } from "react-router-dom";
 const usersidebar = () => {
     return (
         <div className="user-sidebar">
-
-            <hr />
-            <div className="user-center">
+            <div className="center">
                 <ul>
-                    <li>
-                        <DashboardIcon className="user-icon" />
-                        <Link to="/user/profile" >
+                    <Link to="/user/profile" className='userSidebarLink' >
+                        <li>
+                            <DashboardIcon className="icon" />
                             <span>Dashboard</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <AccountBoxIcon className="user-icon" />
-                        <Link to="/user/progress">
+                        </li>
+                    </Link>
+                    <Link to="/user/profile/progress" className='userSidebarLink' >
+                        <li>
+                            <AccountBoxIcon className="icon" />
                             <span>Users Progress</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <NoteAltIcon className="user-icon" />
-                        <Link to="/user/calender">
+                        </li>
+                    </Link>
+                    {/* <Link to="/user/profile/calender" className='userSidebarLink' >
+                        <li>
+                            <NoteAltIcon className="icon" />
                             <span>Calender</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <ExitToAppIcon className="user-icon" />
-                        <span>Logout</span>
-                    </li>
+                        </li>
+                    </Link> */}
+                    <Link to="/user/profile/logout" className='userSidebarLink' >
+                        <li>
+                            <ExitToAppIcon className="icon" />
+                            <span>Logout</span>
+                        </li>
+                    </Link>
                 </ul>
             </div>
         </div>

@@ -1,8 +1,6 @@
 import React from 'react';
 import "./userdashboard.scss";
 
-import UserSidebar from "../UserSidebar/usersidebar";
-import UserNavbar from "../UserNavbar/usernavbar";
 import UserWidget from "../UserWidget/userwidget";
 import UserChart from "../UserChart/userchart";
 import Piechart from "../Piechart/piechart";
@@ -13,9 +11,9 @@ import { userData } from "../dummydata";
 const userdashboard = () => {
     return (
         <div className="user-home">
-            <UserSidebar />
+            {/* <UserSidebar /> */}
             <div className="user-homeContainer">
-                <UserNavbar />
+                {/* <UserNavbar /> */}
                 <div className="user-widgets">
                     <UserWidget type="user" />
                     <UserWidget type="active-user" />

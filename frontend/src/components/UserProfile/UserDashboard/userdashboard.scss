@@ -3,17 +3,16 @@
   flex-basis: 100px;
   flex-grow: 0;
   flex-shrink: 0;
-
+  overflow-x: scroll;
 
   .user-homeContainer {
     flex: 6;
 
     .user-widgets {
       display: flex;
-      padding: 10px;
+      padding: 20px;
       gap: 10px;
     }
-
   }
 
   .homeWidgets {

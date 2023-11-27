@@ -25,7 +25,7 @@ const User = () => {
         <Route path="/programming" element={<Programming />} />
         <Route path="/dsasyllabus" element={<DsaSyllabus />} />
         <Route path="/cheatsheet" element={<CheatSheet />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/*" element={<Profile />} />
         <Route path="/discuss/*" element={<Discuss />} />
         <Route path="/learnDSA/*" element={<LearnDSA />} />
         <Route path="/quizzes" element={<Quizzes />} />
