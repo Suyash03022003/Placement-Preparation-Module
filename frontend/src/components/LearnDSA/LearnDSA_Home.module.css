@@ -1,52 +1,37 @@
-.mainSeperateTopicsDiv {
-    padding: 30px 20px;
+.LearnDSA_HomeMain {
     width: 100%;
+    padding: 30px 20px;
+    color: #676767;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.mainSeperateTopicsDiv h1 {
+.LearnDSA_HomeMain h1 {
+    margin-bottom: 20px;
     color: #545454;
 }
 
-.mainSeperateTopicsDiv .descriptionDiv {
-    color: #676767;
-    margin: 30px 0;
+.LearnDSA_HomeMain p {
     font-size: 18px;
+    text-indent: 40px;
+    line-height: 0.7cm;
 }
 
-.mainSeperateTopicsDiv h3 {
-    margin: 40px 0 20px;
-    font-size: 20px;
-}
-
-.mainSeperateTopicsDiv p {
-    margin: 10px 0;
-}
-
-.mainSeperateTopicsDiv strong {
-    margin: 20px 0 !important;
-    font-size: 20px;
-}
-
-.mainSeperateTopicsDiv ul {
-    font-size: 18px;
-    margin-left: 30px;
-}
-
-.mainSeperateTopicsDiv .mainOuterDiv {
-    padding: 40px 0;
+.LearnDSA_HomeMain .mainOuterDiv {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.mainSeperateTopicsDiv .mainImageDiv {
+.LearnDSA_HomeMain .mainImageDiv {
     width: 80%;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.mainSeperateTopicsDiv .mainImageDiv::after {
+.LearnDSA_HomeMain .mainImageDiv::after {
     content: '';
     width: 200px;
     height: 200px;
@@ -55,12 +40,12 @@
     border-right: 10px solid #30aee3;
     border-left: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    top: -15px;
-    right: -15px;
+    top: 20px;
+    right: 20px;
     z-index: 10000;
 }
 
-.mainSeperateTopicsDiv .mainImageDiv::before {
+.LearnDSA_HomeMain .mainImageDiv::before {
     content: '';
     width: 200px;
     height: 200px;
@@ -69,13 +54,13 @@
     border-right: 10px solid #30aee3;
     border-left: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    bottom: -15px;
-    left: -15px;
+    bottom: 25px;
+    left: -20px;
     z-index: 10000;
     transform: rotate(180deg);
 }
 
-.mainSeperateTopicsDiv .mainImage {
+.LearnDSA_HomeMain .mainImage {
     margin: 40px 0;
     width: 95%;
     box-shadow: 0px 0px 10px #ccc;

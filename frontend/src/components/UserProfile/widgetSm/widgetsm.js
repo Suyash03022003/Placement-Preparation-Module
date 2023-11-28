@@ -1,56 +1,75 @@
-import React from 'react';
-import "./widgetsm.css";
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
+import './widgetsm.css';
 
-const widgetsm = () => {
-    const labels = ['Array', 'Linked List', 'String', 'Graph', 'Trees', 'Page F', 'Page G'];
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'My First Dataset',
+const WidgetSm = () => {
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    let chartInstance;
+
+    // Ensure the chartRef is not null before creating the chart
+    if (chartRef.current) {
+      const ctx = chartRef.current.getContext('2d');
+
+      // Destroy previous chart instance, if any
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Array', 'Linked List', 'String', 'Graph', 'Trees', 'Page F', 'Page G'],
+          datasets: [{
+            label: 'Progress',
             data: [100, 20, 80, 60, 50, 40, 20],
-            barThickness: 6,
+            // barThickness: 6,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 205, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(201, 203, 207, 0.2)'
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)',
+              'rgba(154, 208, 245, 0.8)'
             ],
             borderColor: [
-                'rgb(255, 99, 132)',
-                'rgb(255, 159, 64)',
-                'rgb(255, 205, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)',
+              'rgb(154, 208, 245)'
             ],
             borderWidth: 1
-        }]
-    };
-    
-    const config = {
-        type: 'bar',
-        data: data,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+          }]
         },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Cleanup function
+    return () => {
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
     };
+  }, []);
 
-    return (
-        <div className="widgetSm">
-            <span className="widgetSmTitle">Data Structures</span>
-            <div>
-                {config}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="widgetSm">
+      <span className="widgetSmTitle">Data Structures</span>
+      <canvas ref={chartRef} className="widgetCanvas"></canvas>
+    </div>
+  );
+};
 
-export default widgetsm
+export default WidgetSm;

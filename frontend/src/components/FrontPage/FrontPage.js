@@ -1,10 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import "./frontPage.css";
 import { Link } from "react-router-dom";
 import Slidingcard from "../Slidingcard/Slidingcard";
 import ChatBot from '../ChatBot/Chatbot.js';
+import { useCookies } from 'react-cookie';
 
 function FrontPage() {
+
+    const [cookies, setCookie] = useCookies(['user']);
+    const [fname, setFname] = useState("");
+
+
+    const handleLinkClick = (link) => {
+        // setActiveLink(link);
+        // setShowMediaIcon(false);
+    };
+
+    useEffect(() => {
+        if (cookies.user && cookies.user.name) {
+            const gettingFirstName = cookies.user.name.split(" ")[0];
+            setFname(gettingFirstName);
+        }
+    }, [cookies.user]);
+
 
     const faqData = [
         {
@@ -55,6 +73,8 @@ function FrontPage() {
                                     </div>
                                 </div>
                             </Link>
+
+                            <Link to={fname !== "" ? "/user/profile" : "/login"}  onClick={() => handleLinkClick('Login')}>
                                 <div className='grid2'>
                                     <div className='icon-container2'>
                                         <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>
@@ -63,6 +83,8 @@ function FrontPage() {
                                         <h4>Performance Analysis</h4>
                                     </div>
                                 </div>
+                            </Link>
+
                                 <div className='grid3'>
                                     <div className='icon-container3'>
                                         <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }} alt="Image3" ></img>

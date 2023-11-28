@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import styles from './cheatSheetSidebar.module.css';
 
-export default function CheatSheetSidebar({ scrollToDataStructures, scrollToSortingAlgorithms, scrollToDS_Array }) {
+export default function CheatSheetSidebar({ scrollToDataStructures, scrollToSortingAlgorithms, scrollToDS_Array, scrollToDS_LinkedList,
+  scrollToDS_HashTable, scrollToDS_BinaryTree,scrollToAlgorithms_Basics, scrollToAlgorithms_Selection, scrollToAlgorithms_Insertion, scrollToAlgorithms_Merge, scrollToAlgorithms_Quick, scrollToAlgorithms_BFS, scrollToAlgorithms_DFS }) {
   const [isOpenBigO, setIsOpenBigO] = useState(false);
   const [isOpenDataStructures, setIsOpenDataStructures] = useState(false);
   const [isOpenAlgorithms, setIsOpenAlgorithms] = useState(false);
-  const [isOpenSorting, setIsOpenSorting] = useState(false);
-  const [isOpenSearching, setIsOpenSearching] = useState(false);
 
   const toggleCollapse = (section) => {
     switch (section) {
@@ -22,14 +21,6 @@ export default function CheatSheetSidebar({ scrollToDataStructures, scrollToSort
         setIsOpenAlgorithms(!isOpenAlgorithms);
         closeOtherSections('Algorithms');
         break;
-      case 'Sorting':
-        setIsOpenSorting(!isOpenSorting);
-        setIsOpenSearching(false);
-        break;
-      case 'Searching':
-        setIsOpenSearching(!isOpenSearching);
-        setIsOpenSorting(false);
-        break;
       default:
         break;
     }
@@ -44,46 +35,42 @@ export default function CheatSheetSidebar({ scrollToDataStructures, scrollToSort
   return (
     <div className={styles.cheatSheetSidebar}>
       <ul>
-        <li onClick={() => toggleCollapse('BigO')}>Big-O Complexity</li>
-        {isOpenBigO && (
-          <ul className={styles.subMenuOpen}>
-            <li onClick={scrollToDataStructures}>Data Structures</li>
-            <li onClick={scrollToSortingAlgorithms}>Array Sorting Algorithms</li>
-          </ul>
-        )}
+        <li onClick={() => toggleCollapse('BigO')}>
+          Big-O Complexity
+          {isOpenBigO && (
+            <ul className={styles.subMenuOpen}>
+              <li onClick={scrollToDataStructures}>Data Structures</li>
+              <li onClick={scrollToSortingAlgorithms}>Array Sorting Algorithms</li>
+            </ul>
+          )}
+        </li>
 
-        <li onClick={() => toggleCollapse('DataStructures')}>Data Structures</li>
-        {isOpenDataStructures && (
-          <ul className={styles.subMenuOpen}>
-            <li onClick={scrollToDS_Array}>Array</li>
-            <li> Linked List</li>
-            <li>Hash Table</li>
-            <li>Binary Tree</li>
-          </ul>
-        )}
+        <li onClick={() => toggleCollapse('DataStructures')}>
+          Data Structures
+          {isOpenDataStructures && (
+            <ul className={styles.subMenuOpen}>
+              <li onClick={scrollToDS_Array}>Array</li>
+              <li onClick={scrollToDS_LinkedList}>Linked List</li>
+              <li onClick={scrollToDS_HashTable}>Hash Table</li>
+              <li onClick={scrollToDS_BinaryTree}>Binary Tree</li>
+            </ul>
+          )}
+        </li>
 
-        <li onClick={() => toggleCollapse('Algorithms')}>Algorithms</li>
-        {isOpenAlgorithms && (
-          <ul className={styles.subMenuOpen}>
-            <li onClick={() => toggleCollapse('Sorting')}>Sorting</li>
-            {isOpenSorting && (
-              <ul className={styles.subMenuOpen}>
-                <li>Selection Sort</li>
-                <li>Insertion Sort</li>
-                <li>Merge Sort</li>
-                <li>Quick Sort</li>
-              </ul>
-            )}
-
-            <li onClick={() => toggleCollapse('Searching')}>Searching</li>
-            {isOpenSearching && (
-              <ul className={styles.subMenuOpen}>
-                <li>Breadth First Search</li>
-                <li>Depth First Search</li>
-              </ul>
-            )}
-          </ul>
-        )}
+        <li onClick={() => toggleCollapse('Algorithms')}>
+          Algorithms
+          {isOpenAlgorithms && (
+            <ul className={styles.subMenuOpen}>
+              <li onClick={scrollToAlgorithms_Basics}>Algorithm Basics</li>
+              <li onClick={scrollToAlgorithms_Selection}>Selection Sort</li>
+              <li onClick={scrollToAlgorithms_Insertion}>Insertion Sort</li>
+              <li onClick={scrollToAlgorithms_Merge}>Merge Sort</li>
+              <li onClick={scrollToAlgorithms_Quick}>Quick Sort</li>
+              <li onClick={scrollToAlgorithms_BFS}>Breadth First Search</li>
+              <li onClick={scrollToAlgorithms_DFS}>Depth First Search</li>
+            </ul>
+          )}
+        </li>
       </ul>
     </div>
   );

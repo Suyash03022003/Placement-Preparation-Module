@@ -36,7 +36,7 @@ const Sidebar = () => {
             <div style={{ width: isOpen ? "250px" : "80px" }} className={styles.sidebar}>
                 <div className={styles.topSection}>
                     <h3 style={{ display: isOpen ? "block" : "none" }} className={styles.sidebarLogo}>Syllabus</h3>
-                    <div style={{ marginLeft: isOpen ? "60px" : "0px" }} className={styles.bars}>
+                    <div style={{ marginLeft: isOpen ? "60px" : "13px" }} className={styles.bars}>
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
