@@ -7,39 +7,47 @@ import { useCookies } from 'react-cookie';
 import axios from 'axios'; 
 
 function FrontPage() {
+    const [formData, setFormData] = useState({});
 
-    const[firstname, setFirstname] = useState('');
-    const[email, setEmail] = useState('');
-    const[query, setQuery] = useState('');
-
-    const handleSubmit = async (e) => {
-        try {
-          const response = await axios.post('http://localhost:5000/feed', { name: firstname, email: email, query: query });
-          setFirstname('');
-          setEmail('');
-          setQuery('');
-          alert('Feedback given successfully!');
-        } catch (error) {
-          alert('Failed');
-        }
-      };
-
-    // const handleChange = (e) => {
-    //     const { id, value } = e.target;
-    //     setFormData({ ...formData, [id]: value });
-    // };
+    // const[firstname, setFirstname] = useState('');
+    // const[email, setEmail] = useState('');
+    // const[query, setQuery] = useState('');
 
     // const handleSubmit = async (e) => {
-    //     e.preventDefault();
     //     try {
-    //         const response = await axios.post('http://localhost:5000/feed', {formData: formData});
-    //         console.log('Data sent:', response.data); // Log the response from the backend
-    //         // You can add logic here to handle success or redirect
+    //       const response = await axios.post('http://localhost:5000/feed', { name: firstname, email: email, query: query });
+    //       setFirstname('');
+    //       setEmail('');
+    //       setQuery('');
+    //       alert('Feedback given successfully!');
     //     } catch (error) {
-    //         console.error('Error submitting form:', error);
-    //         // Handle error or show error message to the user
+    //       alert('Failed');
     //     }
-    // };
+    //   };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ 
+            ...formData, 
+            [name]: value 
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const data = {
+                name: formData.name,
+                email: formData.email,
+                query: formData.query
+            }
+            const response = await axios.post('http://localhost:5000/feed', data);
+            setFormData({});
+            alert('Thanks for your feedback!');
+        } catch (error) {
+            alert('An error occured!');
+        }
+    };
 
     const [cookies, setCookie] = useCookies(['user']);
     const [fname, setFname] = useState("");
@@ -108,7 +116,7 @@ function FrontPage() {
                                     </div>
                                 </Link>
 
-                                <Link to={fname !== "" ? "/user/profile" : "/login"} onClick={() => handleLinkClick('Login')}>
+                                <Link to={fname !== "" ? "/user/profile" : "/login"}>
                                     <div className='grid2'>
                                         <div className='icon-container2'>
                                             <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>
@@ -119,7 +127,7 @@ function FrontPage() {
                                     </div>
                                 </Link>
 
-                                <Link to={fname !== "" ? "/user/learnDSA" : "/login"} onClick={() => handleLinkClick('Login')}>
+                                <Link to={fname !== "" ? "/user/learnDSA" : "/login"}>
                                     <div className='grid3'>
                                         <div className='icon-container3'>
                                             <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }} alt="Image3" ></img>
@@ -269,7 +277,7 @@ function FrontPage() {
             </div>
 
             {/* --------------Contact us------------- */}
-            <form className='contact-us-form' onSubmit={handleSubmit}>
+            <form className='contact-us-form'>
                 <h1>STILL IN DOUBT?</h1>
                 <div className='form'>
                     <div className='form-content'>
@@ -282,18 +290,21 @@ function FrontPage() {
                             <div class="subtitle">Let's create your account!</div>
                             <div class="input-container">
                                 <input id="firstname" class="input" type="text" placeholder="Enter First Name Here"
-                                value={firstname}
-                                onChange={(e) => setFirstname(e.target.value)}/>
+                                value={formData.firstname}
+                                name='name'
+                                onChange={handleChange}/>
                             </div>
                             <div class="input-container">
                                 <input id="email" class="input" type="text" placeholder="Enter Email Here " 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}/>
+                                value={formData.email}
+                                name='email'
+                                onChange={handleChange}/>
                             </div>
                             <div class="input-container">
                                 <input id="Query" class="input" type="text" placeholder="Enter Your Query Here " 
-                                value={query}
-                                onChange={(e) => setQuery(e.target.value)}/>
+                                value={formData.query}
+                                name='query'
+                                onChange={handleChange}/>
                             </div>
                             <button onClick={handleSubmit} class="submit">submit</button>
                         </div>
