@@ -11,11 +11,13 @@ const UserLogout = () => {
             removeCookie("user");
             navigate("/");
             window.location.reload();
+            window.location.reload();
+            localStorage.setItem('activeLink', 'Home');
         } catch (error) {
             console.error("Error removing cookie:", error);
         }
     }
-    
+
     return (
         <div>
             <h2>Profile</h2>

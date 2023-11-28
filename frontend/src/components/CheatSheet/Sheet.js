@@ -3,8 +3,8 @@ import { Table, Thead, Tbody, Tr, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import "./sheet.css";
 import CheatSheetSidebar from './CheatSheetSidebar';
-export default function CheatSheet() {
 
+export default function CheatSheet() {
   const dataStructuresRef = useRef(null);
   const sortingAlgorithmsRef = useRef(null);
   const DS_ArrayRef = useRef(null);
@@ -95,8 +95,8 @@ export default function CheatSheet() {
           scrollToAlgorithms_DFS={scrollToAlgorithms_DFS}
         />
       </div>
-      <div className='MainContentsheet'>        
-      <h1 className='SidebarMainHeading'>Big-O Complexity</h1>
+      <div className='MainContentsheet'>
+        <h1 className='SidebarMainHeading'>Big-O Complexity</h1>
         <div ref={dataStructuresRef} className='BigO'>
           <h2>Data Structures</h2>
           <Table className='BigO_Table'>
@@ -223,7 +223,7 @@ export default function CheatSheet() {
         <div ref={sortingAlgorithmsRef} className='BigO'>
           <h2>Array Sorting Algorithms</h2>
           <Table className='Array_Table'>
-            <Thead >
+            <Thead>
               <Tr>
                 <Td>Algorithm</Td>
                 <Td colspan="3">Time Complexity</Td>
