@@ -8,6 +8,7 @@ import AdminViewUsers from './AdminViewUsers/AdminViewUsers.js';
 import AddInterviewQue from './AdminAddContent/AdminAddInterviewQue.js';
 import AddProgQue from './AdminAddContent/AdminAddProgQue.js';
 import AddContent from './AdminAddContent/AdminAddContent';
+import Feedback from './AdminFeedback/AdminFeedback';
 import { Routes, Route } from 'react-router-dom';
 
 const Admin = () => {
@@ -23,6 +24,7 @@ const Admin = () => {
             <Route path="/profile" element={<AdminProfile />} />
             <Route path="/addquiz" element={<AddInterviewQue />} />
             <Route path="/addprogquiz" element={<AddProgQue />} />
+            <Route path="/feedbackpage" element={<Feedback />} />
           </Routes>
       </div>
     </div>

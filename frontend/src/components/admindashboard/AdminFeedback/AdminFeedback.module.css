@@ -1,0 +1,41 @@
+.FeedbackBackground {
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+.FeedbackBackground h1 {
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.FeedbackList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.InterviewAnswer{
+    line-height: 0.7cm;
+}
+
+.FeedbackQuestion{
+    border-radius: 10px;
+    background-color: white;
+    width: 70%;
+    padding: 40px;
+}
+
+.FeedbackQuestion ul {
+    width: 100%;
+}
+
+.FeedbackQuestion li {
+    margin-bottom: 20px;
+}

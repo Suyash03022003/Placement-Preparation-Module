@@ -278,7 +278,7 @@ function FrontPage() {
 
             {/* --------------Contact us------------- */}
             <form className='contact-us-form'>
-                <h1>STILL IN DOUBT?</h1>
+                <h1>FEEDBACK ZONE</h1>
                 <div className='form'>
                     <div className='form-content'>
                         <div className='form-image'>
@@ -287,21 +287,21 @@ function FrontPage() {
 
                         <div className='form-text'>
                             <div class="title">Welcome</div>
-                            <div class="subtitle">Let's create your account!</div>
+                            <div class="subtitle">"Speak, Shape, Improve Together!"</div>
                             <div class="input-container">
-                                <input id="firstname" class="input" type="text" placeholder="Enter First Name Here"
+                                <input id="firstname" class="input" type="text" placeholder="Enter Name Here..."
                                 value={formData.firstname}
                                 name='name'
                                 onChange={handleChange}/>
                             </div>
                             <div class="input-container">
-                                <input id="email" class="input" type="text" placeholder="Enter Email Here " 
+                                <input id="email" class="input" type="text" placeholder="Enter Email Here.. " 
                                 value={formData.email}
                                 name='email'
                                 onChange={handleChange}/>
                             </div>
                             <div class="input-container">
-                                <input id="Query" class="input" type="text" placeholder="Enter Your Query Here " 
+                                <input id="Query" class="input" type="text" placeholder="Enter Your Feedback Here... " 
                                 value={formData.query}
                                 name='query'
                                 onChange={handleChange}/>

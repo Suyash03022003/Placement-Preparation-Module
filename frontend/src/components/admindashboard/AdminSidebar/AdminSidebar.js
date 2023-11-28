@@ -46,16 +46,17 @@ const AdminSidebar = () => {
                             <span>Add Programming Question</span>
                         </li>
                     </Link>
-                    {/* <Link to="/admin/addquiz" className='adminSidebarLink'>
-                        <li>
-                            <NoteAltIcon className="icon" />
-                            <span>Add Quiz</span>
-                        </li>
-                    </Link> */}
+                    
                     <Link to="/admin/addquiz" className='adminSidebarLink'>
                         <li>
                             <NoteAltIcon className="icon" />
                             <span>Add Interview Question</span>
+                        </li>
+                    </Link>
+                    <Link to="/admin/feedbackpage" className='adminSidebarLink'>
+                        <li>
+                            <NoteAltIcon className="icon" />
+                            <span>View Feedback</span>
                         </li>
                     </Link>
                 </ul>
