@@ -41,7 +41,7 @@ function FrontPage() {
                 'The difficulty level of questions is variable. There are questions ranging from easy to difficult levels and hence gives the students a chance to test all kinds of waters.',
         },
 
-        // ... (other FAQ data)
+
     ];
 
     // State to keep track of the active FAQ item (which one is open)
@@ -63,44 +63,48 @@ function FrontPage() {
                             Your Journey to Success Begins Now” </p>
                         <div className='outsideBox'>
                             <div className='box'>
-                            <Link to = '/user/Quizzes'>
-                                <div className='grid1'>
-                                    <div className='icon-container1'>
-                                        <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} alt="Image1" ></img>
+                                <Link to='/user/Quizzes'>
+                                    <div className='grid1'>
+                                        <div className='icon-container1'>
+                                            <img className='' src={process.env.PUBLIC_URL + "/images/tick.png"} style={{ "width": '40px', "height": '40px' }} alt="Image1" ></img>
+                                        </div>
+                                        <div className='box-heading1'>
+                                            <h4>Quizzes</h4>
+                                        </div>
                                     </div>
-                                    <div className='box-heading1'>
-                                        <h4>Quizzes</h4>
-                                    </div>
-                                </div>
-                            </Link>
+                                </Link>
 
-                            <Link to={fname !== "" ? "/user/profile" : "/login"}  onClick={() => handleLinkClick('Login')}>
-                                <div className='grid2'>
-                                    <div className='icon-container2'>
-                                        <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>
+                                <Link to={fname !== "" ? "/user/profile" : "/login"} onClick={() => handleLinkClick('Login')}>
+                                    <div className='grid2'>
+                                        <div className='icon-container2'>
+                                            <img className='' src={process.env.PUBLIC_URL + "/images/business-analysis.png"} style={{ "width": '30px', "height": '30px' }} alt="Image2" ></img>
+                                        </div>
+                                        <div className='box-heading2'>
+                                            <h4>Performance Analysis</h4>
+                                        </div>
                                     </div>
-                                    <div className='box-heading2'>
-                                        <h4>Performance Analysis</h4>
-                                    </div>
-                                </div>
-                            </Link>
+                                </Link>
 
-                                <div className='grid3'>
-                                    <div className='icon-container3'>
-                                        <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }} alt="Image3" ></img>
+                                <Link to={fname !== "" ? "/user/learnDSA" : "/login"} onClick={() => handleLinkClick('Login')}>
+                                    <div className='grid3'>
+                                        <div className='icon-container3'>
+                                            <img className='' src={process.env.PUBLIC_URL + "/images/structured-data.png"} style={{ "width": '40px', "height": '40px' }} alt="Image3" ></img>
+                                        </div>
+                                        <div className='box-heading3'>
+                                            <h4>DSA</h4>
+                                        </div>
                                     </div>
-                                    <div className='box-heading3'>
-                                        <h4>DSA</h4>
+                                </Link >
+                                <Link to='/user/programming'>
+                                    <div className='grid4'>
+                                        <div className='icon-container4'>
+                                            <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }} alt="img"></img>
+                                        </div>
+                                        <div className='box-heading4'>
+                                            <h4>Coding</h4>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='grid4'>
-                                    <div className='icon-container4'>
-                                        <img className='' src={process.env.PUBLIC_URL + "/images/codingimg.png"} style={{ "width": '30px', "height": '30px' }} alt="img"></img>
-                                    </div>
-                                    <div className='box-heading4'>
-                                        <h4>Coding</h4>
-                                    </div>
-                                </div>
+                                </Link>
 
                             </div>
                         </div>
@@ -127,7 +131,9 @@ function FrontPage() {
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Automated Reports</div>
-                            <button className='feature-button'>View</button>
+                            <Link to={fname !== "" ? "/user/profile" : "/login"} onClick={() => handleLinkClick('Login')}>
+                                <button className='feature-button'>View</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -138,7 +144,9 @@ function FrontPage() {
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Quizzes & Coding</div>
-                            <button className='feature-button'>View</button>
+                            <Link to='/user/Quizzes'>
+                                <button className='feature-button'>View</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -149,7 +157,9 @@ function FrontPage() {
                         </div>
                         <div className='right'>
                             <div className='feature-inner-card-heading'>Complete Roadmap</div>
-                            <button className='feature-button'>View</button>
+                            <Link to='/user/dsasyllabus'>
+                                <button className='feature-button'>View</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -171,7 +181,9 @@ function FrontPage() {
                         </div>
                         <div className='item-title'>
                             <h4>Data Structure</h4>
-                            <button className='learning-button'>Read More</button>
+                            <Link to='/user/learnDSA'>
+                                <button className='learning-button'>Read More</button>
+                            </Link>
                         </div>
                     </div>
                     <div className='item-box2'>
@@ -180,7 +192,9 @@ function FrontPage() {
                         </div>
                         <div className='item-title'>
                             <h4>Algorithm</h4>
-                            <button className='learning-button'>Read More</button>
+                            <Link to='/user/learnDSA'>
+                                <button className='learning-button'>Read More</button>
+                            </Link>
                         </div>
                     </div>
                     <div className='item-box3'>
@@ -189,7 +203,9 @@ function FrontPage() {
                         </div>
                         <div className='item-title'>
                             <h4>Coding Problems</h4>
-                            <button className='learning-button'>Read More</button>
+                            <Link to='/user/programming'>
+                                <button className='learning-button'>Read More</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -246,7 +262,7 @@ function FrontPage() {
             </form>
 
             <ChatBot />
-        </div>
+        </div >
     );
 }
 export default FrontPage
