@@ -22,8 +22,8 @@ const InterviewQues = () => {
     <ul className={styles.InterviewQuesList}>
       {questions.map(interview => (
         <li key={interview._id} className={styles.SepInterviewQuestion}>
-          <h3 className={styles.InterviewQuesQuestion}>{interview.question}</h3>
-          <p><strong>Answer:</strong> {interview.answer}</p>
+          <h3 className={styles.InterviewQuesQuestion} dangerouslySetInnerHTML={{__html: interview.question}}></h3>
+          <p><strong>Answer:</strong> <span className={styles.InterviewAnswer} dangerouslySetInnerHTML={{__html: interview.answer}}></span></p>
         </li>
       ))}
     </ul>

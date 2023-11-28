@@ -54,7 +54,7 @@ const Navbar = () => {
                 {/* <div className={styles.mainNavFirstDiv}> */}
                 <div className={styles.navLogo}>
                     <img
-                        src={process.env.PUBLIC_URL + '/images/diagram.png'}
+                        src={process.env.PUBLIC_URL + '/images/new-logo.jpg'}
                         alt="Logo"
                         className={styles.navbarImageLogo}
                         style={{ width: '50px', height: '50px' }}

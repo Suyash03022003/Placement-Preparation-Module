@@ -60,9 +60,9 @@ function Programming() {
             <tbody id="tbody">
               {ques.map((que, index) => (
                 <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{que.title}</td>
-                  <td>{que.difficultyLevel}</td>
+                  <td dangerouslySetInnerHTML={{__html: index + 1}} ></td>
+                  <td dangerouslySetInnerHTML={{__html:que.title}}></td>
+                  <td dangerouslySetInnerHTML={{__html: que.difficultyLevel}} ></td>
                   <td><Link to={`/user/details/${que._id}`}><button className='solve-button'>Solve</button></Link></td>
                 </tr>
               ))}

@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.footerMainLogo}>
-                <img className='footer-logo-img' src={process.env.PUBLIC_URL + "/images/diagram.png"} alt="Company Logo" />
+                <img className='footer-logo-img' src={process.env.PUBLIC_URL + "/images/new-logo.jpg"} alt="Company Logo" />
             </div>
 
             <div className={styles.footerLinks}>
