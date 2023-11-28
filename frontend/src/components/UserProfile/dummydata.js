@@ -1,35 +1,35 @@
 export const userData = [
     {
         name: "",
-        "Active User": 0,
+        "Active Time(Hr)": 0,
     },
     {
         name: "Monday",
-        "Active User": 4000,
+        "Active Time(Hr)": 4,
     },
     {
         name: "Tuesday",
-        "Active User": 3000,
+        "Active Time(Hr)": 3,
     },
     {
         name: "Wednesday",
-        "Active User": 5000,
+        "Active Time(Hr)": 5,
     },
     {
         name: "Thrusday",
-        "Active User": 4000,
+        "Active Time(Hr)": 4,
     },
     {
         name: "Friday",
-        "Active User": 3000,
+        "Active Time(Hr)": 3,
     },
     {
         name: "Saturday",
-        "Active User": 2000,
+        "Active Time(Hr)": 2,
     },
     {
         name: "Sunday",
-        "Active User": 4000,
+        "Active Time(Hr)": 9,
     },
 
 
