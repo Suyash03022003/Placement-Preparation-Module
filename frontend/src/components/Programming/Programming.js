@@ -3,8 +3,19 @@ import "./Programming.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import LoadingScreen from '../LoadingScreen';
+import { useCookies } from 'react-cookie';
 
 function Programming() {
+  const [cookies, setCookie] = useCookies(['user']);
+  const [fname, setFname] = useState("");
+
+  useEffect(() => {
+    if (cookies.user && cookies.user.name) {
+        const gettingFirstName = cookies.user.name.split(" ")[0];
+        setFname(gettingFirstName);
+    }
+}, [cookies.user]);
+
   const [ques, setQues] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -22,7 +33,7 @@ function Programming() {
   }, []);
   return (
     <div>
-      <div className='filter'>
+      {/* <div className='filter'>
         <div className="dropdown">
           <button className="dropbtn">Topic</button>
           <div className="dropdown-content">
@@ -42,7 +53,7 @@ function Programming() {
         </div>
         <div className="search-button">Search</div>
         <input type="text" placeholder="Search Anything" className="search-input" />
-      </div>
+      </div> */}
 
       <div className='programming-questions'>
         {loading ? (
@@ -63,7 +74,7 @@ function Programming() {
                   <td dangerouslySetInnerHTML={{__html: index + 1}} ></td>
                   <td dangerouslySetInnerHTML={{__html:que.title}}></td>
                   <td dangerouslySetInnerHTML={{__html: que.difficultyLevel}} ></td>
-                  <td><Link to={`/user/details/${que._id}`}><button className='solve-button'>Solve</button></Link></td>
+                  <td><Link to={fname !== "" ? `/user/details/${que._id}`: "/login"}><button className='solve-button'>Solve</button></Link></td>
                 </tr>
               ))}
             </tbody>

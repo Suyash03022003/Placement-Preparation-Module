@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import "./Quizzes.css";
+import { useCookies } from 'react-cookie';
 
 function Quizzes() {
+    const [cookies, setCookie] = useCookies(['user']);
+  const [fname, setFname] = useState("");
+
+  useEffect(() => {
+    if (cookies.user && cookies.user.name) {
+        const gettingFirstName = cookies.user.name.split(" ")[0];
+        setFname(gettingFirstName);
+    }
+}, [cookies.user]);
     return (
         <div>
             <div class="quiz-main-div">
                 <div class="quiz_main_box">
                     <div class="quiz_item">
-                        <Link to={{
+                        <Link to={fname !== "" ? {
                             pathname: '/user/QuizQuestion',
                             search: '?topic=Array&difficultyLevel=Easy&difficultyLevel=Hard&difficultyLevel=Medium'
-                        }} class="quiz_item_link">
+                        } : "/login"} class="quiz_item_link">
                             <div class="quiz_item_bg"></div>
 
                             <div class="quiz_item_title">
@@ -21,11 +31,10 @@ function Quizzes() {
                             <div class="quiz_item_difficultyLevel">
                                 Difficulty:
                                 <span>
-                                    <Link
-                                        to={{
+                                    <Link to={fname !== "" ?{
                                             pathname: '/user/QuizQuestion',
                                             search: '?topic=Array&difficultyLevel=Easy' // Pass the selected filters as query parameters
-                                        }}
+                                        } : "/login"}
                                         className="quiz_item_difficultyLevel_easy"
                                     >
                                         Easy
@@ -34,10 +43,10 @@ function Quizzes() {
 
                                 <span>
                                     <Link 
-                                    to={{
+                                    to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Array&difficultyLevel=Medium' // Pass the selected filters as query parameters
-                                    }}
+                                    }: "/login"}
                                     className="quiz_item_difficultyLevel_medium"
                                     >
                                         Medium
@@ -45,10 +54,10 @@ function Quizzes() {
                                 </span>
                                 <span>
                                     <Link 
-                                    to={{
+                                    to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Array&difficultyLevel=Hard' // Pass the selected filters as query parameters
-                                    }}
+                                    }: "/login"}
                                     className="quiz_item_difficultyLevel_hard"
                                     >
                                         Hard
@@ -72,28 +81,28 @@ function Quizzes() {
                             <div class="quiz_item_difficultyLevel">
                                 Difficulty:
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Linked List&difficultyLevel=Easy' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_easy">
+                                    }: "/login"} class="quiz_item_difficultyLevel_easy">
                                         
                                         Easy
                                     </Link>
                                 </span>
 
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Linked List&difficultyLevel=Medium' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_medium">
+                                    }: "/login"} class="quiz_item_difficultyLevel_medium">
                                         Medium
                                     </Link>
                                 </span>
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Linked List&difficultyLevel=Hard' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_hard">
+                                    }: "/login"} class="quiz_item_difficultyLevel_hard">
                                         Hard
                                     </Link>
                                 </span>
@@ -102,10 +111,10 @@ function Quizzes() {
                     </div>
 
                     <div class="quiz_item">
-                        <Link to={{
+                        <Link to={fname !== "" ?{
                             pathname: '/user/QuizQuestion',
                             search: '?topic=String&difficultyLevel=Easy&difficultyLevel=Hard&difficultyLevel=Medium'
-                        }} class="quiz_item_link">
+                        }: "/login"} class="quiz_item_link">
                             <div class="quiz_item_bg"></div>
 
                             <div class="quiz_item_title">
@@ -115,27 +124,27 @@ function Quizzes() {
                             <div class="quiz_item_difficultyLevel">
                                 Difficulty:
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=String&difficultyLevel=Easy' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_easy">
+                                    }: "/login"} class="quiz_item_difficultyLevel_easy">
                                         Easy
                                     </Link>
                                 </span>
 
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=String&difficultyLevel=Medium' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_medium">
+                                    }: "/login"} class="quiz_item_difficultyLevel_medium">
                                         Medium
                                     </Link>
                                 </span>
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=String&difficultyLevel=Hard' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_hard">
+                                    }: "/login"} class="quiz_item_difficultyLevel_hard">
                                         Hard
                                     </Link>
                                 </span>
@@ -144,10 +153,10 @@ function Quizzes() {
                     </div>
 
                     <div class="quiz_item">
-                        <Link to={{
+                        <Link to={fname !== "" ?{
                             pathname: '/user/QuizQuestion',
                             search: '?topic=Array&difficultyLevel=Easy&difficultyLevel=Hard&difficultyLevel=Medium'
-                        }} class="quiz_item_link">
+                        }: "/login"} class="quiz_item_link">
                             <div class="quiz_item_bg"></div>
 
                             <div class="quiz_item_title">
@@ -157,27 +166,27 @@ function Quizzes() {
                             <div class="quiz_item_difficultyLevel">
                                 Difficulty:
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Array&difficultyLevel=Easy' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_easy">
+                                    }: "/login"} class="quiz_item_difficultyLevel_easy">
                                         Easy
                                     </Link>
                                 </span>
 
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Array&difficultyLevel=Medium' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_medium">
+                                    }: "/login"} class="quiz_item_difficultyLevel_medium">
                                         Medium
                                     </Link>
                                 </span>
                                 <span >
-                                    <Link to={{
+                                    <Link to={fname !== "" ?{
                                         pathname: '/user/QuizQuestion',
                                         search: '?topic=Array&difficultyLevel=Hard' // Pass the selected filters as query parameters
-                                    }} class="quiz_item_difficultyLevel_hard">
+                                    }: "/login"} class="quiz_item_difficultyLevel_hard">
                                         Hard
                                     </Link>
                                 </span>

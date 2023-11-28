@@ -247,13 +247,13 @@ function FrontPage() {
                             <div class="title">Welcome</div>
                             <div class="subtitle">Let's create your account!</div>
                             <div class="input-container">
-                                <input id="firstname" class="input" type="text" placeholder="First name" />
+                                <input id="firstname" class="input" type="text" placeholder="Enter First Name Here" />
                             </div>
                             <div class="input-container">
-                                <input id="contact" class="input" type="text" placeholder="Contact Number " />
+                                <input id="email" class="input" type="text" placeholder="Enter Email Here " />
                             </div>
                             <div class="input-container">
-                                <input id="email" class="input" type="text" placeholder="Email " />
+                                <input id="Query" class="input" type="text" placeholder="Enter Your Query Here " />
                             </div>
                             <button type="text" class="submit">submit</button>
                         </div>
