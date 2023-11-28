@@ -16,29 +16,29 @@ const Featured = () => {
                 <div className="featuredChart">
                     <CircularProgressbar value={45} text={"45%"} strokeWidth={7} />
                 </div>
-                <p className="amount">45 / 100</p>
+                <p className="amount">45 / 70</p>
                 <p className="desc">
-                    45 % of the total users i.e 100 were actively using the placement preparation module                 </p>
+                    45 % of the total users i.e 70 were actively using the placement preparation module                 </p>
                 <div className="summary">
                     <div className="item">
                         <div className="itemTitle">Last Year</div>
                         <div className="itemResult negative">
                             <KeyboardArrowDownIcon fontSize="small" />
-                            <div className="resultAmount">124</div>
+                            <div className="resultAmount">10</div>
                         </div>
                     </div>
                     <div className="item">
                         <div className="itemTitle">Last Month</div>
                         <div className="itemResult positive">
                             <KeyboardArrowUpOutlinedIcon fontSize="small" />
-                            <div className="resultAmount">24</div>
+                            <div className="resultAmount">8</div>
                         </div>
                     </div>
                     <div className="item">
                         <div className="itemTitle">Last Week</div>
                         <div className="itemResult positive">
                             <KeyboardArrowUpOutlinedIcon fontSize="small" />
-                            <div className="resultAmount">70</div>
+                            <div className="resultAmount">5</div>
                         </div>
                     </div>
                 </div>
