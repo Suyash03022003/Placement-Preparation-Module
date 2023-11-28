@@ -9,6 +9,7 @@ import answerRoutes from './routes/AnswerRoutes.js';
 import topicRoutes from './routes/TopicsRoutes.js';
 import subTopicRoutes from './routes/SubTopicsRoutes.js';
 import interviewRoutes from './routes/InterviewRoutes.js';
+import feedbackRoutes from './routes/FeedbackRoutes.js';
 import cors from "cors";
 
 const app = express();
@@ -38,6 +39,7 @@ app.use('/answer', answerRoutes);
 app.use('/topic', topicRoutes);
 app.use('/subtopic', subTopicRoutes);
 app.use('/interview', interviewRoutes);
+app.use('/feed', feedbackRoutes);
 
 mongoose
     .connect(mongodbURL)

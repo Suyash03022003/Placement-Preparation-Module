@@ -4,8 +4,42 @@ import { Link } from "react-router-dom";
 import Slidingcard from "../Slidingcard/Slidingcard";
 import ChatBot from '../ChatBot/Chatbot.js';
 import { useCookies } from 'react-cookie';
+import axios from 'axios'; 
 
 function FrontPage() {
+
+    const[firstname, setFirstname] = useState('');
+    const[email, setEmail] = useState('');
+    const[query, setQuery] = useState('');
+
+    const handleSubmit = async (e) => {
+        try {
+          const response = await axios.post('http://localhost:5000/feed', { name: firstname, email: email, query: query });
+          setFirstname('');
+          setEmail('');
+          setQuery('');
+          alert('Feedback given successfully!');
+        } catch (error) {
+          alert('Failed');
+        }
+      };
+
+    // const handleChange = (e) => {
+    //     const { id, value } = e.target;
+    //     setFormData({ ...formData, [id]: value });
+    // };
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const response = await axios.post('http://localhost:5000/feed', {formData: formData});
+    //         console.log('Data sent:', response.data); // Log the response from the backend
+    //         // You can add logic here to handle success or redirect
+    //     } catch (error) {
+    //         console.error('Error submitting form:', error);
+    //         // Handle error or show error message to the user
+    //     }
+    // };
 
     const [cookies, setCookie] = useCookies(['user']);
     const [fname, setFname] = useState("");
@@ -235,7 +269,7 @@ function FrontPage() {
             </div>
 
             {/* --------------Contact us------------- */}
-            <form className='contact-us-form'>
+            <form className='contact-us-form' onSubmit={handleSubmit}>
                 <h1>STILL IN DOUBT?</h1>
                 <div className='form'>
                     <div className='form-content'>
@@ -247,15 +281,21 @@ function FrontPage() {
                             <div class="title">Welcome</div>
                             <div class="subtitle">Let's create your account!</div>
                             <div class="input-container">
-                                <input id="firstname" class="input" type="text" placeholder="Enter First Name Here" />
+                                <input id="firstname" class="input" type="text" placeholder="Enter First Name Here"
+                                value={firstname}
+                                onChange={(e) => setFirstname(e.target.value)}/>
                             </div>
                             <div class="input-container">
-                                <input id="email" class="input" type="text" placeholder="Enter Email Here " />
+                                <input id="email" class="input" type="text" placeholder="Enter Email Here " 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}/>
                             </div>
                             <div class="input-container">
-                                <input id="Query" class="input" type="text" placeholder="Enter Your Query Here " />
+                                <input id="Query" class="input" type="text" placeholder="Enter Your Query Here " 
+                                value={query}
+                                onChange={(e) => setQuery(e.target.value)}/>
                             </div>
-                            <button type="text" class="submit">submit</button>
+                            <button onClick={handleSubmit} class="submit">submit</button>
                         </div>
                     </div>
                 </div>
