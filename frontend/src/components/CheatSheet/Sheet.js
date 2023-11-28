@@ -8,6 +8,16 @@ export default function CheatSheet() {
   const dataStructuresRef = useRef(null);
   const sortingAlgorithmsRef = useRef(null);
   const DS_ArrayRef = useRef(null);
+  const DS_LinkedListRef = useRef(null);
+  const DS_HashTableRef = useRef(null);
+  const DS_BinaryTreeRef = useRef(null);
+  const Algorithms_BasicsRef = useRef(null);
+  const Algorithms_SelectionRef = useRef(null);
+  const Algorithms_InsertionRef = useRef(null);
+  const Algorithms_MergeRef = useRef(null);
+  const Algorithms_QuickRef = useRef(null);
+  const Algorithms_BFSRef = useRef(null);
+  const Algorithms_DFSRef = useRef(null);
 
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -25,6 +35,46 @@ export default function CheatSheet() {
     scrollToRef(DS_ArrayRef);
   };
 
+  const scrollToDS_LinkedList = () => {
+    scrollToRef(DS_LinkedListRef);
+  };
+
+  const scrollToDS_HashTable = () => {
+    scrollToRef(DS_HashTableRef);
+  };
+
+  const scrollToDS_BinaryTree = () => {
+    scrollToRef(DS_BinaryTreeRef);
+  };
+
+  const scrollToAlgorithms_Basics = () => {
+    scrollToRef(Algorithms_BasicsRef);
+  };
+
+  const scrollToAlgorithms_Selection = () => {
+    scrollToRef(Algorithms_SelectionRef);
+  };
+
+  const scrollToAlgorithms_Insertion = () => {
+    scrollToRef(Algorithms_InsertionRef);
+  };
+
+  const scrollToAlgorithms_Merge = () => {
+    scrollToRef(Algorithms_MergeRef);
+  };
+
+  const scrollToAlgorithms_Quick = () => {
+    scrollToRef(Algorithms_QuickRef);
+  };
+
+  const scrollToAlgorithms_BFS = () => {
+    scrollToRef(Algorithms_BFSRef);
+  };
+
+  const scrollToAlgorithms_DFS = () => {
+    scrollToRef(Algorithms_DFSRef);
+  };
+
 
   return (
     <div className='sheet'>
@@ -33,11 +83,21 @@ export default function CheatSheet() {
           scrollToDataStructures={scrollToDataStructures}
           scrollToSortingAlgorithms={scrollToSortingAlgorithms}
           scrollToDS_Array={scrollToDS_Array}
+          scrollToDS_LinkedList={scrollToDS_LinkedList}
+          scrollToDS_HashTable={scrollToDS_HashTable}
+          scrollToDS_BinaryTree={scrollToDS_BinaryTree}
+          scrollToAlgorithms_Basics={scrollToAlgorithms_Basics}
+          scrollToAlgorithms_Selection={scrollToAlgorithms_Selection}
+          scrollToAlgorithms_Insertion={scrollToAlgorithms_Insertion}
+          scrollToAlgorithms_Merge={scrollToAlgorithms_Merge}
+          scrollToAlgorithms_Quick={scrollToAlgorithms_Quick}
+          scrollToAlgorithms_BFS={scrollToAlgorithms_BFS}
+          scrollToAlgorithms_DFS={scrollToAlgorithms_DFS}
         />
       </div>
-      <div className='MainContentsheet'>
+      <div className='MainContentsheet'>        
+      <h1 className='SidebarMainHeading'>Big-O Complexity</h1>
         <div ref={dataStructuresRef} className='BigO'>
-          <h1>Big-O Complexity</h1>
           <h2>Data Structures</h2>
           <Table className='BigO_Table'>
             <Thead >
@@ -160,7 +220,7 @@ export default function CheatSheet() {
           </Table>
         </div>
 
-        <div ref={sortingAlgorithmsRef} className='Array'>
+        <div ref={sortingAlgorithmsRef} className='BigO'>
           <h2>Array Sorting Algorithms</h2>
           <Table className='Array_Table'>
             <Thead >
@@ -239,8 +299,7 @@ export default function CheatSheet() {
         </div>
 
         <div>
-          <h1>Data Structures</h1>
-
+          <h1 className='SidebarMainHeading'>Data Structures</h1>
           <div ref={DS_ArrayRef} className='Data_Structures'>
             <h2 className='DataStructuresMainHeading'>Array</h2>
             <h3 className='DataStructuresSubHeading'>Definition</h3>
@@ -274,8 +333,8 @@ export default function CheatSheet() {
           </div>
         </div>
 
-        <div className='Data_Structures'>
-          <h2 className='DataStructuresMainHeading'>Linked List</h2>
+        <div className='Data_Structures' ref={DS_LinkedListRef}>
+          <h2 className='DataStructuresMainHeading' >Linked List</h2>
           <h3 className='DataStructuresSubHeading'>Definition</h3>
           <ul>
             <li>Stores data with nodes that point to other nodes.
@@ -314,7 +373,7 @@ export default function CheatSheet() {
           </ul>
         </div>
         {/* ------------------------------- */}
-        <div className='Data_Structures'>
+        <div className='Data_Structures' ref={DS_HashTableRef}>
           <h2 className='DataStructuresMainHeading'>Hash Table</h2>
           <h3 className='DataStructuresSubHeading'>Definition</h3>
           <ul>
@@ -350,7 +409,7 @@ export default function CheatSheet() {
         </div >
         {/* --------------------------------- */}
 
-        <div className='Data_Structures'>
+        <div className='Data_Structures' ref={DS_BinaryTreeRef}>
           <h2 className='DataStructuresMainHeading'>Binary Tree</h2>
           <h3 className='DataStructuresSubHeading'>Definition</h3>
           <ul>
@@ -387,11 +446,11 @@ export default function CheatSheet() {
         </div >
         {/* ---------------- */}
         <div>
-          <h1>Algorithms</h1>
+          <h1 className='SidebarMainHeading'>Algorithms</h1>
         </div>
 
 
-        <div className='Algorithms'>
+        <div className='Algorithms' ref={Algorithms_BasicsRef}>
           <h2 className='AlgorithmsMainHeading'>Recursive Algorithms</h2>
           <h3 className='AlgorithmsSubHeading'>Definition</h3>
           <ul>
@@ -482,9 +541,9 @@ export default function CheatSheet() {
         </div >
         {/* ------------------------------------- */}
         <div>
-          <h1>Sorting Algorithms</h1>
+          <h1 className='SidebarMainHeading'>Sorting Algorithms</h1>
         </div>
-        <div className='Sorting'>
+        <div className='Sorting' ref={Algorithms_SelectionRef}>
           <h2 className='SortingMainHeading'>Selection Sort</h2>
           <h3 className='SortingSubHeading'>Definition</h3>
           <ul>
@@ -520,7 +579,7 @@ export default function CheatSheet() {
           </ul>
         </div >
         {/* ----------------- */}
-        <div className='Sorting'>
+        <div className='Sorting' ref={Algorithms_InsertionRef}>
           <h2 className='SortingMainHeading'>Insertion Sort</h2>
           <h3 className='SortingSubHeading'>Definition</h3>
           <ul>
@@ -553,7 +612,7 @@ export default function CheatSheet() {
           </ul>
         </div >
         {/* ------------- */}
-        <div className='Sorting'>
+        <div className='Sorting' ref={Algorithms_MergeRef}>
           <h2 className='SortingMainHeading'>Merge Sort</h2>
           <h3 className='SortingSubHeading'>Definition</h3>
           <ul>
@@ -586,7 +645,7 @@ export default function CheatSheet() {
           </ul>
         </div >
         {/* ------------ */}
-        <div className='Sorting'>
+        <div className='Sorting' ref={Algorithms_QuickRef}>
           <h2 className='SortingMainHeading'>Quicksort</h2>
           <h3 className='SortingSubHeading'>Definition</h3>
           <ul>
@@ -629,9 +688,9 @@ export default function CheatSheet() {
         </div >
 
         <div>
-          <h1>Searching Algorithms</h1>
+          <h1 className='SidebarMainHeading'>Searching Algorithms</h1>
         </div>
-        <div className='Searching'>
+        <div className='Searching' ref={Algorithms_BFSRef}>
           <h2 className='SearchingMainHeading'>Breadth First Search</h2>
           <h3 className='SearchingSubHeading'>Definition</h3>
           <ul>
@@ -667,7 +726,7 @@ export default function CheatSheet() {
           </ul>
         </div >
         {/* ------------------- */}
-        <div className='Searching'>
+        <div className='Searching' ref={Algorithms_DFSRef}>
           <h2 className='SearchingMainHeading'>Depth First Search</h2>
           <h3 className='SearchingSubHeading'>Definition</h3>
           <ul>

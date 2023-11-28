@@ -1,5 +1,6 @@
 .sheet {
     display: flex;
+    background-color: #f0f0f0;
 }
 
 .MainContentsheet {
@@ -12,50 +13,40 @@
 .Array_Table Th {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
 
-.Data_Structures {
+.BigO h2{
     margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #dae9f5;
+    padding: 2%;    
+    text-align: center;
 }
 
-.Algorithms {
+.SidebarMainHeading{
     margin-top: 2%;
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 50px;
 }
 
-.Sorting {
-    margin-top: 2%;
-}
-
+.Data_Structures,
+.Algorithms,
+.Sorting,
 .Searching {
     margin-top: 2%;
 }
 
-.DataStructuresMainHeading {
+.SortingMainHeading,
+.SearchingMainHeading,
+.AlgorithmsMainHeading,
+.DataStructuresMainHeading  {
     text-align: center;
     padding: 2%;
     background-color: #dae9f5;
-    scroll-margin-top: 200px;
-}
-
-.AlgorithmsMainHeading {
-    text-align: center;
-    padding: 2%;
-    background-color: #dae9f5;
-    scroll-margin-top: 200px;
-}
-
-.SortingMainHeading {
-    text-align: center;
-    padding: 2%;
-    background-color: #dae9f5;
-    scroll-margin-top: 200px;
-}
-
-.SearchingMainHeading {
-    text-align: center;
-    padding: 2%;
-    background-color: #dae9f5;
-    scroll-margin-top: 200px;
+    scroll-margin-top: 20%;
 }
 
 .DataStructuresSubHeading {
@@ -74,18 +65,22 @@
     margin-top: 2%;
 }
 
-.Data_Structures ul {
-    margin: 2%;
-}
-
-.Algorithms ul {
-    margin: 2%;
-}
-
-.Sorting ul {
-    margin: 2%;
-}
-
+.Data_Structures ul,
+.Algorithms ul,
+.Sorting ul,
 .Searching ul {
     margin: 2%;
+    line-height: 1cm;
 }
+
+.BigO,
+.Data_Structures,
+.Algorithms,
+.Sorting, 
+.Searching{
+    margin: 5%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 30px;
+}
+

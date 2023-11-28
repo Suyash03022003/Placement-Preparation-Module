@@ -1,46 +1,50 @@
-/* cheatSheetSidebar.module.css */
-
 .cheatSheetSidebar {
-  width: 240px;
+  width: 250px;
   height: 100vh;
+  background-color: #fff;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  position: sticky;  
-  top: 0; 
-  box-shadow: 0px 0px 5px 5px rgb(215, 215, 216);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  position: sticky;
+  top: 69px;
 }
 
 .cheatSheetSidebar ul {
   padding: 0;
+  margin: 0;
+}
+
+.cheatSheetSidebar ul > li {
   list-style: none;
-  margin: 0; /* Add this to remove default margin */
-}
-
-.cheatSheetSidebar ul li {
-  padding: 8px 0;
+  margin-bottom: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px;
 }
 
-.cheatSheetSidebar ul li:hover {
-  background-color: rgb(215, 215, 216);
+.cheatSheetSidebar ul > li:hover {
+  background-color: #f5f5f5;
+  border-radius: 4px;
 }
 
-/* Show submenu */
-.cheatSheetSidebar .subMenuOpen {
-  display: block;
-}
-
-/* Hide submenu */
-.cheatSheetSidebar .subMenuOpen ul {
-  display: block;
-}
-
-.cheatSheetSidebar .subMenuOpen li {
-  padding-left: 20px;
-}
-
-/* Initially hide submenu */
-.cheatSheetSidebar .subMenuOpen ul {
+.cheatSheetSidebar ul ul {
+  padding-left: 15px;
   display: none;
+  margin-top: 8px;
+}
+
+.cheatSheetSidebar ul ul.subMenuOpen {
+  display: block;
+}
+
+.cheatSheetSidebar ul ul li {
+  list-style-type: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cheatSheetSidebar ul ul li:hover {
+  background-color: #e0e0e0;
+  border-radius: 4px;
 }
