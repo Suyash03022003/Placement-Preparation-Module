@@ -4,7 +4,6 @@ import "./QuizQuestion.css";
 const QuizComponent = () => {
   const [questions, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [score, setScore] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -45,51 +44,6 @@ const QuizComponent = () => {
       [questionId]: option,
     });
   };
-
-  const calculateScore = () => {
-    let correctAnswers = 0;
-    questions.forEach((question) => {
-      const selectedAnswer = selectedAnswers[question._id];
-      if (selectedAnswer === question.correctAnswer) {
-        correctAnswers++;
-      }
-    });
-    const calculatedScore = (correctAnswers / questions.length) * 100;
-    setScore(calculatedScore);
-    return calculatedScore;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const calculatedScore = calculateScore();
-    console.log('Calculated Score:', calculatedScore);
-
-    // Send an API request to save the score in the database
-    try {
-      const response = await fetch('http://localhost:5000/save-score', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          score: calculatedScore,
-          // Add other necessary data to send to the server for saving the score
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to save score');
-      }
-
-      console.log('Score saved successfully!');
-      // Handle success - show a success message or redirect the user
-    } catch (error) {
-      console.error('Error saving score:', error.message);
-      // Handle error - show an error message to the user
-    }
-  };
-
 
   return (
     <div className='MCQQuesBackground'>

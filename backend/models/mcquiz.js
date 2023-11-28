@@ -17,7 +17,7 @@ const mcquizSchema = new mongoose.Schema({
         type: [String],
         required: true,
     },
-    correctAnswer: {
+    correctAnswer: {    
         type: String,
         required: true,
     },
