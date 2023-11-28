@@ -18,7 +18,7 @@ const userdashboard = () => {
                     <UserWidget type="unsubcribed" />
                 </div>
                 <ContributionGraph />
-                <UserChart data={userData} title="User Analytics" grid dataKey="Active User" />
+                <UserChart data={userData} title="User Analytics" grid dataKey="Active Time(Hr)" />
                 {/* <Piechart /> */}
                 <div className="homeWidgets">
                     <WidgetSm />
