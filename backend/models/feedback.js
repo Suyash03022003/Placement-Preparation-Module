@@ -2,19 +2,19 @@ import mongoose from "mongoose";
 
 const feedbackSchema = mongoose.Schema(
     {
-        Name: {
+        name: {
             type: String,
             required: true,
         },
-        Email: {
+        email: {
             type: String,
             required: true,
         },
-        Query:{
+        query:{
             type : String,
             required :true,
         }
     }
 )
 
-export const feedback = mongoose.model('interviewquestion', feedbackSchema);
+export const feed = mongoose.model('feed', feedbackSchema);
