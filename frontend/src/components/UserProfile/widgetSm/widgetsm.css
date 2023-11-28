@@ -1,9 +1,18 @@
 .widgetSm {
-    width: 49%;
+    width: 100%;
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
     padding: 20px;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.widgetCanvas {
+    height: 400px;
 }
 
 .widgetSmTitle {

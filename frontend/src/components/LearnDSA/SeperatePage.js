@@ -28,9 +28,13 @@ const SeperatePage = () => {
     return (
         <div className={styles.mainSeperateTopicsDiv}>
             <h1>{topicDetails?.topicName}</h1>
-            <div dangerouslySetInnerHTML={{ __html: topicDetails?.description }}></div>
+            <div className={styles.descriptionDiv} dangerouslySetInnerHTML={{ __html: topicDetails?.description }}></div>
             {topicDetails?.imageURL && (
-                <img src={topicDetails.imageURL} alt={topicDetails.topicName} className={styles.topicImage} />
+                <div className={styles.mainOuterDiv}>
+                    <div className={styles.mainImageDiv}>
+                        <img src={topicDetails.imageURL} alt={topicDetails.topicName} className={styles.topicImage} />
+                    </div>
+                </div>
             )}
         </div>
     );

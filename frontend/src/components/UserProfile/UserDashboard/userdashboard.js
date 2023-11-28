@@ -3,10 +3,10 @@ import "./userdashboard.scss";
 
 import UserWidget from "../UserWidget/userwidget";
 import UserChart from "../UserChart/userchart";
-import Piechart from "../Piechart/piechart";
 import WidgetSm from "../widgetSm/widgetsm";
 import WidgetLg from "../widgetLg/widgetlg";
 import { userData } from "../dummydata";
+import ContributionGraph from "../Contribution Graph/ContributionGraph";
 
 const userdashboard = () => {
     return (
@@ -17,6 +17,7 @@ const userdashboard = () => {
                     <UserWidget type="active-user" />
                     <UserWidget type="unsubcribed" />
                 </div>
+                <ContributionGraph />
                 <UserChart data={userData} title="User Analytics" grid dataKey="Active User" />
                 {/* <Piechart /> */}
                 <div className="homeWidgets">

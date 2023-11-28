@@ -7,7 +7,6 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
-    YAxis,
 } from "recharts";
 
  function userchart({ title, data, dataKey, grid }) {
@@ -16,7 +15,6 @@ import {
             <h3 className="user-chartTitle">{title}</h3>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <LineChart data={data}>
-                    <YAxis dataKey="name" stroke="#5550bd" />
                     <XAxis dataKey="name" stroke="#5550bd" />
                     <Line type="monotone" dataKey={dataKey} stroke="#5550bd" />
                     <Tooltip />

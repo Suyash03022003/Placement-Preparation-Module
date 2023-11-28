@@ -1,68 +1,72 @@
-import React from 'react'
-import "./widgetlg.css";
-import {
-    XAxis,
-    YAxis,
-    Legend,
-    CartesianGrid,
-    Tooltip,
-    Bar,
-    BarChart,
-} from "recharts";
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
+import '../widgetSm/widgetsm.css';
 
-function widgetlg() {
-    const data = [
-        {
-            "name": "Searching",
-            "uv": 100,
+const WidgetSm = () => {
+  const chartRef = useRef(null);
 
+  useEffect(() => {
+    let chartInstance;
+
+    // Ensure the chartRef is not null before creating the chart
+    if (chartRef.current) {
+      const ctx = chartRef.current.getContext('2d');
+
+      // Destroy previous chart instance, if any
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Searching', 'Sorting', 'Divide & Conquer', 'Greedy', 'Backtracking', 'Recursion', 'Dynamic Programming'],
+          datasets: [{
+            axis: 'y',
+            label: 'Progress',
+            data: [100, 80, 60, 30, 50, 80, 60],
+            fill: false,
+            backgroundColor: [
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+                'rgba(154, 208, 245, 0.8)',
+            ],
+            borderColor: [
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)',
+                'rgb(154, 208, 245)'
+            ],
+            borderWidth: 1
+          }]
         },
-        {
-            "name": "Sorting",
-            "uv": 80,
-
-        },
-        {
-            "name": "Divide&Conquer",
-            "uv": 60,
-
-        },
-        {
-            "name": "Greedy",
-            "uv": 0,
-
-        },
-        {
-            "name": "Backtracking",
-            "uv": 50,
-
-        },
-        {
-            "name": "Recursion",
-            "uv": 40,
-
-        },
-        {
-            "name": "Dynamic Programming",
-            "uv": 20,
-
+        options: {
+          indexAxis: 'y',
         }
-    ];
-   
-    return (
+      });
+    }
 
-        <div className="widgetLg">
-            <h3 className="widgetLgTitle">Algorithms</h3>
-            <BarChart width={600} height={350} data={data}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                {/* <Legend /> */}
-                <Bar dataKey="uv" fill="#82ca9d" />
-            </BarChart>
-        </div>
-    )
-}
+    // Cleanup function
+    return () => {
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+    };
+  }, []);
 
-export default widgetlg
+  return (
+    <div className="widgetSm">
+      <span className="widgetSmTitle">Algorithms</span>
+      <canvas ref={chartRef} className="widgetCanvas"></canvas>
+    </div>
+  );
+};
+
+export default WidgetSm;

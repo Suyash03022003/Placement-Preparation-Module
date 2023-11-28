@@ -1,0 +1,31 @@
+.contribution-graph {
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    width: 97%;
+}
+
+.color-github-0 {
+    fill: #ebedf0;
+}
+
+.color-github-1 {
+    fill: #9be9a8;
+}
+
+.color-github-2 {
+    fill: #40c463;
+}
+
+.color-github-3 {
+    fill: #30a14e;
+}
+
+.color-github-4 {
+    fill: #216e39;
+}
+
+.color-empty {
+    fill: #ebedf0;
+}
