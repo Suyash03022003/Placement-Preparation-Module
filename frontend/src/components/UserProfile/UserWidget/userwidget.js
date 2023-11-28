@@ -5,6 +5,7 @@ import TerminalIcon from '@mui/icons-material/Terminal';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOffIcon from '@mui/icons-material/PersonOff';
 import ReviewsIcon from '@mui/icons-material/Reviews';
+import ContentPasteOffIcon from '@mui/icons-material/ContentPasteOff';
 
 const userwidget = ({ type }) => {
   let data;
@@ -48,11 +49,11 @@ const userwidget = ({ type }) => {
 
     case "unsubcribed":
       data = {
-        title: "UNSUBCRIBED USERS",
+        title: "UNATTEMPTED QUESTIONS",
         amount: 10,
         link: "View details",
         icon: (
-          <PersonOffIcon
+          <ContentPasteOffIcon
             className="user-icon"
             style={{
               backgroundColor: "rgba(128, 0, 128, 0.2)",
@@ -87,8 +88,8 @@ const userwidget = ({ type }) => {
       </div>
       <div className="user-right">
         <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
+
+          { }
         </div>
 
         {data.icon}

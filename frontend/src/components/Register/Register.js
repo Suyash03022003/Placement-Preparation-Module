@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Aside from '../../assets/bajaj1.jpg';
-import BitLogo from '../../assets/bitlogo.jpg';
+import Aside from '../../assets/Login.png';
+import BitLogo from '../../assets/NewLogo.jpg';
 import styles from './Register.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';

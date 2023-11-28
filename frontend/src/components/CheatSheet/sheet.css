@@ -4,7 +4,7 @@
 }
 
 .MainContentsheet {
-    margin-left: 2%;
+    margin: 0 2%;
 }
 
 .BigO_Table Td,
@@ -78,9 +78,20 @@
 .Algorithms,
 .Sorting, 
 .Searching{
-    margin: 5%;
+    overflow-x: scroll;
     background-color: white;
-    padding: 2%;
+    padding: 5% 30px;
+    margin: 3% 2%;
     border-radius: 30px;
 }
 
+.Data_Structures,
+.Algorithms,
+.Sorting, 
+.Searching {
+    padding: 6% 30px;
+}
+
+.SidebarMainHeading {
+    margin-top: 60px;
+}

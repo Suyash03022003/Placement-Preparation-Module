@@ -1,5 +1,7 @@
 import React from 'react'
 import "./DsaSyllabus.css";
+import { ReactComponent as RoadMapSVG } from '../../assets/Roadmap.svg'; 
+
 function DsaSyllabus() {
     return (
         <div>
@@ -17,7 +19,6 @@ function DsaSyllabus() {
                         <div className="dsa-image">
                             <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} alt="DSABackgroundImage" />
                         </div>
-
                     </div>
 
                     <div className='RoadmapImageDiv'>
@@ -28,7 +29,7 @@ function DsaSyllabus() {
                         <h2>DSA Roadmap</h2>
                     </div>
                     <div className="dsa-roadmap-img">
-                        <img src={process.env.PUBLIC_URL + "/images/Desktop - 1.svg"} alt="DSABackgroundImage" />
+                        <RoadMapSVG />
                     </div>
                     {/* <div class="timeline">
                         <div class="timeline-container timeline-left">

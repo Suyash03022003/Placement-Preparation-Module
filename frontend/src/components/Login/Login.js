@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Aside from '../../assets/bajaj1.jpg';
-import BitLogo from '../../assets/bitlogo.jpg';
+import Aside from '../../assets/Login.png';
+import BitLogo from '../../assets/NewLogo.jpg';
 import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -31,9 +31,11 @@ const Login = () => {
                     if (res.data.message === "Login successful!") {
                         setCookie('user', res.data.user, { path: '/' });
                         if(res.data.user.role === "Admin")
-                            navigate('/admin'); 
-                        else               
+                            navigate('/admin');
+                        else { 
                             navigate("/");
+                            localStorage.setItem('activeLink', 'Home');
+                        }
                     } else if (res.data.message === "User Not Registered!") {
                         alert(res.data.message);
                         navigate("/register");
