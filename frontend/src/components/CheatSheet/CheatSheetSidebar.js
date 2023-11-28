@@ -1,5 +1,3 @@
-// Sidebar.js
-
 import React, { useState } from 'react';
 import styles from './cheatSheetSidebar.module.css';
 

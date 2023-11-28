@@ -3,6 +3,7 @@ import ChatBot from '../../assets/chatbot.png';
 import './Chatbot.css';
 import axios from 'axios';
 
+
 const Chatbot = () => {
     const [isChatbotVisible, setIsChatbotVisible] = useState(false);
     const [chatMessages, setChatMessages] = useState([]);

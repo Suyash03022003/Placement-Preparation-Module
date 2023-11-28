@@ -6,28 +6,31 @@ function DsaSyllabus() {
             <div className='dsa-syllabus-container'>
                 <div className="dsa-inner-container">
                     <div className='RoadMapTop'>
-                            <div className="dsa-heading">
-                                <h1>Code ! <br/>
-                                    Compete ! <br/>
-                                    Conquer !</h1>
-                                <br />
-                                <h4 style={{ 'color': '#5fa1ff', "fontWeight": '20px', }} >Your Path to Placements Starts Now !</h4>
-                            </div>
+                        <div className="dsa-heading">
+                            <h1>Code !
+                                Compete ! <br />
+                                Conquer !</h1>
+                            <br />
+                            <h4 style={{ 'color': '#5fa1ff', "fontWeight": '20px', }} >Your Path to Placements Starts Now !</h4>
+                        </div>
 
-                            <div className="dsa-image">
-                                <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} alt="DSABackgroundImage" />
-                            </div>
+                        <div className="dsa-image">
+                            <img src={process.env.PUBLIC_URL + "/images/dsa-front.png"} alt="DSABackgroundImage" />
+                        </div>
 
                     </div>
-                    
+
                     <div className='RoadmapImageDiv'>
-                    <img className='' src={process.env.PUBLIC_URL + "/images/roadmap-new.jpg"} style={{ "width": '350px', "height": '350px' }} alt="Image1" ></img>
+                        <img className='' src={process.env.PUBLIC_URL + "/images/roadmap-new.jpg"} style={{ "width": '350px', "height": '350px' }} alt="Image1" ></img>
                     </div>
 
                     <div className="dsa-heading">
-                        <h1>Time Line</h1>
+                        <h2>DSA Roadmap</h2>
                     </div>
-                    <div class="timeline">
+                    <div className="dsa-roadmap-img">
+                        <img src={process.env.PUBLIC_URL + "/images/Desktop - 1.svg"} alt="DSABackgroundImage" />
+                    </div>
+                    {/* <div class="timeline">
                         <div class="timeline-container timeline-left">
                             <div class="timeline-content">
                                 <h2>Week 1</h2>
@@ -76,7 +79,8 @@ function DsaSyllabus() {
                                 <h4>Dynamic Programming</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
+
                 </div>
             </div>
         </div>

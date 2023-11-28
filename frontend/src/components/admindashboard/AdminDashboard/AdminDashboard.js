@@ -4,7 +4,6 @@ import Widget from "../widget/Widget";
 import Featured from "../featured/Featured";
 import Chart from "../chart/Chart";
 import Table from "../table/Table";
-
 const Home = () => {
     return (
         <div className="home">
@@ -24,7 +23,6 @@ const Home = () => {
                 <div className="listContainer">
                     <Table />
                 </div>
-
             </div>
         </div>
     );
