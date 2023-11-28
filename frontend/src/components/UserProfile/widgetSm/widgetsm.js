@@ -20,19 +20,19 @@ const WidgetSm = () => {
       chartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Array', 'Linked List', 'String', 'Graph', 'Trees', 'Page F', 'Page G'],
+          labels: ['Array', 'Linked List', 'String', 'Graph', 'Trees', 'Matrix', 'Stack & Queue'],
           datasets: [{
             label: 'Progress',
             data: [100, 20, 80, 60, 50, 40, 20],
             // barThickness: 6,
             backgroundColor: [
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)',
-              'rgba(154, 208, 245, 0.8)'
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
+              'rgb(173,153,229)',
             ],
             borderColor: [
               'rgb(154, 208, 245)',
