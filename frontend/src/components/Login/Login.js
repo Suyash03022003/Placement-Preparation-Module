@@ -53,7 +53,7 @@ const Login = () => {
             <div className={styles.login}>
                 <div className={styles.form}>
                     <div className={styles.frm}>
-                        <img src={Aside} alt="BITW" />
+                        <img src={Aside} alt="BITW" className={styles.loginImage} />
                         <div className={styles.content}>
                             <img src={BitLogo} alt="BIT Logo" />
                             <form onSubmit={handleSubmit}>

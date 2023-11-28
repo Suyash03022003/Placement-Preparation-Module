@@ -55,8 +55,7 @@
     border-left: 10px solid transparent;
     border-bottom: 10px solid transparent;
     top: -15px;
-    right: 0px;
-    z-index: 10000;
+    right: -15px;
 }
 
 .mainSeperateTopicsDiv .mainImageDiv::before {
@@ -69,8 +68,7 @@
     border-left: 10px solid transparent;
     border-bottom: 10px solid transparent;
     bottom: -15px;
-    left: 0px;
-    z-index: 10000;
+    left: -15px;
     transform: rotate(180deg);
 }
 

@@ -14,7 +14,6 @@ const SeperatePage = () => {
             try {
                 const response = await axios.get(`http://localhost:5000/topic/${topicName}`);
                 setTopicDetails(response.data.mainTopic);
-                setSubTopicDetails(response.data.mainTopic.subTopics);
             } catch (error) {
                 console.error(error);
             }
@@ -24,23 +23,27 @@ const SeperatePage = () => {
     }, [topicName]);
 
     useEffect(() => {
-        const fetchSubTopicDetails = async (id) => {
-            try {
-                const response = await axios.get(`http://localhost:5000/subtopic/${id}`);
-                setSubTopicContents((prevData) => [
-                    ...prevData,
-                    response.data
-                ]);                
-            } catch (error) {
-                console.error(error);
-            }
-        }
+        setSubTopicDetails(topicDetails.subtopics);
+    }, [topicDetails]);
 
-        subTopicDetails.map((subtopicid) => (
-            fetchSubTopicDetails(subtopicid),
-            console.log(subTopicContents)
-        ))
-    }, [subTopicDetails]);
+    // useEffect(() => {
+    //     const fetchSubTopicDetails = async (id) => {
+    //         try {
+    //             const response = await axios.get(`http://localhost:5000/subtopic/${id}`);
+    //             setSubTopicContents((prevData) => [
+    //                 ...prevData,
+    //                 response.data
+    //             ]);                
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     }
+
+    //     subTopicDetails.map((subtopicid) => (
+    //         fetchSubTopicDetails(subtopicid),
+    //         console.log(subTopicContents)
+    //     ))
+    // }, [subTopicDetails]);
 
     const fetchSubTopicDetails = async (id) => {
         try {
@@ -80,11 +83,12 @@ const SeperatePage = () => {
                     <div className={styles.advantagesInnerDiv} dangerouslySetInnerHTML={{ __html: topicDetails.applications }}></div>
                 </div>
             )}
-            {subTopicDetails.length > 0 && (
-                subTopicContents.map((subTopic, index) => {
-                    <p>{subTopic.subTopicName}</p>
+            {/* {subTopicDetails.length > 0 && (
+                subTopicDetails.map((subTopic, index) => {
+                    // <p>{subTopic.subTopicName}</p>
+                    <p>Suyash</p>
                 })
-            )}
+            )} */}
         </div>
     );
 };

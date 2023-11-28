@@ -1,6 +1,8 @@
 import React from 'react'
 import "./DsaSyllabus.css";
-import { ReactComponent as RoadMapSVG } from '../../assets/Roadmap.svg'; 
+import RoadMap from '../../assets/Roadmap.png'; 
+import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 function DsaSyllabus() {
     return (
@@ -28,60 +30,13 @@ function DsaSyllabus() {
                     <div className="dsa-heading">
                         <h2>DSA Roadmap</h2>
                     </div>
-                    <div className="dsa-roadmap-img">
-                        <RoadMapSVG />
-                    </div>
-                    {/* <div class="timeline">
-                        <div class="timeline-container timeline-left">
-                            <div class="timeline-content">
-                                <h2>Week 1</h2>
-                                <h4>Basics of Strings and Arrays</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-right">
-                            <div class="timeline-content">
-                                <h2>Week 2</h2>
-                                <h4>Searching and Sorting</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-left">
-                            <div class="timeline-content">
-                                <h2>Week 3</h2>
-                                <h4>Hash Maps</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-right">
-                            <div class="timeline-content">
-                                <h2>Week 4</h2>
-                                <h4>2D arrays and linked lists</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-left">
-                            <div class="timeline-content">
-                                <h2>Week 5</h2>
-                                <h4>Stacks and Queues</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-right">
-                            <div class="timeline-content">
-                                <h2>Week 6</h2>
-                                <h4>Recursion</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-left">
-                            <div class="timeline-content">
-                                <h2>Week 7</h2>
-                                <h4>Trees and binary Search Trees</h4>
-                            </div>
-                        </div>
-                        <div class="timeline-container timeline-right">
-                            <div class="timeline-content">
-                                <h2>Week 8 & 9</h2>
-                                <h4>Dynamic Programming</h4>
-                            </div>
-                        </div>
-                    </div> */}
 
+                    <div className="dsa-roadmap-img">
+                        <Link to={'/user/learnDSA/content/Array'} className='dsa-syllabus-array-link'>skjsvjhw</Link>
+                        <Link to={'/user/learnDSA/content/Stack'} className='dsa-syllabus-stackQueues-link'>skjsvjhw</Link>
+                        <Link to={'/user/learnDSA/content/Linked%20List'} className='dsa-syllabus-linkedList-link'>skjsvjhw</Link>
+                        <img src={RoadMap} alt='roadMapImage' />
+                    </div>
                 </div>
             </div>
         </div>
