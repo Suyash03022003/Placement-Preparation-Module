@@ -114,14 +114,14 @@ const Navbar = () => {
 
                 <div className={styles.navLoginLink}>
                     <div className={styles.navLoginLinkDesktop}>
-                        <div>
+                        {/* <div>
                             <img
                                 src={process.env.PUBLIC_URL + '/images/bell_white.png'}
                                 alt="Bell"
                                 className={styles.navbarBellImage}
                                 style={{ width: '35px', height: '35px' }}
                             />
-                        </div>
+                        </div> */}
                         <Link to={fname !== "" ? "/user/profile" : "/login"} className={styles.navLoginLinkDesktopHref} onClick={() => handleLinkClick('Login')}>
                             <div className={styles.navLoginLinkDesktopHrefInnerDiv}>
                                 <img

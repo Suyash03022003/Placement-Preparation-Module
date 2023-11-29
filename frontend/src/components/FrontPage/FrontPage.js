@@ -150,7 +150,7 @@ function FrontPage() {
 
                             </div>
                         </div>
-                        <button className='hoverbutton'> Explore More...</button>
+                        {/* <button className='hoverbutton'> Explore More...</button> */}
                     </div>
                 </div>
                 <div>
