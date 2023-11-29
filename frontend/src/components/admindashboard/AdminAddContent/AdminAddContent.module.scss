@@ -16,7 +16,8 @@
         font-weight: bold;
     }
 
-    input, textarea {
+    input,
+    textarea {
         border: 1px solid #ccc;
         margin-top: 15px;
         display: block;
@@ -25,10 +26,28 @@
         transition: 0.4s;
     }
 
-    input:focus, textarea:focus {
+    input:focus,
+    textarea:focus {
         outline: 0;
         border: 1px solid #ccc;
         border-radius: 10px;
+    }
+
+    .addType {
+        position: relative;
+    }
+
+    .typeOptions {
+        width: 75%;
+        position: absolute;
+        bottom: -50px;
+        list-style: none;
+    }
+    
+    .typeOptions li {
+        padding: 10px;
+        background-color: white;
+        border: 0.5px solid #ccc;
     }
 
     h2 {
@@ -41,6 +60,7 @@
         height: 150px !important;
     }
 
+    .addType,
     .addImageURL,
     .addDescription,
     .addTopicName,

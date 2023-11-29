@@ -40,11 +40,22 @@ const Sidebar = () => {
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
+                <p className={styles.typeHeading}>Data Structures</p>
                 {
-                    topicNames.map((item, index) => (
-                        <NavLink to={"./content/" + item} key={index} className={styles.link} activeClassName={styles.active}>
-                            <div style={{ display: isOpen ? "block" : "none" }} className={styles.linkText}>{item}</div>
-                        </NavLink>
+                    topics.map((item, index) => (
+                        item.type === "Data Structures" ?
+                        <NavLink to={"./content/" + item.topicName} key={index} className={styles.link} activeClassName={styles.active}>
+                            <div style={{ display: isOpen ? "block" : "none" }} className={styles.linkText}>{item.topicName}</div>
+                        </NavLink> : <></>
+                    ))
+                }
+                <p className={styles.typeHeading}>Algorithms</p>
+                {
+                    topics.map((item, index) => (
+                        item.type === "Algorithms" ?
+                        <NavLink to={"./content/" + item.topicName} key={index} className={styles.link} activeClassName={styles.active}>
+                            <div style={{ display: isOpen ? "block" : "none" }} className={styles.linkText}>{item.topicName}</div>
+                        </NavLink> : <></>
                     ))
                 }
             </div>

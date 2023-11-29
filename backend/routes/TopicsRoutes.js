@@ -8,6 +8,7 @@ router.post('/', async (request, response) => {
   try {
     if (
       !request.body.topicName ||
+      !request.body.type ||
       !request.body.description
     ) {
       return response.status(400).send({
@@ -17,6 +18,7 @@ router.post('/', async (request, response) => {
 
     const newTopic = {
       topicName: request.body.topicName,
+      type: request.body.type,
       description: request.body.description,
       imageURL: request.body.imageURL,
       advantages: request.body.advantages,
@@ -102,15 +104,6 @@ router.get('/:id', async (request, response) => {
 
 router.put('/:id', async (request, response) => {
   try {
-    if (
-      !request.body.topicName ||
-      !request.body.description
-    ) {
-      return response.status(400).send({
-        message: 'Enter all the required fields!'
-      });
-    }
-
     const { id } = request.params;
 
     const topic = await Topic.findByIdAndUpdate(id, request.body);

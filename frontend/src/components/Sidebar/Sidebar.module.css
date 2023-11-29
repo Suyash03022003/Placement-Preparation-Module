@@ -38,11 +38,18 @@
     transition: 0.3s;
 }
 
-.link:hover {
+.link:hover, .typeHeading {
     font-weight: bold;
     text-decoration: none;
     background: #6fd4ff;
     color: white;
+}
+
+.typeHeading {
+    font-size: 25px;
+    padding: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .icon,

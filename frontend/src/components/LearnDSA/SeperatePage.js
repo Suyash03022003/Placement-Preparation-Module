@@ -10,21 +10,51 @@ const SeperatePage = () => {
     const [subTopicContents, setSubTopicContents] = useState([]);
 
     useEffect(() => {
+        setSubTopicDetails([]);
+        setTopicDetails({ imageURL: '' });
+
         const fetchTopicDetails = async () => {
             try {
                 const response = await axios.get(`http://localhost:5000/topic/${topicName}`);
                 setTopicDetails(response.data.mainTopic);
+                setSubTopicDetails(response.data.mainTopic.subTopics);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        
+        fetchTopicDetails();
+    }, [topicName]);
+    
+    useEffect(() => {
+        setSubTopicContents([]);
+
+        const fetchSubTopicDetails = async (id) => {
+            try {
+                const response = await axios.get(`http://localhost:5000/subtopic/${id}`);
+                setSubTopicContents((prevData) => [
+                    ...prevData,
+                    response.data
+                ]);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchTopicDetails();
-    }, [topicName]);
+        const fetchData = async () => {
+            subTopicDetails.forEach((subtopicid) => {
+                fetchSubTopicDetails(subtopicid);
+            });
+        };
 
-    useEffect(() => {
-        setSubTopicDetails(topicDetails.subtopics);
-    }, [topicDetails]);
+        fetchData();
+
+        // Cleanup function to handle potential memory leaks
+        return () => {
+            setSubTopicContents([]);
+        };
+
+    }, [topicName, subTopicDetails]);
 
     // useEffect(() => {
     //     const fetchSubTopicDetails = async (id) => {
@@ -44,15 +74,6 @@ const SeperatePage = () => {
     //         console.log(subTopicContents)
     //     ))
     // }, [subTopicDetails]);
-
-    const fetchSubTopicDetails = async (id) => {
-        try {
-            const response = await axios.get(`http://localhost:5000/subtopic/${id}`);
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-        }
-    };
 
     return (
         <div className={styles.mainSeperateTopicsDiv}>
@@ -83,12 +104,15 @@ const SeperatePage = () => {
                     <div className={styles.advantagesInnerDiv} dangerouslySetInnerHTML={{ __html: topicDetails.applications }}></div>
                 </div>
             )}
-            {/* {subTopicDetails.length > 0 && (
-                subTopicDetails.map((subTopic, index) => {
-                    // <p>{subTopic.subTopicName}</p>
-                    <p>Suyash</p>
-                })
-            )} */}
+            {/* <ul>
+                {subTopicDetails.length > 0 ? (
+                    subTopicContents.map((subTopicContent, index) => {
+                        return (
+                            <p>{subTopicContent.subTopicName}</p>
+                        )
+                    })
+                ) : <></>}
+            </ul> */}
         </div>
     );
 };

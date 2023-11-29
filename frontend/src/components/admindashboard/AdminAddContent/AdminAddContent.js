@@ -9,6 +9,8 @@ const AdminAddContent = () => {
   const [formData, setFormData] = useState({});
   const [subTopics, setSubTopics] = useState({ subtopics: [{ subTopicName: '', subTopicDescription: '', ccode: '', cppcode: '', javacode: '' }] });
   const [subTopicsCount, setSubTopicsCount] = useState(1);
+  const [type, setType] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
   const [middleId, setMiddleId] = useState('');
   const navigate = useNavigate();
 
@@ -34,6 +36,15 @@ const AdminAddContent = () => {
       ...prevData,
       [name]: value,
     }))
+  }
+
+  const handleTypeValueChange = ( listValue ) => {
+    setType(listValue + "");
+    setFormData((prevData) => ({
+      ...prevData,
+      type: listValue,
+    }))
+    setIsOpen(!isOpen)
   }
   
   const extractMiddleId = () => {
@@ -79,6 +90,7 @@ const AdminAddContent = () => {
 
       const bodyJSON = {
         topicName: formData.topicName,
+        type: formData.type,
         description: formData.description,
         imageURL: "" + middleIdURL,
         advantages: formData.advantages,
@@ -100,6 +112,8 @@ const AdminAddContent = () => {
             document.querySelectorAll('input, textarea').forEach(el => {
               el.value = '';
             });
+
+            setType('');
           })
           .catch((err) => {
             console.log(err);
@@ -111,10 +125,16 @@ const AdminAddContent = () => {
     }
   }
 
+  const showDetails = () => {
+    console.log(formData);
+  }
+
   return (
     <div className={styles.mainDivAdminAddContent}>
+      <button onClick={showDetails}></button>
       <h1>Add Topic:</h1>
-      <div className={styles.addTopicName}>
+      <div
+       className={styles.addTopicName}>
         <p className={styles.addTopicHeading}>Topic Name: </p>
         <input
           name='topicName'
@@ -122,6 +142,19 @@ const AdminAddContent = () => {
           value={formData.topicName}
           onChange={handleValueChange}
         />
+      </div>
+      <div className={styles.addType}>
+        <p className={styles.addTopicHeading}>Type: </p>
+        <input
+          name='type'
+          type='text'
+          value={type}
+          onClick={() => { setIsOpen(!isOpen) }}
+        />
+        <ul className={styles.typeOptions} style={isOpen ? {display: "block"} : {display: "none"}}>
+          <li className={styles.typeDropDownLi} onClick={() => handleTypeValueChange('Data Structures')}>Data Structures</li>
+          <li className={styles.typeDropDownLi} onClick={() => handleTypeValueChange('Algorithms')}>Algorithms</li>
+        </ul>
       </div>
       <div className={styles.addDescription}>
         <p className={styles.addTopicHeading}>Description:</p>
