@@ -173,7 +173,7 @@
 
 .feature-card {
   background-color: #ffffff;
-  margin: 10% 5% 10%;
+  margin: 3% 5% 6%;
   display: flex;
   justify-content: center;
   /* Distribute the cards horizontally */
@@ -245,6 +245,8 @@
 
 /* ----------Benefit wali image----------- */
 .benefit-heading {
+  margin-top: 3%;
+  margin-bottom: 3%;
   text-align: center;
 }
 

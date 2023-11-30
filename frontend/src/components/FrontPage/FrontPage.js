@@ -164,7 +164,7 @@ function FrontPage() {
                 <Slidingcard />
             </div>
             {/*-------Features of website--------- */}
-
+            <h1 className='benefit-heading'>FEATURES</h1>
             <div className='feature-card'>
                 <div className='feature-square-card'>
                     <div className='features-inner-card'>
@@ -215,6 +215,7 @@ function FrontPage() {
                 </div>
             </div>
             {/* ------------Start learning-------------------- */}
+            <h1 className='benefit-heading'>START LEARNING</h1>
             <div className='start-learning-container'>
                 <div className='start-learning-items-container'>
                     <div className='item-box1'>
@@ -257,7 +258,7 @@ function FrontPage() {
 
             {/* -------------Frequently asked questions---------------------- */}
             <div className="faq-container">
-                <h1>Frequently Asked Questions</h1>
+                <h1 className='benefit-heading'>Frequently Asked Questions</h1>
                 <ul className="faq-list">
                     {faqData.map((faq, index) => (
                         <li key={index} className={`faq-item ${index === activeIndex ? 'active' : ''}`}>
@@ -278,7 +279,7 @@ function FrontPage() {
 
             {/* --------------Contact us------------- */}
             <form className='contact-us-form'>
-                <h1>FEEDBACK ZONE</h1>
+                <h1 className='benefit-heading'>FEEDBACK ZONE</h1>
                 <div className='form'>
                     <div className='form-content'>
                         <div className='form-image'>
