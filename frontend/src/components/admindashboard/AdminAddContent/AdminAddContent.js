@@ -125,13 +125,8 @@ const AdminAddContent = () => {
     }
   }
 
-  const showDetails = () => {
-    console.log(formData);
-  }
-
   return (
     <div className={styles.mainDivAdminAddContent}>
-      <button onClick={showDetails}></button>
       <h1>Add Topic:</h1>
       <div
        className={styles.addTopicName}>
