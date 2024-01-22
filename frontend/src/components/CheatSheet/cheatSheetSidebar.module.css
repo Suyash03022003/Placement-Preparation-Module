@@ -15,7 +15,7 @@
   margin: 0;
 }
 
-.cheatSheetSidebar ul > li {
+.cheatSheetSidebar ul>li {
   list-style: none;
   margin-bottom: 15px;
   cursor: pointer;
@@ -23,7 +23,7 @@
   padding: 10px;
 }
 
-.cheatSheetSidebar ul > li:hover {
+.cheatSheetSidebar ul>li:hover {
   background-color: #f5f5f5;
   border-radius: 4px;
 }
